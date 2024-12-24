@@ -1,0 +1,100 @@
+<div class="h-32 rounded-lg w-full">
+    <div class="w-full">
+        <div>
+            <div class="flex items-center justify-between">
+                <div>
+                    <h2 class="font-bold text-[32px]">Thông tin cá nhân</h2>
+                    <div id="circle" class="flex items-center justify-between">
+                        <div>
+                            <span class="text-gray-500 text-base">Cập nhật thông tin của bạn và tìm hiểu các
+                                thông tin
+                                này được sử dụng ra sao.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-[16px] ml-6">
+            <!-- Tên -->
+            <div class="border-b py-4 flex justify-between items-center">
+                <div class="w-1/4">
+                    <span class="text-base">Tiền tệ</span>
+                </div>
+                <div class="w-1/2">
+                    <div id="money" class="editable text-gray-600 text-base cursor-pointer">€£$</div>
+                    <div class="flex justify-between items-center hidden" id="money-input">
+                        <div class="flex flex-col">
+                            <div><span class="font-semibold">Tiền tệ</span></div>
+                            <select class="border rounded-md p-2 w-32 border-[#4a83ae] border">
+                                <option value="">€£$</option>
+                                <option value="1">Tháng 1</option>
+                                <option value="1">Tháng 1</option>
+                                <option value="1">Tháng 1</option>
+                                <option value="1">Tháng 1</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div id="money-btnEdit" class="text-blue-600 cursor-pointer font-semibold text-base ">
+                    Chỉnh
+                    sửa</div>
+                <div id="money-actions" class="ml-5 hidden flex flex-col gap-2">
+                    <button id="cancel__actions" class="text-blue-500 w-12 h-10">Hủy</button>
+                    <button id="save__actions" class="text-white bg-blue-700 w-12 h-8 rounded-lg">Lưu</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-[16px] ml-6">
+            <!-- Ngôn ngữ -->
+            <div class="border-b py-4 flex justify-between items-center">
+                <div class="w-1/4">
+                    <span class="text-base">Ngôn ngữ</span>
+                </div>
+                <div class="w-1/2">
+                    <div id="lang" class="editable text-gray-600 text-base cursor-pointer">Tiếng Việt</div>
+                    <div class="flex justify-between items-center hidden" id="lang-input">
+                        <div class="flex flex-col">
+                            <div><span class="font-semibold">Chọn ngôn ngữ</span></div>
+                            <select class="border rounded-md p-2 w-32">
+                                <option value="">Tiếng Việt</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div id="lang-btnEdit" class="text-blue-600 cursor-pointer font-semibold text-base">Chỉnh
+                    sửa</div>
+                <div id="lang-actions" class="ml-5 hidden flex flex-col gap-2">
+                    <button id="cancel__actions-lang" class="text-blue-500 w-12 h-10">Hủy</button>
+                    <button id="save__actions-lang" class="text-white bg-blue-700 w-12 h-8 rounded-lg">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const $ = document.querySelector.bind(document)
+    function toggleEdit(section, inputId, actionId, displayId, editBtnId) {
+        const input = $(inputId);
+        const actions = $(actionId);
+        const display = $(displayId);
+        const editBtn = $(editBtnId);
+        input.classList.toggle('hidden');
+        actions.classList.toggle('hidden');
+        display.classList.toggle('hidden');
+        editBtn.classList.toggle('hidden');
+    }
+    // Money section
+    $('#money').addEventListener("click", () => toggleEdit('money', '#money-input', '#money-actions', '#money', '#money-btnEdit'));
+    $('#cancel__actions').addEventListener("click", () => toggleEdit('money', '#money-input', '#money-actions', '#money', '#money-btnEdit'));
+    $('#save__actions').addEventListener("click", () => toggleEdit('money', '#money-input', '#money-actions', '#money', '#money-btnEdit'));
+    $('#money-btnEdit').addEventListener("click", () => toggleEdit('money', '#money-input', '#money-actions', '#money', '#money-btnEdit'));
+    // Language section
+    $('#lang').addEventListener("click", () => toggleEdit('lang', '#lang-input', '#lang-actions', '#lang', '#lang-btnEdit'));
+    $('#cancel__actions-lang').addEventListener("click", () => toggleEdit('lang', '#lang-input', '#lang-actions', '#lang', '#lang-btnEdit'));
+    $('#save__actions-lang').addEventListener("click", () => toggleEdit('lang', '#lang-input', '#lang-actions', '#lang', '#lang-btnEdit'));
+    $('#lang-btnEdit').addEventListener("click", () => toggleEdit('lang', '#lang-input', '#lang-actions', '#lang', '#lang-btnEdit'));
+</script>

@@ -1,0 +1,695 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- Lấy id bỏ vào nút bật modal là modal bật -->
+    <button id="openModalComment" type="button"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">click
+        me</button>
+
+    <!-- Modal -->
+    <div id="modal_comment" class="fixed inset-0 overflow-hidden hidden z-10">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+            <div class="fixed inset-y-0 right-0 flex max-w-full">
+                <div class="w-screen max-w-[900px] transform translate-x-full transition-transform duration-300"
+                    id="modalPanel">
+                    <div class="flex h-full flex-col bg-white shadow-xl">
+                        <div class="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
+                            <div class="flex items-start justify-between">
+                                <h2 class="text-xl text-gray-900 font-bold" id="slide-over-title">Đánh giá của
+                                    khách về
+                                    Nostalgia Boutique Hotel</h2>
+                                <div class="ml-3 flex h-7 items-center">
+                                    <button type="button" id="closeModalBtn"
+                                        class="relative -m-2 p-2 text-gray-400 hover:text-gray-500">
+                                        <span class="sr-only">Close panel</span>
+                                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                            stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Nội dung chính -->
+                            <div>
+                                <div class="py-[24px] border-b border-[#e7e7e7]">
+                                    <div class="flex justify-between">
+                                        <div class="flex items-center">
+                                            <div class="flex items-center">
+                                                <div
+                                                    class="w-[32px] h-[32px] bg-[#003c96] flex justify-center items-center text-white rounded-t rounded-br-[4px] mr-[10px]">
+                                                    8,4
+                                                </div>
+                                                <div class="mr-[18px]">
+                                                    <div class="text-base text-[#1A1A1A]">Rất tốt</div>
+                                                    <div class="text-xs text-[#595959]">888 đánh giá</div>
+                                                </div>
+                                                <a href="#" class="text-[#008234]">Chúng tôi cố gắng mang đến
+                                                    100%
+                                                    đánh
+                                                    giá thật</a>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button
+                                                class="py-[6px] px-[12px] border text-[#006ce4] border-[#006ce4] rounded">Viết
+                                                đánh giá</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="py-[24px] border-b border-[#e7e7e7]">
+                                    <div class="py-2">
+                                        <h3 class="text-base font-bold mt-2 mb-2">Hạng mục:</h3>
+                                    </div>
+                                    <div class="grid grid-cols-3 gap-4 mt-2">
+                                        <div>
+                                            <div class="flex justify-between">
+                                                <div>
+                                                    <div class="text-sm">
+                                                        Nhân viên phục vụ
+                                                        <span><i class="fas fa-arrow-up"></i></span>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-2">9,8</div>
+                                            </div>
+                                            <div class="bg-gray-200 rounded-full h-[8px]">
+                                                <span class="bg-green-500 block rounded-full w-[90%] h-[8px]"></span>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <div class="flex justify-between">
+                                                <div>
+                                                    <div class="text-sm">Tiện nghi</div>
+                                                </div>
+                                                <div class="mt-2">9,0</div>
+                                            </div>
+                                            <div class="bg-gray-200 rounded-full h-[8px]">
+                                                <span class="bg-blue-500 block rounded-full w-[90%] h-[8px]"></span>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <div class="flex justify-between">
+                                                <div>
+                                                    <div class="text-sm">
+                                                        Sạch sẽ
+                                                        <span><i class="fas fa-arrow-up"></i></span>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-2">9,3</div>
+                                            </div>
+                                            <div class="bg-gray-200 rounded-full h-[8px]">
+                                                <span class="bg-green-500 block rounded-full w-[90%] h-[8px]"></span>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <div class="flex justify-between">
+                                                <div>
+                                                    <div class="text-sm">Thoải mái</div>
+                                                </div>
+                                                <div class="mt-2">9,3</div>
+                                            </div>
+                                            <div class="bg-gray-200 rounded-full h-[8px]">
+                                                <span class="bg-blue-500 block rounded-full w-[90%] h-[8px]"></span>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <div class="flex justify-between">
+                                                <div class="flex gap-1 text-sm">
+                                                    Đáng giá tiền
+                                                    <span><i class="fas fa-arrow-up"></i></span>
+                                                </div>
+                                                <div class="mt-2">9,2</div>
+                                            </div>
+                                            <div class="bg-gray-200 rounded-full h-[8px]">
+                                                <span class="bg-green-500 block rounded-full w-[90%] h-[8px]"></span>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <div class="flex justify-between">
+                                                <div>
+                                                    <div class="text-sm">
+                                                        Địa điểm
+                                                        <span><i class="fas fa-arrow-up"></i></span>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-2">9,7</div>
+                                            </div>
+                                            <div class="bg-gray-200 rounded-full h-[8px]">
+                                                <span class="bg-green-500 block rounded-full w-[97%] h-[8px]"></span>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <div class="flex justify-between">
+                                                <div>
+                                                    <div class="text-sm">
+                                                        WiFi miễn phí
+                                                        <span><i class="fas fa-arrow-up"></i></span>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-2">8,8</div>
+                                            </div>
+                                            <div class="bg-gray-200 rounded-full h-[8px]">
+                                                <span class="bg-blue-500 block rounded-full w-[80%] h-[8px]"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="row-start-3 col-start-3">
+                                            <div>
+                                                <div class="flex justify-end">
+                                                    <span class="text-sm mt-2">
+                                                        <i class="fas fa-arrow-up text-green-500"></i> Địa điểm
+                                                        cao ở Hà Nội
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="py-[24px] border-b border-[#e7e7e7]">
+                                    <div class="py-2">
+                                        <h3 class="text-base font-bold mt-2 mb-2">Bộ lọc</h3>
+                                    </div>
+                                    <div class="grid grid-cols-4 gap-[8px]">
+                                        <div class="block w-full">
+                                            <label for="countries"
+                                                class="block mb-2 text-sm font-medium text-gray-600 w-full">Khách
+                                                đánh giá
+                                            </label>
+                                            <select id="countries"
+                                                class="h-8 border border-gray-300 text-gray-600 text-sm rounded-md block w-full py-1.5 px-4 focus:outline-none">
+                                                <option selected>Tất cả (909)</option>
+                                                <option value="US">United States</option>
+                                                <option value="CA">Canada</option>
+                                                <option value="FR">France</option>
+                                                <option value="DE">Germany</option>
+                                            </select>
+                                        </div>
+                                        <div class="block w-full">
+                                            <label for="countries"
+                                                class="block mb-2 text-sm font-medium text-gray-600 w-full">Điểm
+                                                đánh giá</label>
+                                            <select id="countries"
+                                                class="h-8 border border-gray-300 text-gray-600 text-sm rounded-md block w-full py-1.5 px-4 focus:outline-none">
+                                                <option selected>Tất cả (909)</option>
+                                                <option value="US">United States</option>
+                                                <option value="CA">Canada</option>
+                                                <option value="FR">France</option>
+                                                <option value="DE">Germany</option>
+                                            </select>
+                                        </div>
+                                        <div class="block w-full">
+                                            <label for="countries"
+                                                class="block mb-2 text-sm font-medium text-gray-600 w-full">Ngôn
+                                                ngữ</label>
+                                            <select id="countries"
+                                                class="h-8 border border-gray-300 text-gray-600 text-sm rounded-md block w-full py-1.5 px-4 focus:outline-none">
+                                                <option selected>Tất cả (909)</option>
+                                                <option value="US">United States</option>
+                                                <option value="CA">Canada</option>
+                                                <option value="FR">France</option>
+                                                <option value="DE">Germany</option>
+                                            </select>
+                                        </div>
+                                        <div class="block w-full">
+                                            <label for="countries"
+                                                class="block mb-2 text-sm font-medium text-gray-600 w-full">Thời
+                                                gian trong năm</label>
+                                            <select id="countries"
+                                                class="h-8 border border-gray-300 text-gray-600 text-sm rounded-md block w-full py-1.5 px-4 focus:outline-none">
+                                                <option selected>Tất cả (909)</option>
+                                                <option value="US">United States</option>
+                                                <option value="CA">Canada</option>
+                                                <option value="FR">France</option>
+                                                <option value="DE">Germany</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="py-2 mt-[24px]">
+                                        <h4 class="text-base font-bold mt-2 mb-2">Chọn chủ đề
+                                            để đọc đánh giá</h4>
+                                    </div>
+                                    <div class="mb-5">
+                                        <div class="flex justify-start gap-4">
+                                            <span class="border rounded-full gap-2 p-2 flex items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                                                    class="w-[16px] h-[16px]">
+                                                    <path
+                                                        d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z" />
+                                                </svg>
+                                                <span>Vị trí</span>
+                                            </span>
+                                            <span class="border rounded-full gap-2 p-2 flex items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                                                    class="w-[16px] h-[16px]">
+                                                    <path
+                                                        d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z" />
+                                                </svg>
+                                                <span>Bữa sáng</span>
+                                            </span>
+                                            <span class="border rounded-full gap-2 p-2 flex items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                                                    class="w-[16px] h-[16px]">
+                                                    <path
+                                                        d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z" />
+                                                </svg>
+                                                <span>Phòng</span>
+                                            </span>
+                                            <span class="border rounded-full gap-2 p-2 flex items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                                                    class="w-[16px] h-[16px]">
+                                                    <path
+                                                        d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z" />
+                                                </svg>
+                                                <span>Sạch sẽ</span>
+                                            </span>
+                                            <span class="border rounded-full gap-2 p-2 flex items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                                                    class="w-[16px] h-[16px]">
+                                                    <path
+                                                        d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z" />
+                                                </svg>
+                                                <span>Giường</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="py-[24px]">
+                                    <div class="py-2 flex justify-between items-center">
+                                        <h4 class="text-base font-bold mt-2 mb-2">Đánh giá của khách</h4>
+                                        <div class="flex items-center gap-[8px]">
+                                            <span>Sắp xếp đánh giá theo:</span>
+                                            <div>
+                                                <div class="block w-full">
+                                                    <select id="countries"
+                                                        class="h-8 border border-gray-300 text-gray-600 text-sm rounded-md block w-full py-1.5 px-4 focus:outline-none">
+                                                        <option selected>Phù hợp nhất</option>
+                                                        <option value="US">United States</option>
+                                                        <option value="CA">Canada</option>
+                                                        <option value="FR">France</option>
+                                                        <option value="DE">Germany</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex mt-[48px] gap-[45px] border-b border-[#e7e7e7] pb-[24px]">
+                                        <div class="flex flex-col min-w-[190px]">
+                                            <div class="flex items-center gap-[10px] mb-[20px]">
+                                                <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png"
+                                                    class="w-[32px] h-[32px] rounded-full" alt="">
+                                                <span>Anh</span>
+                                            </div>
+                                            <div class="flex items-center gap-[10px] mb-[12px]">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"
+                                                    class="w-[16px] h-[16px]">
+                                                    <path
+                                                        d="M32 32c17.7 0 32 14.3 32 32l0 256 224 0 0-160c0-17.7 14.3-32 32-32l224 0c53 0 96 43 96 96l0 224c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-32-224 0-32 0L64 416l0 32c0 17.7-14.3 32-32 32s-32-14.3-32-32L0 64C0 46.3 14.3 32 32 32zm144 96a80 80 0 1 1 0 160 80 80 0 1 1 0-160z" />
+                                                </svg>
+                                                <p class="text-xs">Phòng Deluxe Giường Đôi</p>
+                                            </div>
+                                            <div class="flex items-center gap-[10px] mb-[12px]">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                                                    class="w-[16px] h-[16px]">
+                                                    <path
+                                                        d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40L64 64C28.7 64 0 92.7 0 128l0 16 0 48L0 448c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-256 0-48 0-16c0-35.3-28.7-64-64-64l-40 0 0-40c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40L152 64l0-40zM48 192l352 0 0 256c0 8.8-7.2 16-16 16L64 464c-8.8 0-16-7.2-16-16l0-256z" />
+                                                </svg>
+                                                <p class="text-xs">1 đêm · tháng 11/2022</p>
+                                            </div>
+                                            <div class="flex items-center gap-[10px] mb-[12px]">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"
+                                                    class="w-[16px] h-[16px]">
+                                                    <path
+                                                        d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192l42.7 0c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0L21.3 320C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7l42.7 0C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3l-213.3 0zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352l117.3 0C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7l-330.7 0c-14.7 0-26.7-11.9-26.7-26.7z" />
+                                                </svg>
+                                                <p class="text-xs">Nhóm</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col w-full">
+                                            <div class="flex justify-between w-full">
+                                                <div>
+                                                    <div class="flex items-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+                                                            class="w-[16px] h-[16px] text-[#946800] mr-[9px]">
+                                                            <path
+                                                                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                                                        </svg>
+                                                        <div class="text-[#946800]">Đánh giá hàng đầu
+                                                            <span class="text-xs text-[#595959]">Ngày đánh giá:
+                                                                ngày 25
+                                                                tháng
+                                                                11 năm
+                                                                2022</span>
+                                                        </div>
+                                                    </div>
+                                                    <h4 class="text-lg font-bold">Xuất sắc</h4>
+                                                </div>
+                                                <div
+                                                    class="w-[38px] h-[38px] bg-[#003c96] flex justify-center items-center text-white rounded-t rounded-br-[4px] mr-[10px]">
+                                                    10
+                                                </div>
+                                            </div>
+                                            <div class="flex gap-2 mt-[24px] items-start">
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                        class="w-[16px] h-[16px]">
+                                                        <path
+                                                            d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+                                                    </svg>
+                                                </div>
+                                                <p>Phòng ở sạch sẽ và rất rộng, thoải mái, các bạn nhân viên rất
+                                                    nhiệt tình. Nói chung đây là một khách sạn tuyệt vời và tôi
+                                                    chắc chắn sẽ ở lại đây một lần nữa!!!</p>
+                                            </div>
+                                            <div class="flex min-h-[80px] max-w-[80px] gap-3 mt-[24px]">
+                                                <img class="w-full h-full object-cover"
+                                                    src="https://fps.cdnpk.net/images/ai/image-generator/advantages/image-generator-freepik-7.webp?w=3840&h=1920&q=75"
+                                                    alt="">
+                                                <img class="w-full h-full object-cover"
+                                                    src="https://fps.cdnpk.net/images/ai/image-generator/advantages/image-generator-freepik-7.webp?w=3840&h=1920&q=75"
+                                                    alt="">
+                                                <img class="w-full h-full object-cover"
+                                                    src="https://fps.cdnpk.net/images/ai/image-generator/advantages/image-generator-freepik-7.webp?w=3840&h=1920&q=75"
+                                                    alt="">
+                                                <img class="w-full h-full object-cover"
+                                                    src="https://fps.cdnpk.net/images/ai/image-generator/advantages/image-generator-freepik-7.webp?w=3840&h=1920&q=75"
+                                                    alt="">
+                                            </div>
+                                            <div class="flex justify-end mt-[24px]">
+                                                <button
+                                                    class="flex items-center py-[4px] px-[8px] text-[#006ce4] gap-[10px] hover:bg-[#eff6fe]">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                        class="w-[16px] h-[16px]">
+                                                        <path
+                                                            d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2l144 0c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48l-97.5 0c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3l0-38.3 0-48 0-24.9c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192l64 0c17.7 0 32 14.3 32 32l0 224c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32L0 224c0-17.7 14.3-32 32-32z" />
+                                                    </svg>
+                                                    <p>Hữu ích</p>
+                                                </button>
+                                                <button
+                                                    class="flex items-center py-[4px] px-[8px] text-[#006ce4] gap-[10px] hover:bg-[#eff6fe]">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                        class="w-[16px] h-[16px]">
+                                                        <path
+                                                            d="M313.4 479.1c26-5.2 42.9-30.5 37.7-56.5l-2.3-11.4c-5.3-26.7-15.1-52.1-28.8-75.2l144 0c26.5 0 48-21.5 48-48c0-18.5-10.5-34.6-25.9-42.6C497 236.6 504 223.1 504 208c0-23.4-16.8-42.9-38.9-47.1c4.4-7.3 6.9-15.8 6.9-24.9c0-21.3-13.9-39.4-33.1-45.6c.7-3.3 1.1-6.8 1.1-10.4c0-26.5-21.5-48-48-48l-97.5 0c-19 0-37.5 5.6-53.3 16.1L202.7 73.8C176 91.6 160 121.6 160 153.7l0 38.3 0 48 0 24.9c0 29.2 13.3 56.7 36 75l7.4 5.9c26.5 21.2 44.6 51 51.2 84.2l2.3 11.4c5.2 26 30.5 42.9 56.5 37.7zM32 384l64 0c17.7 0 32-14.3 32-32l0-224c0-17.7-14.3-32-32-32L32 96C14.3 96 0 110.3 0 128L0 352c0 17.7 14.3 32 32 32z" />
+                                                    </svg>
+                                                    <p>Không hữu ích</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex mt-[48px] gap-[45px] border-b border-[#e7e7e7] pb-[24px]">
+                                        <div class="flex flex-col min-w-[190px]">
+                                            <div class="flex items-center gap-[10px] mb-[20px]">
+                                                <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png"
+                                                    class="w-[32px] h-[32px] rounded-full" alt="">
+                                                <span>Anh</span>
+                                            </div>
+                                            <div class="flex items-center gap-[10px] mb-[12px]">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"
+                                                    class="w-[16px] h-[16px]">
+                                                    <path
+                                                        d="M32 32c17.7 0 32 14.3 32 32l0 256 224 0 0-160c0-17.7 14.3-32 32-32l224 0c53 0 96 43 96 96l0 224c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-32-224 0-32 0L64 416l0 32c0 17.7-14.3 32-32 32s-32-14.3-32-32L0 64C0 46.3 14.3 32 32 32zm144 96a80 80 0 1 1 0 160 80 80 0 1 1 0-160z" />
+                                                </svg>
+                                                <p class="text-xs">Phòng Deluxe Giường Đôi</p>
+                                            </div>
+                                            <div class="flex items-center gap-[10px] mb-[12px]">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                                                    class="w-[16px] h-[16px]">
+                                                    <path
+                                                        d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40L64 64C28.7 64 0 92.7 0 128l0 16 0 48L0 448c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-256 0-48 0-16c0-35.3-28.7-64-64-64l-40 0 0-40c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40L152 64l0-40zM48 192l352 0 0 256c0 8.8-7.2 16-16 16L64 464c-8.8 0-16-7.2-16-16l0-256z" />
+                                                </svg>
+                                                <p class="text-xs">1 đêm · tháng 11/2022</p>
+                                            </div>
+                                            <div class="flex items-center gap-[10px] mb-[12px]">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"
+                                                    class="w-[16px] h-[16px]">
+                                                    <path
+                                                        d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192l42.7 0c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0L21.3 320C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7l42.7 0C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3l-213.3 0zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352l117.3 0C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7l-330.7 0c-14.7 0-26.7-11.9-26.7-26.7z" />
+                                                </svg>
+                                                <p class="text-xs">Nhóm</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col w-full">
+                                            <div class="flex justify-between w-full">
+                                                <div>
+                                                    <div class="flex items-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+                                                            class="w-[16px] h-[16px] text-[#946800] mr-[9px]">
+                                                            <path
+                                                                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                                                        </svg>
+                                                        <div class="text-[#946800]">Đánh giá hàng đầu
+                                                            <span class="text-xs text-[#595959]">Ngày đánh giá:
+                                                                ngày 25
+                                                                tháng
+                                                                11 năm
+                                                                2022</span>
+                                                        </div>
+                                                    </div>
+                                                    <h4 class="text-lg font-bold">Xuất sắc</h4>
+                                                </div>
+                                                <div
+                                                    class="w-[38px] h-[38px] bg-[#003c96] flex justify-center items-center text-white rounded-t rounded-br-[4px] mr-[10px]">
+                                                    10
+                                                </div>
+                                            </div>
+                                            <div class="flex gap-2 mt-[24px] items-start">
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                        class="w-[16px] h-[16px]">
+                                                        <path
+                                                            d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+                                                    </svg>
+                                                </div>
+                                                <p>Phòng ở sạch sẽ và rất rộng, thoải mái, các bạn nhân viên rất
+                                                    nhiệt tình. Nói chung đây là một khách sạn tuyệt vời và tôi
+                                                    chắc chắn sẽ ở lại đây một lần nữa!!!</p>
+                                            </div>
+                                            <div class="flex min-h-[80px] max-w-[80px] gap-3 mt-[24px]">
+                                                <img class="w-full h-full object-cover"
+                                                    src="https://fps.cdnpk.net/images/ai/image-generator/advantages/image-generator-freepik-7.webp?w=3840&h=1920&q=75"
+                                                    alt="">
+                                                <img class="w-full h-full object-cover"
+                                                    src="https://fps.cdnpk.net/images/ai/image-generator/advantages/image-generator-freepik-7.webp?w=3840&h=1920&q=75"
+                                                    alt="">
+                                                <img class="w-full h-full object-cover"
+                                                    src="https://fps.cdnpk.net/images/ai/image-generator/advantages/image-generator-freepik-7.webp?w=3840&h=1920&q=75"
+                                                    alt="">
+                                                <img class="w-full h-full object-cover"
+                                                    src="https://fps.cdnpk.net/images/ai/image-generator/advantages/image-generator-freepik-7.webp?w=3840&h=1920&q=75"
+                                                    alt="">
+                                            </div>
+                                            <div class="flex justify-end mt-[24px]">
+                                                <button
+                                                    class="flex items-center py-[4px] px-[8px] text-[#006ce4] gap-[10px] hover:bg-[#eff6fe]">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                        class="w-[16px] h-[16px]">
+                                                        <path
+                                                            d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2l144 0c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48l-97.5 0c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3l0-38.3 0-48 0-24.9c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192l64 0c17.7 0 32 14.3 32 32l0 224c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32L0 224c0-17.7 14.3-32 32-32z" />
+                                                    </svg>
+                                                    <p>Hữu ích</p>
+                                                </button>
+                                                <button
+                                                    class="flex items-center py-[4px] px-[8px] text-[#006ce4] gap-[10px] hover:bg-[#eff6fe]">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                        class="w-[16px] h-[16px]">
+                                                        <path
+                                                            d="M313.4 479.1c26-5.2 42.9-30.5 37.7-56.5l-2.3-11.4c-5.3-26.7-15.1-52.1-28.8-75.2l144 0c26.5 0 48-21.5 48-48c0-18.5-10.5-34.6-25.9-42.6C497 236.6 504 223.1 504 208c0-23.4-16.8-42.9-38.9-47.1c4.4-7.3 6.9-15.8 6.9-24.9c0-21.3-13.9-39.4-33.1-45.6c.7-3.3 1.1-6.8 1.1-10.4c0-26.5-21.5-48-48-48l-97.5 0c-19 0-37.5 5.6-53.3 16.1L202.7 73.8C176 91.6 160 121.6 160 153.7l0 38.3 0 48 0 24.9c0 29.2 13.3 56.7 36 75l7.4 5.9c26.5 21.2 44.6 51 51.2 84.2l2.3 11.4c5.2 26 30.5 42.9 56.5 37.7zM32 384l64 0c17.7 0 32-14.3 32-32l0-224c0-17.7-14.3-32-32-32L32 96C14.3 96 0 110.3 0 128L0 352c0 17.7 14.3 32 32 32z" />
+                                                    </svg>
+                                                    <p>Không hữu ích</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex mt-[48px] gap-[45px] border-b border-[#e7e7e7] pb-[24px]">
+                                        <div class="flex flex-col min-w-[190px]">
+                                            <div class="flex items-center gap-[10px] mb-[20px]">
+                                                <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png"
+                                                    class="w-[32px] h-[32px] rounded-full" alt="">
+                                                <span>Anh</span>
+                                            </div>
+                                            <div class="flex items-center gap-[10px] mb-[12px]">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"
+                                                    class="w-[16px] h-[16px]">
+                                                    <path
+                                                        d="M32 32c17.7 0 32 14.3 32 32l0 256 224 0 0-160c0-17.7 14.3-32 32-32l224 0c53 0 96 43 96 96l0 224c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-32-224 0-32 0L64 416l0 32c0 17.7-14.3 32-32 32s-32-14.3-32-32L0 64C0 46.3 14.3 32 32 32zm144 96a80 80 0 1 1 0 160 80 80 0 1 1 0-160z" />
+                                                </svg>
+                                                <p class="text-xs">Phòng Deluxe Giường Đôi</p>
+                                            </div>
+                                            <div class="flex items-center gap-[10px] mb-[12px]">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                                                    class="w-[16px] h-[16px]">
+                                                    <path
+                                                        d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40L64 64C28.7 64 0 92.7 0 128l0 16 0 48L0 448c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-256 0-48 0-16c0-35.3-28.7-64-64-64l-40 0 0-40c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40L152 64l0-40zM48 192l352 0 0 256c0 8.8-7.2 16-16 16L64 464c-8.8 0-16-7.2-16-16l0-256z" />
+                                                </svg>
+                                                <p class="text-xs">1 đêm · tháng 11/2022</p>
+                                            </div>
+                                            <div class="flex items-center gap-[10px] mb-[12px]">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"
+                                                    class="w-[16px] h-[16px]">
+                                                    <path
+                                                        d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192l42.7 0c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0L21.3 320C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7l42.7 0C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3l-213.3 0zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352l117.3 0C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7l-330.7 0c-14.7 0-26.7-11.9-26.7-26.7z" />
+                                                </svg>
+                                                <p class="text-xs">Nhóm</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col w-full">
+                                            <div class="flex justify-between w-full">
+                                                <div>
+                                                    <div class="flex items-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+                                                            class="w-[16px] h-[16px] text-[#946800] mr-[9px]">
+                                                            <path
+                                                                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                                                        </svg>
+                                                        <div class="text-[#946800]">Đánh giá hàng đầu
+                                                            <span class="text-xs text-[#595959]">Ngày đánh giá:
+                                                                ngày 25
+                                                                tháng
+                                                                11 năm
+                                                                2022</span>
+                                                        </div>
+                                                    </div>
+                                                    <h4 class="text-lg font-bold">Xuất sắc</h4>
+                                                </div>
+                                                <div
+                                                    class="w-[38px] h-[38px] bg-[#003c96] flex justify-center items-center text-white rounded-t rounded-br-[4px] mr-[10px]">
+                                                    10
+                                                </div>
+                                            </div>
+                                            <div class="flex gap-2 mt-[24px] items-start">
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                        class="w-[16px] h-[16px]">
+                                                        <path
+                                                            d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+                                                    </svg>
+                                                </div>
+                                                <p>Phòng ở sạch sẽ và rất rộng, thoải mái, các bạn nhân viên rất
+                                                    nhiệt tình. Nói chung đây là một khách sạn tuyệt vời và tôi
+                                                    chắc chắn sẽ ở lại đây một lần nữa!!!</p>
+                                            </div>
+                                            <div class="flex min-h-[80px] max-w-[80px] gap-3 mt-[24px]">
+                                                <img class="w-full h-full object-cover"
+                                                    src="https://fps.cdnpk.net/images/ai/image-generator/advantages/image-generator-freepik-7.webp?w=3840&h=1920&q=75"
+                                                    alt="">
+                                                <img class="w-full h-full object-cover"
+                                                    src="https://fps.cdnpk.net/images/ai/image-generator/advantages/image-generator-freepik-7.webp?w=3840&h=1920&q=75"
+                                                    alt="">
+                                                <img class="w-full h-full object-cover"
+                                                    src="https://fps.cdnpk.net/images/ai/image-generator/advantages/image-generator-freepik-7.webp?w=3840&h=1920&q=75"
+                                                    alt="">
+                                                <img class="w-full h-full object-cover"
+                                                    src="https://fps.cdnpk.net/images/ai/image-generator/advantages/image-generator-freepik-7.webp?w=3840&h=1920&q=75"
+                                                    alt="">
+                                            </div>
+                                            <div class="flex justify-end mt-[24px]">
+                                                <button
+                                                    class="flex items-center py-[4px] px-[8px] text-[#006ce4] gap-[10px] hover:bg-[#eff6fe]">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                        class="w-[16px] h-[16px]">
+                                                        <path
+                                                            d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2l144 0c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48l-97.5 0c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3l0-38.3 0-48 0-24.9c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192l64 0c17.7 0 32 14.3 32 32l0 224c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32L0 224c0-17.7 14.3-32 32-32z" />
+                                                    </svg>
+                                                    <p>Hữu ích</p>
+                                                </button>
+                                                <button
+                                                    class="flex items-center py-[4px] px-[8px] text-[#006ce4] gap-[10px] hover:bg-[#eff6fe]">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                        class="w-[16px] h-[16px]">
+                                                        <path
+                                                            d="M313.4 479.1c26-5.2 42.9-30.5 37.7-56.5l-2.3-11.4c-5.3-26.7-15.1-52.1-28.8-75.2l144 0c26.5 0 48-21.5 48-48c0-18.5-10.5-34.6-25.9-42.6C497 236.6 504 223.1 504 208c0-23.4-16.8-42.9-38.9-47.1c4.4-7.3 6.9-15.8 6.9-24.9c0-21.3-13.9-39.4-33.1-45.6c.7-3.3 1.1-6.8 1.1-10.4c0-26.5-21.5-48-48-48l-97.5 0c-19 0-37.5 5.6-53.3 16.1L202.7 73.8C176 91.6 160 121.6 160 153.7l0 38.3 0 48 0 24.9c0 29.2 13.3 56.7 36 75l7.4 5.9c26.5 21.2 44.6 51 51.2 84.2l2.3 11.4c5.2 26 30.5 42.9 56.5 37.7zM32 384l64 0c17.7 0 32-14.3 32-32l0-224c0-17.7-14.3-32-32-32L32 96C14.3 96 0 110.3 0 128L0 352c0 17.7 14.3 32 32 32z" />
+                                                    </svg>
+                                                    <p>Không hữu ích</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border py-[4px] px-[12px] rounded-md">
+                                    <div class="flex flex-col lg:flex-row justify-between">
+                                        <nav aria-label="Pagination"
+                                            class="flex justify-center items-center text-[#006ce4] mt-8 lg:mt-0">
+                                            <a href="#" class="p-2 mr-4 rounded hover:bg-gray-100"> <svg
+                                                    xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M15 19l-7-7 7-7" />
+                                                </svg> </a> <a href="#" class="px-4 py-2 rounded hover:bg-gray-100"> 1
+                                            </a> <a href="#"
+                                                class="px-4 py-2 rounded bg-gray-200 text-[#006ce4] font-medium hover:bg-gray-100">
+                                                2 </a> <a href="#" class="px-4 py-2 rounded hover:bg-gray-100">
+                                                3 </a> <a href="#" class="px-4 py-2 rounded hover:bg-gray-100">
+                                                ... </a> <a href="#" class="px-4 py-2 rounded hover:bg-gray-100"> 9 </a>
+                                            <a href="#" class="p-2 ml-4 rounded hover:bg-gray-100"> <svg
+                                                    xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M9 5l7 7-7 7" />
+                                                </svg> </a>
+                                        </nav>
+                                        <div class="flex flex-col lg:flex-row items-center space-x-2 text-xs">
+                                            <p class="text-gray-500 text-sm">Đang hiển thị 1 - 10
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const openModalComment = document.getElementById('openModalComment');
+        const modal_comment = document.getElementById('modal_comment');
+        const modalPanel = document.getElementById('modalPanel');
+        const modalOverlay = modal_comment.querySelector('.bg-gray-500');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+
+        // Hàm mở modal
+        function openModal() {
+            modal_comment.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden'); // Ẩn thanh cuộn của body khi modal mở
+            setTimeout(() => {
+                modalPanel.classList.remove('translate-x-full');
+            }, 10);
+        }
+
+        // Hàm đóng modal
+        function closeModal() {
+            modalPanel.classList.add('translate-x-full');
+            setTimeout(() => {
+                modal_comment.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }, 300);
+        }
+
+        // Click btn open modal
+        openModalComment.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal();
+        });
+
+        closeModalBtn.addEventListener('click', closeModal);
+
+        modalOverlay.addEventListener('click', closeModal);
+    </script>
+</body>
+
+</html>

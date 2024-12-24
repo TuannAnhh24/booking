@@ -1,0 +1,1944 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./css/tailwind.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+  <title>Chi tiết</title>
+</head>
+
+<body>
+  <header class="bg-blue-500 rounded-lg shadow p-8 justify-center ">
+    <div class="container mx-auto max-w-screen-lg text-center ">
+      <div class="flex flex-col gap-4 mt-2">
+        <nav class="flex flex-row justify-between items-center text-white ">
+          <!-- Left side navigation -->
+          <div class="">
+            <a href="#" class="text-2xl font-bold">Booking.com</a>
+          </div>
+          <!-- Right side navigation -->
+          <div class="flex space-x-2">
+            <button class="flex items-center text-white font-bold py-2 px-4">
+              VND
+            </button>
+            <button class="flex items-center text-white font-bold py-1 px-2 relative">
+              <img
+                src="./image/pngtree-vietnam-round-flag-glossy-glass-effect-vector-transparent-background-png-image_14464421.png"
+                alt="Flag" class="w-7 h-6" />
+              <span
+                class="absolute bg-black text-white text-xs px-2 py-1 mt-1 rounded-lg shadow-lg z-10 opacity-0 invisible transition-opacity duration-300 left-1/2 transform -translate-x-1/2">Chọn
+                ngôn ngữ</span>
+            </button>
+            <button class="flex items-center text-white font-bold py-1 px-2 relative">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+              </svg>
+            </button>
+            <button class="text-white font-bold">
+              Đăng chỗ nghỉ của Quý vị
+            </button>
+            <a href="#" class="flex items-center bg-white text-blue-500 rounded px-4 py-2">Đăng ký</a>
+            <a href="#" class="flex items-center bg-white text-blue-500 rounded px-4 py-2">Đăng nhập</a>
+          </div>
+        </nav>
+
+        <div class="mb-2">
+          <ul class="flex space-x-4 px-4">
+            <li>
+              <button
+                class="flex items-center justify-center text-white font-bold py-1 px-2 rounded-full transition-colors duration-300 border hover:bg-gray-500 text-sm">
+                <i class="fas fa-bed mr-2"></i> Lưu trú
+              </button>
+            </li>
+            <li>
+              <button
+                class="flex items-center justify-center text-white font-bold py-1 px-2 rounded-full transition-colors duration-300 border border-transparent hover:bg-gray-500 text-sm">
+                <i class="fas fa-plane mr-2"></i> Chuyến bay
+              </button>
+            </li>
+            <li>
+              <button
+                class="flex items-center justify-center text-white font-bold py-1 px-2 rounded-full transition-colors duration-300 border border-transparent hover:bg-gray-500 text-sm">
+                <i class="fas fa-plane mr-2"></i> Chuyến bay + Khách sạn
+              </button>
+            </li>
+            <li>
+              <button
+                class="flex items-center justify-center text-white font-bold py-1 px-2 rounded-full transition-colors duration-300 border border-transparent hover:bg-gray-500 text-sm">
+                <i class="fas fa-car mr-2"></i> Thuê xe
+              </button>
+            </li>
+            <li>
+              <button
+                class="flex items-center justify-stretch text-white font-bold py-1 px-2 rounded-full transition-colors duration-300 border border-transparent hover:bg-gray-500 text-sm">
+                <i class="fas fa-map-marked-alt mr-2"></i> Địa điểm tham quan
+              </button>
+            </li>
+            <li>
+              <button
+                class="flex items-center justify-stretch text-white font-bold py-1 px-2 rounded-full transition-colors duration-300 border border-transparent hover:bg-gray-500 text-sm">
+                <i class="fas fa-taxi mr-2"></i> Taxi sân bay
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="container mx-auto px-4 lg:px-8 max-w-6xl">
+    <div class="flex justify-center transform -translate-y-1/2 ">
+      <form action="#" method="GET" class="bg-yellow-500 p-2 rounded-lg shadow-lg w-full">
+        <div class="flex items-center gap-4">
+          <!-- Destination Input -->
+          <div class="col-span-4 flex items-center border-gray-500 bg-white box-border h-12 w-2/5 p-4 border-2">
+            <div class="flex items-center w-full">
+              <i class="fas fa-bed mr-2"></i>
+              <input type="text" name="ss" id="destination" placeholder="Bạn muốn đến đâu?"
+                class="py-2 pl-2 pr-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-full" />
+            </div>
+          </div>
+      
+          <!-- Date Range Dropdown -->
+          <div class="col-span-3 flex items-center border-gray-500 bg-white box-border h-12 w-2/5 p-4 border-2 relative">
+            <div class="flex items-center w-full">
+              <i class="fas fa-calendar-alt mr-2"></i>
+              <div class="dropdown-trigger relative flex justify-between">
+                <span class="whitespace-nowrap cursor-pointer" id="dateRange">Ngày Chọn: Chọn ngày</span>
+                <svg class="w-6 h-6 text-gray-800 dark:text-white ml-2" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m19 9-7 7-7-7" />
+                </svg>
+              </div>
+              <div id="dateRangeDropdown"
+                class="absolute top-full left-0 mt-1 bg-white border border-gray-300 shadow-lg rounded-lg py-2 px-3 w-56 z-10 hidden">
+                <!-- Date Picker Content -->
+                <div class="flex items-center">
+                  <input type="date" id="startDate" class="py-2 px-3 border border-gray-300 rounded mr-2">
+                  <span>đến</span>
+                  <input type="date" id="endDate" class="py-2 px-3 border border-gray-300 rounded ml-2">
+                </div>
+                <button id="applyDateRange"
+                  class="mt-2 btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                  Áp dụng
+                </button>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Room Selection Dropdown -->
+          <div class="col-span-4 flex items-center bg-white box-border h-12 w-2/5 p-4 border-2 border-gray-500 relative">
+            <div class="flex items-center w-full">
+              <i class="fas fa-user mr-2"></i>
+              <button id="roomDropdownToggle" class="flex items-center focus:outline-none">
+                <span class="whitespace-nowrap" id="selectedRoomOption">2 Người lớn - 0 trẻ em - 1 phòng</span>
+                <svg class="w-6 h-6 text-gray-800 dark:text-white ml-2" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m19 9-7 7-7-7" />
+                </svg>
+              </button>
+      
+              <!-- Dropdown Content -->
+              <div id="roomDropdownContent"
+                class="absolute top-full left-0 mt-1 bg-white border border-gray-300 shadow-lg rounded-lg py-2 px-3 w-full z-10 hidden">
+                <!-- Form for Room Selection -->
+                <form>
+                  <div class="flex items-center">
+                    <div class="flex items-center border border-gray-300 rounded py-1 px-2">
+                      <button type="button" id="decrementRooms"
+                        class="text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900">-</button>
+                      <input type="text" id="numberOfRooms" value="1"
+                        class="py-2 px-3 text-gray-700 leading-tight focus:outline-none bg-transparent">
+                      <button type="button" id="incrementRooms"
+                        class="text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900">+</button>
+                    </div>
+                    <span class="ml-4">Phòng</span>
+                  </div>
+                  <div class="flex items-center mt-2">
+                    <div class="flex items-center border border-gray-300 rounded py-1 px-2">
+                      <button type="button" id="decrementAdults"
+                        class="text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900">-</button>
+                      <input type="text" id="numberOfAdults" value="2"
+                        class="py-2 px-3 text-gray-700 leading-tight focus:outline-none bg-transparent">
+                      <button type="button" id="incrementAdults"
+                        class="text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900">+</button>
+                    </div>
+                    <span class="ml-4">Người lớn</span>
+                  </div>
+                  <div class="flex items-center mt-2" id="childrenContainer">
+                    <div class="flex items-center border border-gray-300 rounded py-1 px-2">
+                      <button type="button" id="decrementChildren"
+                        class="text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900">-</button>
+                      <input type="text" id="numberOfChildren" value="0"
+                        class="py-2 px-3 text-gray-700 leading-tight focus:outline-none bg-transparent">
+                      <button type="button" id="incrementChildren"
+                        class="text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900">+</button>
+                    </div>
+                    <span class="ml-4">Trẻ em</span>
+                  </div>
+                  <div id="childrenAgesContainer" class="mt-2 hidden">
+                    <div class="flex items-center mt-2">
+                      <select id="childrenAge" class="py-2 px-3 border border-gray-300 rounded mr-2">
+                        <option value="1">Dưới 1 tuổi</option>
+                        <option value="2">1 - 3 tuổi</option>
+                        <option value="3">4 - 6 tuổi</option>
+                        <option value="4">Trên 6 tuổi</option>
+                      </select>
+                      <button type="button" id="addChildAge"
+                        class="btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                        Thêm
+                      </button>
+                    </div>
+                  </div>
+                  <div class="mt-2">
+                    <button type="button" id="applyRoomSelection"
+                      class="btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                      Xong
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Search Button -->
+          <div class="col-span-1">
+            <button type="submit"
+              class="btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+              Tìm
+            </button>
+          </div>
+        </div>
+      </form>
+      
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          // Lấy ngày hôm nay
+          const today = new Date();
+          
+          // Lấy ngày sau 1 tuần
+          const nextWeek = new Date();
+          nextWeek.setDate(today.getDate() + 7);
+          
+          // Định dạng ngày tháng về dạng DD/MM để sử dụng trong input type="date"
+          const todayFormatted = formatDate(today);
+          const nextWeekFormatted = formatDate(nextWeek);
+          
+          // Lấy chuỗi thứ và ngày tháng
+          const todayDayOfWeek = getDayOfWeek(today);
+          const nextWeekDayOfWeek = getDayOfWeek(nextWeek);
+          
+          // Hiển thị ngày mặc định trên UI
+          const dateRange = document.getElementById('dateRange');
+          dateRange.textContent = `Thứ ${todayDayOfWeek}, ngày ${todayFormatted} - Thứ ${nextWeekDayOfWeek}, ngày ${nextWeekFormatted}`;
+          
+          // Đặt giá trị cho input type="date" nếu cần
+          document.getElementById('startDate').value = todayFormatted;
+          document.getElementById('endDate').value = nextWeekFormatted;
+        });
+        
+        // Hàm chuyển đổi ngày thành dạng DD/MM
+        function formatDate(date) {
+          let day = date.getDate();
+          let month = date.getMonth() + 1;
+        
+          if (day < 10) {
+            day = `0${day}`;
+          }
+        
+          if (month < 10) {
+            month = `0${month}`;
+          }
+        
+          return `${day}/${month}`;
+        }
+        
+        // Hàm lấy chuỗi thứ từ ngày
+        function getDayOfWeek(date) {
+          const days = ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'];
+          return days[date.getDay()];
+        }
+      
+        document.addEventListener('DOMContentLoaded', function () {
+          const dateRangeDropdown = document.getElementById('dateRangeDropdown');
+          const dateRangeTrigger = document.getElementById('dateRange');
+      
+          dateRangeTrigger.addEventListener('click', function () {
+            dateRangeDropdown.classList.toggle('hidden');
+          });
+      
+          document.addEventListener('click', function (event) {
+            if (!dateRangeTrigger.contains(event.target) && !dateRangeDropdown.contains(event.target)) {
+              dateRangeDropdown.classList.add('hidden');
+            }
+          });
+      
+          const roomDropdownToggle = document.getElementById('roomDropdownToggle');
+          const roomDropdownContent = document.getElementById('roomDropdownContent');
+          const selectedRoomOption = document.getElementById('selectedRoomOption');
+      
+          roomDropdownToggle.addEventListener('click', function () {
+            roomDropdownContent.classList.toggle('hidden');
+          });
+      
+          document.addEventListener('click', function (event) {
+            if (!roomDropdownToggle.contains(event.target) && !roomDropdownContent.contains(event.target)) {
+              roomDropdownContent.classList.add('hidden');
+            }
+          });
+      
+          // Increment and Decrement Buttons
+          const incrementButtons = document.querySelectorAll('[id^="increment"]');
+          const decrementButtons = document.querySelectorAll('[id^="decrement"]');
+          const numberInputs = document.querySelectorAll('[id^="numberOf"]');
+      
+          incrementButtons.forEach(button => {
+            button.addEventListener('click', function () {
+              const input = button.parentNode.querySelector('input[type="text"]');
+              let value = parseInt(input.value, 10);
+              input.value = ++value;
+              if (input.id === 'numberOfChildren') {
+                toggleChildrenAgesInput(value > 0);
+              }
+            });
+          });
+      
+          decrementButtons.forEach(button => {
+            button.addEventListener('click', function () {
+              const input = button.parentNode.querySelector('input[type="text"]');
+              let value = parseInt(input.value, 10);
+              if (value > 0) {
+                input.value = --value;
+                if (input.id === 'numberOfChildren') {
+                  toggleChildrenAgesInput(value > 0);
+                }
+              }
+            });
+          });
+      
+          // Handle room option selection
+          const roomOptions = document.querySelectorAll('.flex.items-center.cursor-pointer');
+          roomOptions.forEach(option => {
+            option.addEventListener('click', function () {
+              roomDropdownContent.classList.add('hidden');
+              const optionText = option.querySelector('span').textContent.trim();
+              selectedRoomOption.textContent = optionText;
+            });
+          });
+      
+          // Apply Room Selection Button
+          const applyRoomSelection = document.getElementById('applyRoomSelection');
+          applyRoomSelection.addEventListener('click', function () {
+            const numberOfRooms = document.getElementById('numberOfRooms').value;
+            const numberOfAdults = document.getElementById('numberOfAdults').value;
+            const numberOfChildren = document.getElementById('numberOfChildren').value;
+            selectedRoomOption.textContent = `${numberOfAdults} Người lớn - ${numberOfChildren} trẻ em - ${numberOfRooms} phòng`;
+      
+            const childrenAgesContainer = document.getElementById('childrenAgesContainer');
+            const childrenContainer = document.getElementById('childrenContainer');
+            if (parseInt(numberOfChildren) > 0) {
+              childrenContainer.style.display = 'flex';
+              toggleChildrenAgesInput(true);
+            } else {
+              childrenContainer.style.display = 'none';
+              childrenAgesContainer.classList.add('hidden');
+            }
+            roomDropdownContent.classList.add('hidden');
+          });
+      
+          // Toggle Children Ages Input
+          function toggleChildrenAgesInput(show) {
+            const childrenAgesContainer = document.getElementById('childrenAgesContainer');
+            childrenAgesContainer.classList.toggle('hidden', !show);
+          }
+      
+          // Add Child Age Button
+          const addChildAgeButton = document.getElementById('addChildAge');
+          addChildAgeButton.addEventListener('click', function () {
+            const childrenAgeSelect = document.getElementById('childrenAge');
+            const selectedOption = childrenAgeSelect.options[childrenAgeSelect.selectedIndex].text;
+            const childrenAgesContainer = document.getElementById('childrenAgesContainer');
+            const childrenAgesList = document.createElement('ul');
+            childrenAgesList.classList.add('list-disc', 'list-inside', 'mt-2');
+      
+            const listItem = document.createElement('li');
+            listItem.textContent = selectedOption;
+            childrenAgesList.appendChild(listItem);
+            childrenAgesContainer.appendChild(childrenAgesList);
+          });
+      
+        });
+      </script>
+      
+
+
+
+    </div>
+    <div>
+      <nav>
+        <ol class="flex space-x-2">
+          <li class="flex items-center">
+            <a href="#" class="text-blue-500">Trang chủ</a>
+            <span class="text-gray-400">&gt;</span>
+          </li>
+          <li class="flex items-center">
+            <a href="#" class="text-blue-500">Khách sạn</a>
+            <span class="text-gray-400">&gt;</span>
+          </li>
+          <li class="flex items-center">
+            <a href="#" class="text-blue-500">Việt Nam</a>
+            <span class="text-gray-400">&gt;</span>
+          </li>
+          <li class="flex items-center">
+            <a href="#" class="text-blue-500">Hà Nội</a>
+            <span class="text-gray-400">&gt;</span>
+          </li>
+          <li class="flex items-center">
+            <a href="#" class="text-blue-500">Hoàn Kiếm</a>
+            <span class="text-gray-400">&gt;</span>
+          </li>
+          <li class="flex items-center">
+            <a href="#" class="text-blue-500">Ưu đãi cho Eliana Signature Hanoi Hotel (Khách sạn), Hà Nội
+              (Việt Nam)</a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <div>
+      <div>
+        <nav class="py-4">
+          <ul class="flex justify-between px-4">
+            <li class="flex-1 text-center">
+              <a href="#overview" class="block py-2 hover:bg-gray-200">
+                <span class="inline-block">Tổng quan</span>
+              </a>
+            </li>
+            <li class="flex-1 text-center">
+              <a href="#price-info" class="block py-2 hover:bg-gray-200">
+                <span class="inline-block">Thông tin giá</span>
+              </a>
+            </li>
+            <li class="flex-1 text-center">
+              <a href="#amenities" class="block py-2 hover:bg-gray-200">
+                <span class="inline-block">Tiện nghi</span>
+              </a>
+            </li>
+            <li class="flex-1 text-center">
+              <a href="#reviews" class="block py-2 hover:bg-gray-200">
+                <span class="inline-block">Đánh giá</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Nội dung phần tổng quan -->
+        <section id="overview">
+          <div class="grid grid-cols-10 gap-4">
+            <!-- Cột 1 -->
+            <div class="col-span-7 grid grid-rows- gap-4">
+              <div class="flex items-center">
+                <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+                <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+                <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+                <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+                <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+                <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+
+                <span><i class="fas fa-thumbs-up"></i></span>
+              </div>
+
+              <div class="flex items-center ">
+                <h2 class="text-xl font-bold">Welcome Hotel</h2>
+              </div>
+              <div class="flex items-center justify-start space-x-2">
+                <i class="fas fa-map-marker-alt text-blue-500"></i>
+                <p>66 Lê Trọng Tấn</p>
+                <span class="text-blue-500 font-bold">-<a href="">Vị trí xuất sắc-hiển thị bản đồ</a></span>
+              </div>
+            </div>
+
+            <!-- Cột 2 -->
+            <div class="col-span-3 grid grid-rows-2 gap-4">
+              <div class="flex items-center justify-end space-x-2">
+                <button class="flex items-center justify-center bg-gray-200 text-gray-700 rounded-full w-10 h-10">
+                  <span><i class="fas fa-heart"></i></span>
+                </button>
+                <button class="flex items-center justify-center bg-gray-200 text-gray-700 rounded-full w-10 h-10">
+                  <span><i class="fas fa-share"></i></span>
+                </button>
+                <button type="submit"
+                  class="flex items-center justify-center bg-blue-800 text-white rounded-full px-4 py-2">
+                  <span>Đặt ngay</span>
+                </button>
+              </div>
+
+              <div class="flex items-center justify-end space-x-2">
+                <span><i class="fas fa-tag"></i></span>
+                <span class="text-blue-500">Chúng tôi luôn khớp giá</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-5 gap-2">
+            <div class="col-span-4 lg:col-span-4 w-full h-full">
+              <div class="grid gap-4">
+                <div class="flex flex-row gap-2">
+                  <div class="flex flex-col w-1/2">
+                    <div class="w-full h-full mb-2">
+                      <img class="h-auto w-full rounded-lg"
+                        src="https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg" alt="" />
+                    </div>
+                    <div class="w-full">
+                      <img class="h-auto w-full rounded-lg"
+                        src="https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="w-full">
+                    <img class="h-full w-full rounded-lg"
+                      src="https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg" alt="" />
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-5 gap-4">
+                  <div>
+                    <img class="h-auto max-w-full rounded-lg"
+                      src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="" />
+                  </div>
+                  <div>
+                    <img class="h-auto max-w-full rounded-lg"
+                      src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="" />
+                  </div>
+                  <div>
+                    <img class="h-auto max-w-full rounded-lg"
+                      src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="" />
+                  </div>
+                  <div>
+                    <img class="h-auto max-w-full rounded-lg"
+                      src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" alt="" />
+                  </div>
+                  <div>
+                    <img class="h-auto max-w-full rounded-lg"
+                      src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-span-1 lg:col-span-1  w-full border">
+              <div class="grid grid-rows-2 ">
+                <div class="row-span-1">
+                  <div class="flex justify-end border">
+                    <div class="grid">
+                      <div class="flex justify-end ">
+                        <h2 class="text-lg font-bold  ">
+                          Tuyệt hảo
+                        </h2>
+                      </div>
+                      <div class="flex justify-end">
+                        <span class="text-xs">1001 đánh giá</span>
+                      </div>
+                    </div>
+                    <div class="flex justify-end items-center px-2 py-1">
+                      <button class="px-2 py-1 rounded-lg bg-green-500 ">
+                        <span class="text-lg font-bold">9,3</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="container mx-auto max-w-6xl overflow-hidden relative ">
+                    <div id="carousel" class="flex transition-transform duration-300 ease-out w-full">
+                      <div class="border flex-shrink-0 w-full p-4 h-30 ">
+                        <textarea name="" id="" class="content-none w-full h-20">Rộng rãi sạch đẹp</textarea>
+                        <div class="flex gap-2">
+                          <div class="rounded-none">
+                            <img
+                              src="./image/pngtree-vietnam-round-flag-glossy-glass-effect-vector-transparent-background-png-image_14464421.png"
+                              alt="" width="20px" />
+                          </div>
+                          <p>An</p>
+                          <div class="rounded-none">
+                            <img
+                              src="./image/pngtree-vietnam-round-flag-glossy-glass-effect-vector-transparent-background-png-image_14464421.png"
+                              alt="" width="15px" />
+                          </div>
+                          <p>Đài Loàn</p>
+                        </div>
+                      </div>
+                      <div class="border flex-shrink-0 w-full p-4 h-30">
+                        <textarea name="" id="" class="content-none w-full h-20">Rộng rãi sạch đẹp</textarea>
+                        <div class="flex gap-2">
+                          <div class="rounded-none">
+                            <img
+                              src="./image/pngtree-vietnam-round-flag-glossy-glass-effect-vector-transparent-background-png-image_14464421.png"
+                              alt="" width="20px" />
+                          </div>
+                          <p>An</p>
+                          <div class="rounded-none">
+                            <img
+                              src="./image/pngtree-vietnam-round-flag-glossy-glass-effect-vector-transparent-background-png-image_14464421.png"
+                              alt="" width="15px" />
+                          </div>
+                          <p class="text-sm">Đài Loàn</p>
+                        </div>
+                      </div>
+                    </div>
+                    <button id="prev"
+                      class="absolute top-1/2 left-0 transform -translate-y-1/2 rounded-full bg-white text-white px-4 py-2">
+                      <span class="text-black"><i class="fas fa-angle-left"></i></span>
+                    </button>
+                    <button id="next"
+                      class="absolute top-1/2 right-0 transform -translate-y-1/2 rounded-full bg-white text-white px-4 py-2">
+                      <span class="text-black"><i class="fas fa-angle-right"></i></span>
+                    </button>
+                  </div>
+                  <div class="border flex justify-between items-center px-2 py-1 mt-2 mb-2">
+                    <p class="text-sm font-bold text-center">Nhân viên phục vụ</p>
+                    <span class="border border-slate-400 px-2 py-1">9,8</span>
+                  </div>
+                </div>
+
+                <div class="row-span-1">
+                  <div class="relative w-full h-48">
+                    <button id="openMapModal" class="absolute inset-0 bg-cover bg-center focus:outline-none">
+                      <img
+                        src="https://maps.googleapis.com/maps/api/staticmap?center=21.0316113%2C105.8548057&zoom=13&size=261x180&key=YOUR_GOOGLE_MAPS_API_KEY"
+                        class="w-full h-full object-cover" alt="Map">
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Modal -->
+                <div id="mapModal"
+                  class="fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center bg-gray-800 bg-opacity-50 z-50 hidden">
+                  <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="bg-white p-4 rounded-lg shadow-lg relative">
+                      <iframe id="mapEmbed" width="600" height="400" style="border: 0;" allowfullscreen
+                        loading="lazy"></iframe>
+                      <button id="closeMapModal"
+                        class="absolute top-2 right-2 text-gray-600 hover:text-gray-800 focus:outline-none">
+                        <i class="fas fa-times"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <script>
+                  document.addEventListener('DOMContentLoaded', function () {
+                    const openMapModalButton = document.getElementById('openMapModal');
+                    const closeMapModalButton = document.getElementById('closeMapModal');
+                    const mapModal = document.getElementById('mapModal');
+                    const mapEmbed = document.getElementById('mapEmbed');
+
+                    openMapModalButton.addEventListener('click', function () {
+                      mapEmbed.src = `https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=place_id:ChIJdd4hrwug2jERIKizQYm1LOA`;
+                      mapModal.classList.remove('hidden');
+                    });
+
+                    closeMapModalButton.addEventListener('click', function () {
+                      mapEmbed.src = '';
+                      mapModal.classList.add('hidden');
+                    });
+                  });
+                </script>
+
+
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-4 border mb-4">
+            <div class="flex-initial w-2/3">
+              <p class="text-sm">
+                Bạn đủ điều kiện nhận giảm giá Genius tại Eliana Signature
+                Hanoi Hotel! Để tiết kiệm tại chỗ nghỉ này, bạn chỉ cần
+                <a href="">Đăng nhập</a>
+              </p>
+              <div>
+                <p>
+                  Với sân hiên, Eliana Signature Hanoi Hotel nằm ở trung tâm
+                  Hà Nội và cách Nhà hát múa rối Thăng Long 2 phút đi bộ.
+                  Khách sạn 4 sao này có bàn bán tour và phòng giữ hành lý.
+                  Chỗ nghỉ cung cấp lễ tân 24/24, dịch vụ đưa đón sân bay,
+                  dịch vụ tiền sảnh và Wi-Fi miễn phí ở toàn bộ chỗ nghỉ.
+                </p>
+                <p>
+                  Khách sạn sẽ cung cấp cho khách các phòng được trang bị điều
+                  hòa có bàn làm việc, ấm đun nước, tủ lạnh, minibar, két an
+                  toàn, TV màn hình phẳng và phòng tắm riêng với vòi xịt/chậu
+                  rửa vệ sinh.
+                </p>
+                <p>
+                  Khách có thể thưởng thức bữa sáng thực đơn buffet, thực đơn
+                  à la carte hoặc kiểu Anh/ Ai-len tại chỗ nghỉ.
+                </p>
+                <p>
+                  Các điểm tham quan nổi tiếng gần Eliana Signature Hanoi
+                  Hotel bao gồm Hồ Hoàn Kiếm, Ô Quan Chưởng và Nhà hát Lớn Hà
+                  Nội. Sân bay gần nhất là Sân bay Quốc tế Nội Bài, cách chỗ
+                  nghỉ 24 km.
+                </p>
+                <p>
+                  Các cặp đôi đặc biệt thích địa điểm này — họ cho điểm
+                  <strong>9,8</strong> khi đánh giá chuyến đi 2 người
+                </p>
+                <p>
+                  Các khoảng cách nêu trong mô tả chỗ nghỉ được tính toán bằng
+                  © OpenStreetMap
+                </p>
+              </div>
+              <div>
+                <h2 class="text-lg font-bold mt-4">
+                  các tiện nghi được ưa chuộng nhất
+                </h2>
+                <ul class="flex flex-wrap">
+                  <li class="p-2">
+                    <div class="inline-flex items-center gap-2 p-2 rounded-lg hover:border border-green-200">
+                      <i class="fas fa-shuttle-van text-lg text-green-500"></i>
+                      <span class="text-sm">Xe đưa đón sân bay</span>
+                    </div>
+                  </li>
+                  <li class="p-2">
+                    <div class="inline-flex items-center gap-2 p-2 rounded-lg hover:border border-green-200">
+                      <i class="fas fa-smoking-ban text-lg text-green-500"></i>
+                      <span class="text-sm">Phòng không hút thuốc</span>
+                    </div>
+                  </li>
+                  <li class="p-2">
+                    <div class="inline-flex items-center gap-2 p-2 rounded-lg hover:border border-green-200">
+                      <i class="fas fa-spa text-lg text-green-500"></i>
+                      <span class="text-sm">Trung tâm Spa & chăm sóc sức khỏe</span>
+                    </div>
+                  </li>
+                  <li class="p-2">
+                    <div class="inline-flex items-center gap-2 p-2 rounded-lg hover:border border-green-200">
+                      <i class="fas fa-wifi text-lg text-green-500"></i>
+                      <span class="text-sm">WiFi miễn phí</span>
+                    </div>
+                  </li>
+                  <li class="p-2">
+                    <div class="inline-flex items-center gap-2 p-2 rounded-lg hover:border border-green-200">
+                      <i class="fas fa-bed text-lg text-green-500"></i>
+                      <span class="text-sm">Phòng gia đình</span>
+                    </div>
+                  </li>
+                  <li class="p-2">
+                    <div class="inline-flex items-center gap-2 p-2 rounded-lg hover:border border-green-200">
+                      <i class="fas fa-clock text-lg text-green-500"></i>
+                      <span class="text-sm">Lễ tân 24h</span>
+                    </div>
+                  </li>
+                  <li class="p-2">
+                    <div class="inline-flex items-center gap-2 p-2 rounded-lg hover:border border-green-200">
+                      <i class="fas fa-sun text-lg text-green-500"></i>
+                      <span class="text-sm">Sân thượng/hiên</span>
+                    </div>
+                  </li>
+                  <li class="p-2">
+                    <div class="inline-flex items-center gap-2 p-2 rounded-lg hover:border border-green-200">
+                      <i class="fas fa-caret-square-up text-lg text-green-500"></i>
+                      <span class="text-sm">Thang máy</span>
+                    </div>
+                  </li>
+                  <li class="p-2">
+                    <div class="inline-flex items-center gap-2 p-2 rounded-lg hover:border border-green-200">
+                      <i class="fas fa-coffee text-lg text-green-500"></i>
+                      <span class="text-sm">Máy pha cà phê trong tất cả các phòng</span>
+                    </div>
+                  </li>
+                  <li class="p-2">
+                    <div class="inline-flex items-center gap-2 p-2 rounded-lg hover:border border-green-200">
+                      <i class="fas fa-mug-hot text-lg text-green-500"></i>
+                      <span class="text-sm">Bữa sáng tuyệt vời</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="flex-initial w-1/3 text-sm p-4">
+              <div class="bg-blue-50">
+                <div class="p-2">
+                  <h3 class="text-lg font-bold">Điểm nổi bật của chỗ nghỉ</h3>
+                </div>
+                <div class="p-2">
+                  <h4 class="text-lg font-bold">
+                    Hoàn hảo cho kỳ nghỉ 1 đêm
+                  </h4>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fas fa-check"></i>
+                  <p class="text-sm">
+                    Nằm ngay trung tâm Hà Nội, khách sạn này có điểm vị trí
+                    tuyệt vời 9,7
+                  </p>
+                </div>
+                <div class="p-2">
+                  <h4 class="text-lg font-bold">Thông tin về bữa sáng</h4>
+                </div>
+                <div class="p-2">
+                  <span>Kiểu Anh/ Ai Len, Thực đơn chay, Thực đơn chay không
+                    trứng, sữa, Kiêng Gluten, Kiểu Á, Tự chọn, Bữa sáng mang
+                    đi</span>
+                </div>
+                <div class="p-2">
+                  <h4 class="text-lg font-bold">Phòng có:</h4>
+                </div>
+                <div class="flex items-center gap-2 p-2">
+                  <i class="fas fa-home"></i>
+                  <p>Nhìn ra thành phố</p>
+                </div>
+                <div class="p-4">
+                  <button class="w-full bg-blue-500 text-white px-4 py-2 mt-4 rounded-md">
+                    Đặt ngay
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-between border p-4">
+            <div class="flex flex-col justify-between">
+              <div class="mb-2">
+                <h1 class="text-xl font-bold">Đăng nhập để tiết kiệm</h1>
+                <!-- Chỉnh cỡ chữ h1 -->
+              </div>
+              <div class="mb-2">
+                <p class="text-xs">
+                  Cơ hội tiết kiệm 10% trở lên tại chỗ nghỉ này khi đăng nhập
+                </p>
+                <!-- Chỉnh cỡ chữ p -->
+              </div>
+              <div class="flex items-center gap-4">
+                <a href="#" class="btn border border-blue-500 py-2 px-4 text-sm rounded-full text-blue-500">Đăng
+                  nhập</a>
+                <a href="#" class="text-xs hover:underline hover:text-blue-500 text-blue-500">Tạo tài khoản</a>
+              </div>
+            </div>
+
+            <div class="flex">
+              <img src="./image/4.jpg" alt="" height="104px" width="104px" />
+            </div>
+          </div>
+        </section>
+        <!-- Nội dung phần thông tin giá -->
+        <section id="price-info" class="p-4">
+          <div class="flex justify-between">
+            <div>
+              <h2 class="text-2xl font-bold">Phòng trống</h2>
+            </div>
+            <div class="flex gap-2">
+              <div><i class="fas fa-tags text-blue-500"></i></div>
+              <div>
+                <span class="text-blue-500">Chúng tôi luôn khớp giá</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-start items-center w-full mt-4 mb-2">
+            <div class="col-span-3 flex items-center border-yellow-500 box-border h-12 p-4 border-2">
+              <div class="flex items-center w-full">
+                <i class="fas fa-calendar-alt mr-2"></i>
+                <button><span>CN, 14 tháng 7</span></button>
+                <span>-</span>
+                <button><span>CN, 14 tháng 8</span></button>
+              </div>
+            </div>
+            <div class="flex items-center bg-white box-border h-12 p-4 border-2 border-yellow-500 w-3xl">
+              <div class="flex justify-between items-center w-full">
+                <i class="fas fa-user mr-2"></i>
+                <button><span>2 Người lớn - 0 trẻ em - 1 phòng</span></button>
+              </div>
+              <div>
+                <p>&#x25BE;</p>
+              </div>
+            </div>
+            <div class="col-span-1">
+              <button type="submit"
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded focus:outline-none focus:shadow-outline w-">
+                Thay đổi tìm kiếm
+              </button>
+            </div>
+          </div>
+          <div class="text-xl font-bold">
+            <h2>Lọc theo:</h2>
+          </div>
+          <div class="flex">
+            <div class="mr-4">
+              <label class="flex items-center">
+                <input type="checkbox" class="form-checkbox h-4 w-4 text-blue-500" />
+                <span class="ml-2">Phòng</span>
+              </label>
+            </div>
+            <div>
+              <label class="flex items-center">
+                <input type="checkbox" class="form-checkbox h-4 w-4 text-blue-500" />
+                <span class="ml-2">Suite</span>
+              </label>
+            </div>
+          </div>
+          <!-- table -->
+          <div class="container mx-auto px-4 lg:px-8 max-w-6xl">
+            <form action="">
+              <div class="flex justify-between ">
+                <div>
+                  <table class=" table-auto  w-full border border-blue-500">
+                    <thead class="bg-blue-500 text-white">
+                      <tr>
+                        <th scope="col"
+                          class=" border-2 border-green-500 text-left text-xs font-medium text-white uppercase tracking-wider">
+                          Loại chỗ nghỉ
+                        </th>
+                        <th scope="col"
+                          class=" border-2 border-green-500 text-left text-xs font-medium text-white uppercase tracking-wider">
+                          Số lượng khách
+                        </th>
+                        <th scope="col"
+                          class="border-2 border-green-500 text-left text-xs font-medium text-white uppercase tracking-wider">
+                          Giá hôm nay
+                        </th>
+                        <th scope="col"
+                          class="border-2 border-green-500 text-left text-xs font-medium text-white uppercase tracking-wider">
+                          Các lựa chọn
+                        </th>
+                        <th scope="col"
+                          class="border-2 border-green-500 text-left text-xs font-medium text-white uppercase tracking-wider">
+                          Chọn phòng
+                        </th>
+                        <th scope="col"
+                          class="border-2 border-green-500 text-left text-xs font-medium text-white uppercase tracking-wider">
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200 border-blue-500">
+                      <!-- Dữ liệu cho các hàng trong bảng -->
+                      <tr class="">
+                        <td class="px-6 py-4 whitespace-nowrap border border-blue-500" rowspan="2">
+                          <div>
+                            <div class="">
+                              <a href=""><span class="font-bold text-blue-500 underline">Phòng Deluxe Giường
+                                  Đôi</span></a>
+                            </div>
+                            <div>
+                              <span class="text-red-500 font-bold text-sm"><i class="fas fa-circle"></i>Chỉ còn 3 phòng
+                                trên trang
+                                của chúng tôi</span>
+                            </div>
+                            <ul class="">
+                              <li>
+                                <span> 1 giường đôi lớn <i class="fas fa-bed-pulse"></i></span>
+                              </li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2 p-2">
+                              <div><span><i class="fas fa-door-open"></i>Phòng</span></div>
+                              <div><span><i class="fas fa-house-user"></i>18m2</span></div>
+                              <div><span><i class="fas fa-snowflake"></i>Điều hòa không khí</span></div>
+                              <div><span><i class="fas fa-bath"></i>Phòng tắm riêng trong phòng</span></div>
+                              <div><span><i class="fas fa-tv"></i>TV màn hình phẳng</span></div>
+                              <div><span><i class="fas fa-mug-saucer"></i>Minibar</span></div>
+                            </div>
+                            <ul class="flex flex-wrap p-2">
+                              <li class="">
+                                <div class="inline-flex items-center ">
+                                  <span class="inline-flex items-center  text-sm">
+                                    <i class="fas fa-check text-green-500"></i> Đồ vệ sinh cá nhân miễn phí
+                                  </span>
+                                </div>
+                              </li>
+                              <li class=" flex-basis ">
+                                <div class="inline-flex items-center ">
+                                  <span class="inline-flex items-center text-sm">
+                                    <i class="fas fa-check text-green-500"></i> Áo choàng tắm
+                                  </span>
+                                </div>
+                              </li>
+                              <li class=" flex-basis ">
+                                <div class="inline-flex items-center ">
+                                  <span class="inline-flex items-center text-sm">
+                                    <i class="fas fa-check text-green-500"></i> Két an toàn
+                                  </span>
+                                </div>
+                              </li>
+                              <li class=" ">
+                                <div class="inline-flex items-center ">
+                                  <span class="inline-flex items-center text-sm">
+                                    <i class="fas fa-check text-green-500"></i> Chậu rửa vệ sinh
+                                  </span>
+                                </div>
+                              </li>
+                              <li class=" ">
+                                <div class="inline-flex items-center ">
+                                  <span class="inline-flex items-center text-sm">
+                                    <i class="fas fa-check text-green-500"></i> Nhà vệ sinh
+                                  </span>
+                                </div>
+                              </li>
+                              <li class="">
+                                <div class="inline-flex items-center ">
+                                  <span class="inline-flex items-center text-sm">
+                                    <i class="fas fa-check text-green-500"></i> Bồn tắm hoặc vòi sen
+                                  </span>
+                                </div>
+                              </li>
+                              <li class="">
+                                <div class="inline-flex items-center ">
+                                  <span class="inline-flex items-center text-sm">
+                                    <i class="fas fa-check text-green-500"></i> Bàn làm việc
+                                  </span>
+                                </div>
+                              </li>
+                              <li class="">
+                                <div class="inline-flex items-center ">
+                                  <span class="inline-flex items-center text-sm">
+                                    <i class="fas fa-check text-green-500"></i> Dép
+                                  </span>
+                                </div>
+                              </li>
+                              <li class="">
+                                <div class="inline-flex items-center ">
+                                  <span class="inline-flex items-center text-sm">
+                                    <i class="fas fa-check text-green-500"></i> Tủ lạnh
+                                  </span>
+                                </div>
+                              </li>
+                              <li class="">
+                                <div class="inline-flex items-center ">
+                                  <span class="inline-flex items-center text-sm">
+                                    <i class="fas fa-check text-green-500"></i> Máy pha trà cà phê
+                                  </span>
+                                </div>
+                              </li>
+                              <li class="">
+                                <div class="inline-flex items-center ">
+                                  <span class="inline-flex items-center text-sm">
+                                    <i class="fas fa-check text-green-500"></i> Hệ thống sưởi
+                                  </span>
+                                </div>
+                              </li>
+                              <li class="">
+                                <div class="inline-flex items-center ">
+                                  <span class="inline-flex items-center text-sm">
+                                    <i class="fas fa-check text-green-500"></i> Máy sấy tóc
+                                  </span>
+                                </div>
+                              </li>
+                              <li class="">
+                                <div class="inline-flex items-center ">
+                                  <span class="inline-flex items-center text-sm">
+                                    <i class="fas fa-check text-green-500"></i> Ấm đun nước điện
+                                  </span>
+                                </div>
+                              </li>
+                              <li class="">
+                                <div class="inline-flex items-center ">
+                                  <span class="inline-flex items-center text-sm">
+                                    <i class="fas fa-check text-green-500"></i> Giấy vệ sinh
+                                  </span>
+                                </div>
+                              </li>
+                            </ul>
+
+                          </div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap border border-blue-500">
+                          <div>
+                            <i class="fas fa-user"></i>
+                          </div>
+                        </td>
+                        <td class="whitespace-nowrap border border-blue-500 mt-0">
+                          <div class="bg-white  rounded-md mt-0">
+                            <div class="">
+                              <span class="text-xs text-red-500 line-through">VND 7.500.000</span>
+                            </div>
+                            <div class="">
+                              <h3 class="text-sm font-bold text-black">
+                                VND 1.650.000
+                              </h3>
+                            </div>
+                            <div class="flex flex-col items-start">
+                              <div class="inline-flex items-center bg-green-500 rounded-full px-2 mb-1">
+                                <span class="text-white font-medium text-xs">tiết kiệm 78%</span>
+                              </div>
+                              <div class="inline-flex items-center bg-green-500 rounded-full px-2">
+                                <span class="text-white font-medium text-xs">Ưu Đãi Trong Thời Gian Có hạn</span>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+
+
+                        <td class="  border border-blue-500 ">
+                          <div class=" ">
+                            <ul>
+                              <li>
+                                <div>
+                                  <i class="fas fa-coffee"></i>Bữa sáng
+                                  <span class="font-bold">Tuyệt vời</span> - VND 123.000
+                                </div>
+                              </li>
+                              <li>
+                                <div class="text-green-500">
+                                  <i class="fas fa-check"></i><span class="font-bold">Miễn phí bất kỳ lúc nào</span> bất
+                                  kỳ lúc nào
+                                </div>
+                              </li>
+                              <li>
+                                <div class="text-green-500">
+                                  <i class="fas fa-check"></i><span class="font-bold">Không cần thanh toán trước</span>
+                                  thanh toán
+                                  tại chỗ nghỉ
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap border border-blue-500">
+                          <select class="border border-black text-black px-4 py-2 rounded-md">
+                            <option value=""></option>
+
+                            <option value="500000">Phòng giá 500,000 VND</option>
+                            <option value="600000">Phòng giá 600,000 VND</option>
+                            <option value="700000">Phòng giá 700,000 VND</option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="px-6 py-4 whitespace-nowrap border border-blue-500">
+                          <div>
+                            <i class="fas fa-user"></i><i class="fas fa-user"></i>
+                          </div>
+                        </td>
+                        <td class="px-3 py-2 whitespace-nowrap border border-blue-500">
+                          <div class="bg-white">
+                            <div class="p-2">
+                              <span class="text-sm text-red-500 line-through">VND 7.500.000</span>
+                            </div>
+                            <div class="">
+                              <h3 class="text-xl font-bold text-black">
+                                VND 1.650.000
+                              </h3>
+                            </div>
+                            <div class=" flex flex-col items-start">
+                              <div class="inline-flex items-center bg-green-500 rounded-full px-2 mb-2">
+                                <span class="text-white font-medium text-sm">tiết kiệm 78%</span>
+                              </div>
+                              <div class="inline-flex items-center bg-green-500 rounded-full px-2">
+                                <span class="text-white font-medium text-sm">Ưu Đãi Trong Thời Gian Có hạn</span>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap border border-blue-500">
+                          <div class=" ">
+                            <ul>
+                              <li>
+                                <div>
+                                  <i class="fas fa-coffee"></i>Bữa sáng
+                                  <span class="font-bold">Tuyệt vời</span> - VND 123.000
+                                </div>
+                              </li>
+                              <li>
+                                <div class="text-green-500">
+                                  <i class="fas fa-check"></i><span class="font-bold">Miễn phí bất kỳ lúc nào</span> bất
+                                  kỳ lúc nào
+                                </div>
+                              </li>
+                              <li>
+                                <div class="text-green-500">
+                                  <i class="fas fa-check"></i><span class="font-bold">Không cần thanh toán trước</span>
+                                  thanh toán
+                                  tại chỗ nghỉ
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap border border-blue-500">
+                          <select class="border border-black text-black px-4 py-2 rounded-md">
+                            <option value="500000"></option>
+                            <option value="500000">Phòng giá 500,000 VND</option>
+                            <option value="600000">Phòng giá 600,000 VND</option>
+                            <option value="700000">Phòng giá 700,000 VND</option>
+                          </select>
+                        </td>
+                      </tr>
+
+
+                    </tbody>
+                  </table>
+                </div>
+              </div class="">
+
+              <div>
+              </div>
+            </form>
+          </div>
+          <!-- đánh giá Của khách -->
+          <div>
+            <div class="flex justify-between mt-4">
+              <div>
+                <h3 class="font-bold text-xl">Đánh giá của khách</h3>
+              </div>
+              <div><button
+                  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded focus:outline-none focus:shadow-outline w-"><span>Xem
+                    phòng trống</span></button></div>
+            </div>
+            <div class="flex justify-start">
+              <div class="flex justify-center ">
+                <div class="bg-blue-500 w-10 h-8  text-xl "><span class="ml-2">9,3</span></div>
+                <span class="ml-2 font-bold">Tuyệt hảo</span>
+                <span> .10009 đánh giá </span>
+              </div>
+              <div><span class="text-blue-500">Đọc tất cả đánh giá</span></div>
+            </div>
+            <div>
+              <div>
+                <h3 class="text-xl font-bold mt-2 mb-2">Hạng mục:</h3>
+              </div>
+              <div class="grid grid-cols-3 gap-4 mt-2">
+                <div>
+                  <div class="flex justify-between">
+                    <div>
+                      <div>
+                        Nhân viên phục vụ <span><i class="fas fa-arrow-up"></i></span>
+                      </div>
+                    </div>
+                    <div>9,8</div>
+                  </div>
+                  <div class="bg-gray-200 h-2">
+                    <span class="bg-green-500 block h-2" style="width: 90%"></span>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between">
+                    <div>
+                      <div>
+                        Tiện nghi
+                      </div>
+                    </div>
+                    <div>9,0</div>
+                  </div>
+                  <div class="bg-gray-200 h-2">
+                    <span class="bg-blue-500 block h-2" style="width: 90%"></span>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between">
+                    <div>
+                      <div>
+                        Sạch sẽ <span><i class="fas fa-arrow-up"></i></span>
+                      </div>
+                    </div>
+                    <div>9,3</div>
+                  </div>
+                  <div class="bg-gray-200 h-2">
+                    <span class="bg-green-500 block h-2" style="width: 90%"></span>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between">
+                    <div>
+                      <div>
+                        Thoải mái
+                      </div>
+                    </div>
+                    <div>9,3</div>
+                  </div>
+                  <div class="bg-gray-200 h-2">
+                    <span class="bg-blue-500 block h-2" style="width: 90%"></span>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between">
+                    <div>
+                      <div>
+                        Đáng giá tiền<span><i class="fas fa-arrow-up"></i></span>
+                      </div>
+                    </div>
+                    <div>9,2</div>
+                  </div>
+                  <div class="bg-gray-200 h-2">
+                    <span class="bg-green-500 block h-2" style="width: 90%"></span>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between">
+                    <div>
+                      <div>
+                        Địa điểm <span><i class="fas fa-arrow-up"></i></span>
+                      </div>
+                    </div>
+                    <div>9,7</div>
+                  </div>
+                  <div class="bg-gray-200 h-2">
+                    <span class="bg-green-500 block h-2" style="width: 97%"></span>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between">
+                    <div>
+                      <div>
+                        WiFi miễn phí <span><i class="fas fa-arrow-up"></i></span>
+                      </div>
+                    </div>
+                    <div>8,8</div>
+                  </div>
+                  <div class="bg-gray-200 h-2">
+                    <span class="bg-blue-500 block h-2" style="width: 80%"></span>
+                  </div>
+                </div>
+                <div class="row-start-3 col-start-3 ">
+                  <div>
+                    <div class=" flex justify-end ">
+                      <span class="text-sm mt-2"><i class="fas fa-arrow-up text-green-500"></i> Địa điểm cao ở Hà
+                        Nội</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-4 mb-4">
+              <h3 class="flex justify-start text-xl font-bold mt-2 mb-2">Chọn chủ đề để đọc đánh giá</h3>
+            </div>
+            <div class="flex justify-start gap-4">
+              <span class="border rounded-full gap-4 p-2">
+                <span><i class="fas fa-plus"></i></span>
+                <span>Vị trí</span>
+              </span>
+              <span class="border rounded-full gap-4 p-2">
+                <span><i class="fas fa-plus"></i></span>
+                <span>Bữa sáng</span>
+              </span>
+              <span class="border rounded-full gap-4 p-2">
+                <span><i class="fas fa-plus"></i></span>
+                <span>Phòng</span>
+              </span>
+              <span class="border rounded-full gap-4 p-2">
+                <span><i class="fas fa-plus"></i></span>
+                <span>Sạch sẽ</span>
+              </span>
+              <span class="border rounded-full gap-4 p-2">
+                <span><i class="fas fa-plus"></i></span>
+                <span>Giường</span>
+              </span>
+            </div>
+            <div class="">
+              <h3 class="font-bold">Đọc xem khác yêu thích gì nhất:</h3>
+              <div class="container mx-auto max-w-6xl gap-">
+                <div class="relative overflow-hidden ">
+                  <div id="carousel" class="flex transition-transform duration-300 ease-out gap-4 ml-2">
+                    <div class="flex-shrink-0  p-4 " style="width: 300px; height: 256px;">
+                      <div class="p-4 bg-white rounded-md shadow-md h-full">
+                        <div class="flex items-center space-x-4">
+                          <div>
+                            <img class="object-cover rounded-full" src="./image/1.jpg" alt="Card 1"
+                              style="height: 32px; width: 32px;" />
+                          </div>
+                          <div>
+                            <div class="" height="20">
+                              <p class="font-bold">An</p>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                              <img src="./image/2.webp" alt="Flag" style="height: 12px; width: 12px;" />
+                              <p style="height: 18px;" class="text-sm">Đài Loan</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <textarea name="" id="">Vãi cả con chim non</textarea>
+                        </div>
+                        <p class="text-green-600 text-sm ">Tìm hiểu thêm</p>
+                      </div>
+                    </div>
+                    <div class="flex-shrink-0  p-4 " style="width: 300px; height: 256px;">
+                      <div class="p-4 bg-white rounded-md shadow-md h-full">
+                        <div class="flex items-center space-x-4">
+                          <div>
+                            <img class="object-cover rounded-full" src="./image/1.jpg" alt="Card 1"
+                              style="height: 32px; width: 32px;" />
+                          </div>
+                          <div>
+                            <div class="" height="20">
+                              <p class="font-bold">An</p>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                              <img src="./image/2.webp" alt="Flag" style="height: 12px; width: 12px;" />
+                              <p style="height: 18px;" class="text-sm">Đài Loan</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <textarea name="" id="">Vãi cả con chim non</textarea>
+                        </div>
+                        <p class="text-green-600 text-sm ">Tìm hiểu thêm</p>
+                      </div>
+                    </div>
+                    <div class="flex-shrink-0  p-4 " style="width: 300px; height: 256px;">
+                      <div class="p-4 bg-white rounded-md shadow-md h-full">
+                        <div class="flex items-center space-x-4">
+                          <div>
+                            <img class="object-cover rounded-full" src="./image/1.jpg" alt="Card 1"
+                              style="height: 32px; width: 32px;" />
+                          </div>
+                          <div>
+                            <div class="" height="20">
+                              <p class="font-bold">An</p>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                              <img src="./image/2.webp" alt="Flag" style="height: 12px; width: 12px;" />
+                              <p style="height: 18px;" class="text-sm">Đài Loan</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <textarea name="" id="">Vãi cả con chim non</textarea>
+                        </div>
+                        <p class="text-green-600 text-sm ">Tìm hiểu thêm</p>
+                      </div>
+                    </div>
+                    <!-- Add more slides as needed -->
+                  </div>
+                  <button id="prev"
+                    class="absolute top-1/2 left-0 transform -translate-y-1/2 rounded-full bg-white text-white px-4 py-2">
+                    <span class="text-black"><i class="fas fa-angle-left"></i></span>
+                  </button>
+                  <button id="next"
+                    class="absolute top-1/2 right-0 transform -translate-y-1/2 rounded-full bg-white text-white px-4 py-2">
+                    <span class="text-black"><i class="fas fa-angle-right"></i></span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Modal toggle -->
+              <button data-modal-target="default-modal" data-modal-toggle="default-modal"
+                class=" border border-blue-500 rounded-lg px-4 py-2 block text-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium  text-sm  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                type="button">
+                <span class="text-blue-500">Đọc tất cả đánh giá</span>
+              </button>
+
+              <!-- Main modal -->
+              <div id="default-modal" tabindex="-1" aria-hidden="true"
+                class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full h-full bg-gray-500 bg-opacity-50">
+                <div
+                  class="modal-content bg-white rounded-lg shadow-md dark:bg-gray-700 w-full  max-w-6xl mx-auto mt-20 p-8">
+                  <!-- Modal header -->
+                  <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                      Đánh giá cao của khách về <span class="text-xl font-semibold text-gray-900 dark:text-white">
+                        Elioana Signature Hanoi Hotel</span>
+                    </h3>
+                    <button type="button"
+                      class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                      data-modal-hide="default-modal">
+                      <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                      </svg>
+                      <span class="sr-only">Close modal</span>
+                    </button>
+                  </div>
+                  <!-- Modal body -->
+                  <div class="p-4 md:p-5 space-y-4">
+                    <div class="grid grid-cols-3 gap-4 mt-2">
+                      <div>
+                        <div class="flex justify-between">
+                          <div>
+                            <div>
+                              Nhân viên phục vụ <span><i class="fas fa-arrow-up"></i></span>
+                            </div>
+                          </div>
+                          <div>9,8</div>
+                        </div>
+                        <div class="bg-gray-200 h-2">
+                          <span class="bg-green-500 block h-2" style="width: 90%"></span>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="flex justify-between">
+                          <div>
+                            <div>
+                              Tiện nghi
+                            </div>
+                          </div>
+                          <div>9,0</div>
+                        </div>
+                        <div class="bg-gray-200 h-2">
+                          <span class="bg-blue-500 block h-2" style="width: 90%"></span>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="flex justify-between">
+                          <div>
+                            <div>
+                              Sạch sẽ <span><i class="fas fa-arrow-up"></i></span>
+                            </div>
+                          </div>
+                          <div>9,3</div>
+                        </div>
+                        <div class="bg-gray-200 h-2">
+                          <span class="bg-green-500 block h-2" style="width: 90%"></span>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="flex justify-between">
+                          <div>
+                            <div>
+                              Thoải mái
+                            </div>
+                          </div>
+                          <div>9,3</div>
+                        </div>
+                        <div class="bg-gray-200 h-2">
+                          <span class="bg-blue-500 block h-2" style="width: 90%"></span>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="flex justify-between">
+                          <div>
+                            <div>
+                              Đáng giá tiền<span><i class="fas fa-arrow-up"></i></span>
+                            </div>
+                          </div>
+                          <div>9,2</div>
+                        </div>
+                        <div class="bg-gray-200 h-2">
+                          <span class="bg-green-500 block h-2" style="width: 90%"></span>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="flex justify-between">
+                          <div>
+                            <div>
+                              Địa điểm <span><i class="fas fa-arrow-up"></i></span>
+                            </div>
+                          </div>
+                          <div>9,7</div>
+                        </div>
+                        <div class="bg-gray-200 h-2">
+                          <span class="bg-green-500 block h-2" style="width: 97%"></span>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="flex justify-between">
+                          <div>
+                            <div>
+                              WiFi miễn phí <span><i class="fas fa-arrow-up"></i></span>
+                            </div>
+                          </div>
+                          <div>8,8</div>
+                        </div>
+                        <div class="bg-gray-200 h-2">
+                          <span class="bg-blue-500 block h-2" style="width: 80%"></span>
+                        </div>
+                      </div>
+                      <div class="row-start-3 col-start-3 ">
+                        <div>
+                          <div class=" flex justify-end ">
+                            <span class="text-sm mt-2"><i class="fas fa-arrow-up text-green-500"></i> Địa điểm cao ở Hà
+                              Nội</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="mt-4 mb-4">
+                    <h3 class="flex justify-start text-xl font-bold mt-2 mb-2">Chọn chủ đề để đọc đánh giá</h3>
+                  </div>
+                  <div class="flex justify-start gap-4">
+                    <span class="border rounded-full gap-4 p-2">
+                      <span><i class="fas fa-plus"></i></span>
+                      <span>Vị trí</span>
+                    </span>
+                    <span class="border rounded-full gap-4 p-2">
+                      <span><i class="fas fa-plus"></i></span>
+                      <span>Bữa sáng</span>
+                    </span>
+                    <span class="border rounded-full gap-4 p-2">
+                      <span><i class="fas fa-plus"></i></span>
+                      <span>Phòng</span>
+                    </span>
+                    <span class="border rounded-full gap-4 p-2">
+                      <span><i class="fas fa-plus"></i></span>
+                      <span>Sạch sẽ</span>
+                    </span>
+                    <span class="border rounded-full gap-4 p-2">
+                      <span><i class="fas fa-plus"></i></span>
+                      <span>Giường</span>
+                    </span>
+                  </div>
+                  <div class="flex justify-between">
+                    <h3 class="text-xl font-bold">Đánh giá của khách</h3>
+                    <div class="flex justify-center gap-2">
+                      <label for="">Sắp xếp đánh giá theo:</label>
+                      <div class="border border-black px-1 ">
+                        <select name="" id="">
+                          <option value="">Phù hợp nhất</option>
+                          <option value="">Mới nhất</option>
+                          <option value="">Cũ nhất</option>
+                          <option value="">Điểm cao nhất</option>
+                          <option value="">Điểm thấp nhất</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <div class="flex gap-2">
+                        <div class="flex-shrink-0  p-4  " style="width: 300px; height: 256px;">
+                          <div class="p-4 bg-white rounded-md shadow-md h-full">
+                            <div class="flex items-center space-x-4">
+                              <div>
+                                <img class="object-cover rounded-full" src="./image/1.jpg" alt="Card 1"
+                                  style="height: 32px; width: 32px;" />
+                              </div>
+                              <div>
+                                <div class="" height="20">
+                                  <p class="font-bold">An</p>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                  <img src="./image/2.webp" alt="Flag" style="height: 12px; width: 12px;" />
+                                  <p style="height: 18px;" class="text-sm">Đài Loan</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="">
+                              <ul class="space-y-4">
+                                <li>
+                                  <div class="flex items-center gap-2">
+                                    <span><i class="fas fa-bed-pulse"></i></span>
+                                    <div>
+                                      <button class="max-w-full text-left whitespace-normal">
+                                        <span class="text-xs">Phòng Deluxe Giường Đôi/2 Giường Đơn Với Cửa Sổ Bên
+                                          Trong</span>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="flex items-center gap-2">
+                                    <span>
+                                      <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-width="2"
+                                          d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Zm3-7h.01v.01H8V13Zm4 0h.01v.01H12V13Zm4 0h.01v.01H16V13Zm-8 4h.01v.01H8V17Zm4 0h.01v.01H12V17Zm4 0h.01v.01H16V17Z" />
+                                      </svg>
+                                    </span>
+                                    <div>
+                                      <button class="max-w-full text-left whitespace-normal">
+                                        <span class="text-xs">12 đêm- tháng 6/2024</span>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="flex items-center gap-2">
+                                    <span><i class="fas fa-user"></i></span>
+                                    <div>
+                                      <button class="max-w-full text-left whitespace-normal">
+                                        <span class="text-xs">Khách lẻ</span>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </li>
+                              </ul>
+
+                            </div>
+
+                          </div>
+                        </div>
+                        <div class="flex">
+                          <div>
+                            <div>
+                              <div>
+                                <div>
+                                  <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                      d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
+                                  </svg>
+                                  <div><span>Đánh giá hàng đầu</span></div>
+                                </div>
+                                <span>Ngày đánh giá: ngày 6 tháng 6 năm 2024</span>
+                              </div>
+                              <div><span>Kỳ nghỉ tốt..</span></div>
+                            </div>
+                            <div class="border border-blue-500 bg-blue-500">10</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+            <!-- JavaScript to toggle modal -->
+            <script>
+              document.addEventListener('DOMContentLoaded', function () {
+                const modalToggles = document.querySelectorAll('[data-modal-toggle]');
+                const modalCloses = document.querySelectorAll('[data-modal-hide]');
+                const modal = document.getElementById('default-modal');
+                const modalContent = modal.querySelector('.modal-content');
+
+                modalToggles.forEach(button => {
+                  button.addEventListener('click', function () {
+                    modal.classList.remove('hidden');
+                    modal.setAttribute('aria-hidden', 'false');
+
+                    // Disable scrolling on the body
+                    document.body.style.overflow = 'hidden';
+                  });
+                });
+
+                modalCloses.forEach(button => {
+                  button.addEventListener('click', function () {
+                    modal.classList.add('hidden');
+                    modal.setAttribute('aria-hidden', 'true');
+
+                    // Enable scrolling on the body
+                    document.body.style.overflow = 'auto';
+                  });
+                });
+
+                // Prevent clicks on the modal content from closing the modal
+                modalContent.addEventListener('click', function (event) {
+                  event.stopPropagation(); // Prevents the click event from bubbling up
+                });
+              });
+            </script>
+            <script>
+              document.addEventListener('alpine:init', () => {
+                Alpine.data('modal', () => ({
+                  showModal: false,
+                  show() {
+                    this.showModal = true;
+                    setTimeout(() => {
+                      document.getElementById('large-modal').classList.remove('hidden');
+                      document.getElementById('large-modal').classList.add('translate-x-0');
+                    }, 50); // Adjust delay as needed for transition
+                  },
+                  hide() {
+                    document.getElementById('large-modal').classList.add('translate-x-full');
+                    setTimeout(() => {
+                      this.showModal = false;
+                      document.getElementById('large-modal').classList.add('hidden');
+                      document.getElementById('large-modal').classList.remove('translate-x-0');
+                      document.getElementById('large-modal').classList.remove('translate-x-full');
+                    }, 300); // Adjust delay to match transition duration
+                  },
+                }));
+              });
+            </script>
+
+
+
+
+
+          </div>
+      </div>
+
+
+      <!-- 00 -->
+
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const carousel = document.getElementById("carousel");
+          const nextButton = document.getElementById("next");
+          const prevButton = document.getElementById("prev");
+          const slides = document.querySelectorAll("#carousel > div");
+          const totalSlides = slides.length;
+          let index = 0;
+
+          function updateCarousel() {
+            carousel.style.transform = `translateX(${-index * 100}%)`;
+          }
+
+          nextButton.addEventListener("click", function () {
+            if (index < totalSlides - 1) {
+              index++;
+            } else {
+              index = 0;
+            }
+            updateCarousel();
+          });
+
+          prevButton.addEventListener("click", function () {
+            if (index > 0) {
+              index--;
+            } else {
+              index = totalSlides - 1;
+            }
+            updateCarousel();
+          });
+
+          updateCarousel();
+        });
+      </script>
+      <!-- Alpine.js -->
+
+      </section>
+
+      <!-- Nội dung phần tiện nghi -->
+      <section id="amenities" class="p-4">
+        <h2>Tiện nghi</h2>
+        <p>Nội dung tiện nghi của bạn ở đây...</p>
+      </section>
+
+      <!-- Nội dung phần đánh giá -->
+      <section id="reviews" class="p-4">
+        <h2>Đánh giá</h2>
+        <p>Nội dung đánh giá của bạn ở đây...</p>
+      </section>
+    </div>
+    </div>
+  </main>
+
+
+  <footer class="container mx-auto px-4 lg:px-8 max-w-6xl mt-4">
+    <div class="mx-auto w-full max-w-screen-xl ">
+      <div class="grid grid-cols-5 gap-4 px-4 py-6 lg:py-8 md:grid-cols-4  ">
+        <div>
+          <h2 class="mb-6 text-sm  text-gray-900 uppercase dark:text-white font-bold">Hỗ trợ</h2>
+          <ul class="text-gray-500 dark:text-gray-400 font-medium">
+            <li class="mb-4">
+              <a href="#" class=" hover:underline text-sm">Các câu hỏi thường gặp về virus corona (COVID-19)</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline text-sm">Quản lí các chuyến đi của bạn</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline text-sm">Liên hệ Dịch vụ Khách hàng</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline text-sm">Trung tâm thông tin bảo mật</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="mb-6 text-sm font-bold text-gray-900 uppercase dark:text-white">Khám phá thêm</h2>
+          <ul class="text-gray-500 dark:text-gray-400 font-medium">
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Chương trình khách hàng thân thiết Genius</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Ưu đãi theo mùa và dịp lễ</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Bài viết về du lịch</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Cho thuê xe hơi</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="mb-6 text-sm font-bold text-gray-900 uppercase dark:text-white">Điều khoản và cài đặt</h2>
+          <ul class="text-gray-500 dark:text-gray-400 font-medium">
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Bảo mật & Cookie</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Điều khoản và điều kiện</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline"> Tranh chấp đối tác</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Dành cho đối tác</h2>
+          <ul class="text-gray-500 dark:text-gray-400 font-medium">
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Đăng nhập vào trang Extranet</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Trợ giúp đối tác</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Đăng chỗ nghỉ của Quý vị</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Trở thành đối tác phân phối</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Về chúng tôi</h2>
+          <ul class="text-gray-500 dark:text-gray-400 font-medium">
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Chúng tôi hoạt động như thế nào</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Du lịch bền vững</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Truyền thông</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Cơ hội việc làm</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="px-4 py-6 bg-gray-100 dark:bg-gray-700 md:flex md:items-center md:justify-between">
+        <span class="text-sm text-gray-500 dark:text-gray-300 sm:text-center">© 2023 <a
+            href="https://flowbite.com/">Flowbite™</a>. All Rights Reserved.
+        </span>
+        <div class="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
+          <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              viewBox="0 0 8 19">
+              <path fill-rule="evenodd"
+                d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                clip-rule="evenodd" />
+            </svg>
+            <span class="sr-only">Facebook page</span>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              viewBox="0 0 21 16">
+              <path
+                d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z" />
+            </svg>
+            <span class="sr-only">Discord community</span>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              viewBox="0 0 20 17">
+              <path fill-rule="evenodd"
+                d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
+                clip-rule="evenodd" />
+            </svg>
+            <span class="sr-only">Twitter page</span>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                clip-rule="evenodd" />
+            </svg>
+            <span class="sr-only">GitHub account</span>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
+                clip-rule="evenodd" />
+            </svg>
+            <span class="sr-only">Dribbble account</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

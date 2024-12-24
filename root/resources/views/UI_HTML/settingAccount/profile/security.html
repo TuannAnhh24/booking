@@ -1,0 +1,173 @@
+<script src="https://cdn.tailwindcss.com"></script>
+
+<div class="h-32 rounded-lg w-full">
+    <div class="w-full">
+        <div>
+            <div class="flex items-center justify-between">
+                <div>
+                    <h2 class="font-bold text-[32px]">Cài đặt bảo mật</h2>
+                    <div id="circle" class="flex items-center justify-between">
+                        <div>
+                            <span class="text-gray-500 text-base">Thay đổi thiết lập bảo mật, cài đặt xác
+                                thực bổ sung
+                                hoặc xóa tài khoản của bạn.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pb-8 mt-[16px] ml-6">
+            <div class="border-b py-4 flex justify-between items-center" data-section="password">
+                <div class="w-[30%] max-w-[170px]">
+                    <span class="text-base font-medium">Mật khẩu</span>
+                </div>
+                <div class="flex w-full justify-between items-center">
+                    <div class="w-[85%]">
+                        <div class="info editable text-gray-600 text-sm cursor-pointer">
+                            Đổi mật khẩu thường xuyên để giữ tài khoản của bạn được bảo mật.
+                        </div>
+                        <div class="input hidden text-sm">
+                            Để thay đổi mật khẩu, chúng tôi cần gửi link tạo lại mật khẩu đến địa chỉ email
+                            của bạn
+                        </div>
+                    </div>
+                    <div class="toggle-btn text-blue-600 cursor-pointer font-semibold text-sm">
+                        Cài lại
+                    </div>
+                    <div class="actions hidden flex flex-col gap-2 items-end">
+                        <button class="cancel-btn text-blue-500 w-12 h-10">Hủy</button>
+                        <button class="submit-btn text-white bg-blue-700 text-sm rounded-lg py-[8px] px-[10px]">Gửi
+                            Email</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-b py-4 flex justify-between items-center" data-section="2fa">
+                <div class="w-[30%] max-w-[170px]">
+                    <span class="text-base font-medium">Xác thực 2 yếu tố</span>
+                </div>
+                <div class="flex w-full justify-between items-center">
+                    <div class="w-[85%]">
+                        <div class="info editable text-gray-600 text-sm cursor-pointer">
+                            Tăng độ bảo mật cho tài khoản bằng cách thiết lập xác thực 2 yếu tố.
+                        </div>
+                        <div class="input hidden text-sm flex flex-col">
+                            <span class="mb-2">1. Tải ứng dụng xác thực</span>
+                            <p>Nếu Quý vị không có ứng dụng xác thực, vui lòng tải về. Chúng tôi khuyến
+                                khích Quý vị sử dụng Google Authenticator hoặc Microsoft Authenticator.</p>
+                        </div>
+                    </div>
+                    <div class="toggle-btn text-blue-600 cursor-pointer font-semibold text-sm">
+                        Thiết lập
+                    </div>
+                    <div class="actions hidden flex flex-col gap-2 items-end">
+                        <button class="cancel-btn text-blue-500 w-12 h-10 mb-[30px]">Hủy</button>
+                        <button class="submit-btn text-white bg-blue-700 text-sm rounded-lg py-[8px] px-[10px]">Kế
+                            tiếp</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-b py-4 flex justify-between items-center" data-section="session">
+                <div class="w-[30%] max-w-[170px]">
+                    <span class="text-base font-medium">Các phiên truy cập</span>
+                </div>
+                <div class="flex w-full justify-between items-center">
+                    <div class="w-[85%]">
+                        <div class="info editable text-gray-600 text-sm cursor-pointer">
+                            Khi chọn "Đăng xuất", bạn sẽ đăng xuất khỏi tất cả các thiết bị trừ thiết bị này
+                            và có thể mất đến 10 phút.
+                        </div>
+                        <div class="input hidden text-sm flex flex-col">
+                            Bạn đã đăng xuất trên tất cả các thiết bị khác.
+                        </div>
+                    </div>
+                    <div class="toggle-btn text-blue-600 cursor-pointer font-semibold text-sm">
+                        Đăng xuất
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-b py-4 flex justify-between items-center" data-section="delete">
+                <div class="w-[30%] max-w-[170px]">
+                    <span class="text-base font-medium">Xóa tài khoản</span>
+                </div>
+                <div class="flex w-full justify-between items-center">
+                    <div>
+                        <div class="info editable text-gray-600 text-sm cursor-pointer">
+                            Xóa tài khoản Booking.com vĩnh viễn.
+                        </div>
+                        <div class="input hidden text-sm flex flex-col max-w-[485px]">
+                            <span class="mb-4"> Vì sao bạn muốn xóa tài khoản của mình?</span>
+                            <div class="flex items-center gap-2 mb-2">
+                                <span><input type="radio" class="w-4 h-4"></span>
+                                <p>Tôi nhận được quá nhiều email từ Booking.com
+                                    Nếu muốn tiếp tục tận hưởng lợi ích từ tài khoản mà không nhận email
+                                    marketing, bạn có thể hủy đăng ký nhận email.</p>
+                            </div>
+
+                            <div class="flex items-center gap-2  mb-2">
+                                <span><input type="radio" class="w-4 h-4"></span>
+                                <p> Tôi muốn dùng email khác cho tài khoản của mình
+                                    Có cách nhanh hơn để thực hiện điều này! Thay đổi email của bạn bất cứ
+                                    lúc nào
+                                    trong cài đặt "Thông tin cá nhân".</p>
+                            </div>
+
+                            <div class="flex items-center gap-2  mb-2">
+                                <span><input type="radio" class="w-4 h-4"></span>
+                                <p> Tôi muốn xóa tất cả dữ liệu của mình
+                                    Sau khi tài khoản Booking.com của bạn bị xóa, bạn sẽ không thể tiếp tục
+                                    truy cập dữ liệu tài khoản, dữ liệu đơn đặt trong quá khứ, danh sách chỗ
+                                    nghỉ yêu thích hoặc trạng thái Genius của bạn.Để biết thêm thông tin về
+                                    việc thực thi quyền của chủ thể dữ liệu, vui lòng xem Chính sách Bảo mật
+                                    dành cho Khách hàng của chúng tôi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="toggle-btn text-red-600 cursor-pointer font-semibold text-sm">
+                        Xóa tài khoản
+                    </div>
+                    <div class="actions hidden h-full justify-between flex flex-col gap-2 items-end">
+                        <button class="cancel-btn text-blue-500 w-12 h-10 mb-[30px]">Hủy</button>
+                        <button class="submit-btn text-white bg-blue-700 text-sm rounded-lg py-[8px] px-[10px]">Xóa
+                            tài khoản</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const sections = document.querySelectorAll('[data-section]');
+
+    sections.forEach(section => {
+        const info = section.querySelector('.info');
+        const input = section.querySelector('.input');
+        const toggleBtn = section.querySelector('.toggle-btn');
+        const actions = section.querySelector('.actions');
+        const cancelBtn = section.querySelector('.cancel-btn');
+        const submitBtn = section.querySelector('.submit-btn');
+
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', () => {
+                info.classList.add('hidden');
+                toggleBtn.classList.add('hidden');
+                input.classList.remove('hidden');
+                actions.classList.remove('hidden');
+            });
+        }
+
+        if (cancelBtn) {
+            cancelBtn.addEventListener('click', () => {
+                info.classList.remove('hidden');
+                toggleBtn.classList.remove('hidden');
+                input.classList.add('hidden');
+                actions.classList.add('hidden');
+            });
+        }
+    });
+</script>

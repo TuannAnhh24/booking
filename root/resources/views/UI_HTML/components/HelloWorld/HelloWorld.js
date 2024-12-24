@@ -1,0 +1,3 @@
+defineProps({
+    msg: String,
+});

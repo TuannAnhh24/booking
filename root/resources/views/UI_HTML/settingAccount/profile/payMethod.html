@@ -1,0 +1,141 @@
+<div class="h-32 rounded-lg w-full">
+    <div class="w-full">
+        <div>
+            <div class="flex items-center justify-between">
+                <div>
+                    <h2 class="font-bold text-[32px]">Phương thức thanh toán</h2>
+                    <div id="circle" class="flex items-center justify-between">
+                        <div>
+                            <span class="text-gray-500 text-base">Thêm hoặc bỏ các phương thức thanh toán
+                                một cách bảo mật để dễ đặt hơn.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pb-8 mt-[16px] ml-6" data-section>
+            <div class="border-b py-4 flex justify-between items-center" data-section="session">
+                <div class="w-[30%] max-w-[170px]">
+                    <span class="text-base font-medium">Thẻ thanh toán</span>
+                </div>
+                <div class="flex w-full justify-between items-center">
+                    <div class="w-[85%]">
+                        <div class="info editable text-gray-600 text-sm cursor-pointer">
+                            Thanh toán bằng thẻ mới
+                        </div>
+                        <div class="input hidden text-sm flex flex-col">
+                            <div class="font-[sans-serif] bg-white p-4">
+                                <div class="md:max-w-5xl max-w-xl mx-auto">
+                                    <div class="lg:col-span-2 max-md:order-1">
+                                        <div class="flex items-center">
+                                            <label for="card" class="flex gap-2 cursor-pointer">
+                                                <img src="https://readymadeui.com/images/visa.webp" class="w-6"
+                                                    alt="card1" />
+                                                <img src="https://readymadeui.com/images/american-express.webp"
+                                                    class="w-6" alt="card2" />
+                                                <img src="https://readymadeui.com/images/master.webp" class="w-6"
+                                                    alt="card3" />
+                                                <img src="https://readymadeui.com/images/master.webp" class="w-6"
+                                                    alt="card3" />
+                                                <img src="https://readymadeui.com/images/master.webp" class="w-6"
+                                                    alt="card3" />
+                                                <img src="https://readymadeui.com/images/master.webp" class="w-6"
+                                                    alt="card3" />
+                                                <img src="https://readymadeui.com/images/master.webp" class="w-6"
+                                                    alt="card3" />
+                                                <img src="https://readymadeui.com/images/master.webp" class="w-6"
+                                                    alt="card3" />
+                                                <img src="https://readymadeui.com/images/master.webp" class="w-6"
+                                                    alt="card3" />
+                                            </label>
+                                        </div>
+
+                                        <form class="mt-8 max-w-lg">
+                                            <div class="grid gap-4">
+                                                <div>
+                                                    <label for="">Tên chủ thẻ</label>
+                                                    <input type="text" placeholder="Cardholder's Name"
+                                                        class="px-4 py-3.5 bg-gray-100 text-gray-800 w-full text-sm border rounded-md focus:border-purple-500 focus:bg-transparent outline-none" />
+                                                </div>
+
+                                                <div>
+                                                    <label for="">Số thẻ</label>
+                                                    <div
+                                                        class="flex bg-gray-100 border rounded-md focus-within:border-purple-500 focus-within:bg-transparent overflow-hidden">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 ml-3"
+                                                            viewBox="0 0 32 20">
+                                                            <circle cx="10" cy="10" r="10" fill="#f93232"
+                                                                data-original="#f93232" />
+                                                            <path fill="#fed049"
+                                                                d="M22 0c-2.246 0-4.312.75-5.98 2H16v.014c-.396.298-.76.634-1.107.986h2.214c.308.313.592.648.855 1H14.03a9.932 9.932 0 0 0-.667 1h5.264c.188.324.365.654.518 1h-6.291a9.833 9.833 0 0 0-.377 1h7.044c.104.326.186.661.258 1h-7.563c-.067.328-.123.66-.157 1h7.881c.039.328.06.661.06 1h-8c0 .339.027.67.06 1h7.882c-.038.339-.093.672-.162 1h-7.563c.069.341.158.673.261 1h7.044a9.833 9.833 0 0 1-.377 1h-6.291c.151.344.321.678.509 1h5.264a9.783 9.783 0 0 1-.669 1H14.03c.266.352.553.687.862 1h2.215a10.05 10.05 0 0 1-1.107.986A9.937 9.937 0 0 0 22 20c5.523 0 10-4.478 10-10S27.523 0 22 0z"
+                                                                class="hovered-path" data-original="#fed049" />
+                                                        </svg>
+                                                        <input type="number" placeholder="Card Number"
+                                                            class="px-4 py-3.5 text-gray-800 w-full text-sm outline-none bg-transparent" />
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <label for="">Ngày hết hạn</label>
+                                                    <div class="grid grid-cols-2 gap-4">
+                                                        <div>
+                                                            <input type="date" placeholder="EXP."
+                                                                class="px-4 py-3.5 bg-gray-100 text-gray-800 w-full text-sm border rounded-md focus:border-purple-500 focus:bg-transparent outline-none" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="toggle-btn text-blue-600 cursor-pointer font-semibold text-sm">
+                        <span>Thêm thẻ</span>
+                    </div>
+                    <div class="actions hidden flex flex-col gap-2 items-end">
+                        <button class="cancel-btn text-blue-500 w-12 h-10 mb-[30px]">Hủy</button>
+                        <button
+                            class="submit-btn text-white bg-blue-700 text-sm rounded-lg py-[8px] px-[10px]">Lưu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Phần js này giống bên security
+    const sections = document.querySelectorAll('[data-section]');
+
+    sections.forEach(section => {
+        const info = section.querySelector('.info');
+        const input = section.querySelector('.input');
+        const toggleBtn = section.querySelector('.toggle-btn');
+        const actions = section.querySelector('.actions');
+        const cancelBtn = section.querySelector('.cancel-btn');
+        const submitBtn = section.querySelector('.submit-btn');
+
+        // Xử lý sự kiện click vào nút "Thêm thẻ"
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', () => {
+                info.classList.add('hidden');
+                toggleBtn.classList.add('hidden');
+                input.classList.remove('hidden');
+                actions.classList.remove('hidden');
+            });
+        }
+
+        // Xử lý khi nhấn nút "Hủy"
+        if (cancelBtn) {
+            cancelBtn.addEventListener('click', () => {
+                info.classList.remove('hidden');
+                toggleBtn.classList.remove('hidden');
+                input.classList.add('hidden');
+                actions.classList.add('hidden');
+            });
+        }
+    });
+</script>

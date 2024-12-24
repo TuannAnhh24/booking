@@ -1,0 +1,206 @@
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+<!-- Font Awesome -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
+
+<!-- Ionicons -->
+<script
+  type="module"
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+></script>
+
+<!-- Bootstrap Icons -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+  integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd"
+  crossorigin="anonymous"
+/>
+
+<div
+  id="static-modal"
+  class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+>
+  <div class="relative p-4 w-full max-w-2xl max-h-full">
+    <!-- Modal content -->
+    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+      <!-- Modal header -->
+      <div
+        class="flex items-center justify-between p-4 md:p-6 border-b rounded-t dark:border-gray-600"
+      >
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+          Iconic Santorini, a Boutique Cave Hotel by Sandglass
+          <svg
+            class="w-[26px] h-[26px] text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.1"
+              d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+            />
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.1"
+              d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z"
+            />
+          </svg>
+        </h3>
+        <button
+          type="button"
+          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+          data-modal-hide="static-modal"
+        >
+          <svg
+            class="w-3 h-3"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+            />
+          </svg>
+          <span class="sr-only">Close modal</span>
+        </button>
+      </div>
+      <!-- Modal body -->
+      <div class="p-4 md:p-6 space-y-4">
+        <div class="mt-2">
+          <div>
+            <p class="text-sm">Tổng thời gian lưu trú:</p>
+          </div>
+          <div>
+            <p class="text-sm font-bold mt-1">5 đêm</p>
+          </div>
+        </div>
+        <div class="flex flex-row mt-4 justify-between">
+          <div class="flex-1 pr-4 border-r-2">
+            <div class="mb-1">
+              <p class="text-sm font-medium">Nhận phòng</p>
+            </div>
+            <label class="text-base font-bold">T2, 15 tháng 7 2024</label><br />
+            <span class="text-sm font-light">Từ 15:00</span>
+          </div>
+          <div class="flex-1 pl-4">
+            <div class="mb-1">
+              <p class="text-sm font-medium">Trả phòng</p>
+            </div>
+            <label class="text-base font-bold">T2, 15 tháng 7 2024</label><br />
+            <span class="text-sm font-light">Từ 15:00</span>
+          </div>
+        </div>
+        <div class="mt-4">
+          <div class="mx-1 border-t-2 border-gray-300"></div>
+        </div>
+        <div class="space-y-3">
+          <p class="font-semibold">1 x Suite Cổ điển nhìn ra biển</p>
+          <ul class="list-disc">
+            <li class="font-semibold ml-5">Không hoàn tiền</li>
+          </ul>
+        </div>
+        <div class="mt-4">
+          <div class="mx-1 border-t-2 border-gray-300"></div>
+        </div>
+        <div>
+          <p class="font-semibold">1 x Suite Cổ điển nhìn ra biển</p>
+          <div class="mt-4 border text-center p-4 w-1/3">
+            <p class="text-sm">Phòng ngủ</p>
+            <ion-icon name="bed-outline"></ion-icon>
+            <p class="text-sm">1 giường đôi cực lớn</p>
+            <p class="text-sm">Rộng 181-210 cm</p>
+          </div>
+        </div>
+        <div class="mt-4">
+          <div class="mx-1 border-t-2 border-gray-300"></div>
+        </div>
+        <div>
+          <div class="flex justify-between">
+            <div>
+              <div>
+                <h1 class="text-base font-bold">Giá</h1>
+                <p>(loại tiền tệ của bạn)</p>
+              </div>
+            </div>
+            <div>
+              <h1 class="text-base font-bold">VND 90.821.731*</h1>
+            </div>
+          </div>
+          <div class="flex justify-between mt-2">
+            <div>
+              <div>
+                <h1 class="text-base font-bold">Tiền tệ của chỗ nghỉ</h1>
+                <p>bằng ERU</p>
+              </div>
+            </div>
+            <div>
+              <h1 class="text-base font-bold">€ 3.568,70</h1>
+            </div>
+          </div>
+          <div>
+            <p>Không bao gồm Phí môi trường (&#x20AC; 1,50 cho mỗi đêm)</p>
+          </div>
+          <div class="mt-2">
+            <p>
+              * Giá này được chuyển đổi để hiển thị cho bạn chi phí ước tính
+              bằng VND. Bạn sẽ trả bằng €. Tỷ giá hối đoái có thể thay đổi trước
+              khi bạn thanh toán.
+            </p>
+          </div>
+          <div class="mt-2">
+            <p>
+              Xin lưu ý, đơn vị phát hành thẻ của bạn có thể tính phí giao dịch
+              bằng ngoại tệ.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Modal footer -->
+      <div
+        class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600"
+      >
+        <button
+          type="submit"
+          class="flex items-center text-white bg-blue-700 hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-md text-base px-7 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+        >
+          <svg
+            class="size-10 text-white dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.1"
+              d="M12 14v3m-3-6V7a3 3 0 1 1 6 0v4m-8 0h10a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1Z"
+            />
+          </svg>
+          Hoàn tất đặt chỗ
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="checkoutMD.js"></script>

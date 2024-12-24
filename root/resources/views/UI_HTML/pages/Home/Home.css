@@ -1,0 +1,15 @@
+.carousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.3s ease-out;
+}
+
+.carousel-item {
+  padding: 0.5rem;
+  box-sizing: border-box;
+}

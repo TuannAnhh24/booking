@@ -1,0 +1,444 @@
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+<!-- Font Awesome -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
+
+<!-- Ionicons -->
+<script
+  type="module"
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+></script>
+
+<!-- Bootstrap Icons -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+  integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd"
+  crossorigin="anonymous"
+/>
+
+<div class="h-full rounded-md lg:col-span-2">
+  <div
+    class="flex flex-col border border-solid border-[#eaecf0] rounded-lg shadow-[0_1px_3px_0px_rgba(16,24,40,.1)] bg-white"
+  >
+    <!-- Title navbar-sreach -->
+    <div class="flex justify-between py-5 px-3 border-b">
+      <h1 class="text-lg font-semibold">Chọn lọc theo:</h1>
+    </div>
+
+    <div class="py-5 px-3 border-b">
+      <h1 class="text-base text-[#000] font-semibold">Dùng các bộ lọc cũ</h1>
+      <div class="flex flex-col gap-2 pt-3 pl-2">
+        <div class="inline-flex items-center justify-between">
+          <div class="flex items-center">
+            <label
+              class="relative flex items-center rounded-full cursor-pointer"
+              for="blue"
+            >
+              <input
+                type="checkbox"
+                class="before:content[''] peer relative h-[20px] w-[20px] cursor-pointer appearance-none border border-[#868686] rounded-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-8 before:w-8 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-blue-500 checked:bg-blue-500 checked:before:bg-blue-500 hover:before:opacity-10"
+                id="blue"
+              />
+              <span
+                class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"
+              >
+                <i
+                  class="fa-solid fa-check text-[12px] flex justify-center items-center"
+                ></i>
+              </span>
+            </label>
+            <span class="pl-2 text-[13px] leading-tight">Bao gồm bữa sáng</span>
+          </div>
+          <span class="text-[13px]">111</span>
+        </div>
+        <div class="inline-flex items-center justify-between">
+          <div class="flex items-center">
+            <label
+              class="relative flex items-center rounded-full cursor-pointer"
+              for="blue"
+            >
+              <input
+                type="checkbox"
+                class="before:content[''] peer relative h-[20px] w-[20px] cursor-pointer appearance-none border border-[#868686] rounded-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-8 before:w-8 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-blue-500 checked:bg-blue-500 checked:before:bg-blue-500 hover:before:opacity-10"
+                id="blue"
+              />
+              <span
+                class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"
+              >
+                <i
+                  class="fa-solid fa-check text-[12px] flex justify-center items-center"
+                ></i>
+              </span>
+            </label>
+            <span class="pl-2 text-[13px] leading-tight">Nhìn ra biển</span>
+          </div>
+          <span class="text-[13px]">111</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="py-5 px-3 border-b">
+      <h1 class="text-base text-[#000] font-semibold">Lọc theo giá</h1>
+      <div class="text-sm text-[#1A1A1A] mt-4 mb-3">
+        VND 200.000 - VND 600.000
+      </div>
+      <div x-data="app()" x-cloak class="px-4">
+        <div class="max-w-lg mx-auto">
+          <div class="rounded-lg bg-white">
+            <div class="relative">
+              <!-- Bar Chart: lỗi thư viện đang tìm thư viện mới -->
+              <!-- <div class="flex -mx-2 items-end mb-2">
+                         <template>
+                            <div
+                               v-for="(data, index) in chartData"
+                               :key="index"
+                               class="w-1/6"
+                            >
+                               <div
+                                  :style="`height: ${data}px`"
+                                  class="transition ease-in duration-200 bg-[#e7e7e7] hover:bg-red-600 cursor-pointer relative"
+                                  @mouseenter="showTooltip($event)"
+                                  @mouseleave="hideTooltip"
+                               ></div>
+                            </div>
+                            <div
+                               v-if="tooltipOpen"
+                               :style="{
+                                  left: `${tooltipX}px`,
+                                  top: `${tooltipY}px`,
+                               }"
+                               class="absolute bg-gray-700 text-white p-2 rounded z-10"
+                            >
+                               {{ tooltipContent }}
+                            </div>
+                         </template>
+                      </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative mb-6">
+        <label for="labels-range-input" class="sr-only">Labels range</label>
+        <input
+          id="labels-range-input"
+          type="range"
+          value="1000"
+          min="100"
+          max="1500"
+          class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+        />
+        <span
+          class="text-sm text-gray-500 dark:text-gray-400 absolute start-0 -bottom-6"
+          >Min ($100)</span
+        >
+
+        <span
+          class="text-sm text-gray-500 dark:text-gray-400 absolute end-0 -bottom-6"
+          >Max ($1500)</span
+        >
+      </div>
+    </div>
+
+    <div class="py-5 px-3 border-b">
+      <h1 class="text-base text-[#000] font-semibold">Loại chỗ ở</h1>
+      <div class="flex flex-col gap-2 pt-3 pl-2">
+        <div class="inline-flex items-center justify-between">
+          <div class="flex items-center">
+            <label
+              class="relative flex items-center rounded-full cursor-pointer"
+              for="blue"
+            >
+              <input
+                type="checkbox"
+                class="before:content[''] peer relative h-[20px] w-[20px] cursor-pointer appearance-none border border-[#868686] rounded-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-8 before:w-8 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-blue-500 checked:bg-blue-500 checked:before:bg-blue-500 hover:before:opacity-10"
+                id="blue"
+              />
+              <span
+                class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"
+              >
+                <i
+                  class="fa-solid fa-check text-[12px] flex justify-center items-center"
+                ></i>
+              </span>
+            </label>
+            <span class="pl-2 text-[13px] leading-tight">Khách sạn</span>
+          </div>
+          <span class="text-[13px]">111</span>
+        </div>
+        <div class="inline-flex items-center justify-between">
+          <div class="flex items-center">
+            <label
+              class="relative flex items-center rounded-full cursor-pointer"
+              for="blue"
+            >
+              <input
+                type="checkbox"
+                class="before:content[''] peer relative h-[20px] w-[20px] cursor-pointer appearance-none border border-[#868686] rounded-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-8 before:w-8 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-blue-500 checked:bg-blue-500 checked:before:bg-blue-500 hover:before:opacity-10"
+                id="blue"
+              />
+              <span
+                class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"
+              >
+                <i
+                  class="fa-solid fa-check text-[12px] flex justify-center items-center"
+                ></i>
+              </span>
+            </label>
+            <span class="pl-2 text-[13px] leading-tight">Khách sạn</span>
+          </div>
+          <span class="text-[13px]">111</span>
+        </div>
+        <div class="inline-flex items-center justify-between">
+          <div class="flex items-center">
+            <label
+              class="relative flex items-center rounded-full cursor-pointer"
+              for="blue"
+            >
+              <input
+                type="checkbox"
+                class="before:content[''] peer relative h-[20px] w-[20px] cursor-pointer appearance-none border border-[#868686] rounded-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-8 before:w-8 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-blue-500 checked:bg-blue-500 checked:before:bg-blue-500 hover:before:opacity-10"
+                id="blue"
+              />
+              <span
+                class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"
+              >
+                <i
+                  class="fa-solid fa-check text-[12px] flex justify-center items-center"
+                ></i>
+              </span>
+            </label>
+            <span class="pl-2 text-[13px] leading-tight">Căn hộ</span>
+          </div>
+          <span class="text-[13px]">111</span>
+        </div>
+        <div class="inline-flex items-center justify-between">
+          <div class="flex items-center">
+            <label
+              class="relative flex items-center rounded-full cursor-pointer"
+              for="blue"
+            >
+              <input
+                type="checkbox"
+                class="before:content[''] peer relative h-[20px] w-[20px] cursor-pointer appearance-none border border-[#868686] rounded-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-8 before:w-8 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-blue-500 checked:bg-blue-500 checked:before:bg-blue-500 hover:before:opacity-10"
+                id="blue"
+              />
+              <span
+                class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"
+              >
+                <i
+                  class="fa-solid fa-check text-[12px] flex justify-center items-center"
+                ></i>
+              </span>
+            </label>
+            <span class="pl-2 text-[13px] leading-tight">Resort</span>
+          </div>
+          <span class="text-[13px]">111</span>
+        </div>
+        <div>
+          <a href="#" class="flex items-center">
+            <span class="text-[#006ce4] pr-1 text-sm"
+              >Hiện thị tất cả 15 loại</span
+            >
+            <i class="text-[#006ce4] fa-solid fa-angle-down"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="py-5 px-3 border-b">
+      <h1 class="text-base text-[#000] font-semibold">
+        Điểm đánh giá của khách
+      </h1>
+      <div class="flex flex-col gap-2 pt-3 pl-2">
+        <div class="inline-flex items-center justify-between">
+          <div class="flex items-center">
+            <label
+              class="relative flex items-center rounded-full cursor-pointer"
+              for="blue"
+            >
+              <input
+                type="checkbox"
+                class="before:content[''] peer relative h-[20px] w-[20px] cursor-pointer appearance-none border border-[#868686] rounded-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-8 before:w-8 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-blue-500 checked:bg-blue-500 checked:before:bg-blue-500 hover:before:opacity-10"
+                id="blue"
+              />
+              <span
+                class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"
+              >
+                <i
+                  class="fa-solid fa-check text-[12px] flex justify-center items-center"
+                ></i>
+              </span>
+            </label>
+            <span class="pl-2 text-[13px] leading-tight">Tuyệt hảo: >9đ</span>
+          </div>
+          <span class="text-[13px]">111</span>
+        </div>
+        <div class="inline-flex items-center justify-between">
+          <div class="flex items-center">
+            <label
+              class="relative flex items-center rounded-full cursor-pointer"
+              for="blue"
+            >
+              <input
+                type="checkbox"
+                class="before:content[''] peer relative h-[20px] w-[20px] cursor-pointer appearance-none border border-[#868686] rounded-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-8 before:w-8 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-blue-500 checked:bg-blue-500 checked:before:bg-blue-500 hover:before:opacity-10"
+                id="blue"
+              />
+              <span
+                class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"
+              >
+                <i
+                  class="fa-solid fa-check text-[12px] flex justify-center items-center"
+                ></i>
+              </span>
+            </label>
+            <span class="pl-2 text-[13px] leading-tight">Khách sạn</span>
+          </div>
+          <span class="text-[13px]">111</span>
+        </div>
+        <div class="inline-flex items-center justify-between">
+          <div class="flex items-center">
+            <label
+              class="relative flex items-center rounded-full cursor-pointer"
+              for="blue"
+            >
+              <input
+                type="checkbox"
+                class="before:content[''] peer relative h-[20px] w-[20px] cursor-pointer appearance-none border border-[#868686] rounded-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-8 before:w-8 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-blue-500 checked:bg-blue-500 checked:before:bg-blue-500 hover:before:opacity-10"
+                id="blue"
+              />
+              <span
+                class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"
+              >
+                <i
+                  class="fa-solid fa-check text-[12px] flex justify-center items-center"
+                ></i>
+              </span>
+            </label>
+            <span class="pl-2 text-[13px] leading-tight">Rất tốt: >8đ</span>
+          </div>
+          <span class="text-[13px]">111</span>
+        </div>
+        <div class="inline-flex items-center justify-between">
+          <div class="flex items-center">
+            <label
+              class="relative flex items-center rounded-full cursor-pointer"
+              for="blue"
+            >
+              <input
+                type="checkbox"
+                class="before:content[''] peer relative h-[20px] w-[20px] cursor-pointer appearance-none border border-[#868686] rounded-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-8 before:w-8 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-blue-500 checked:bg-blue-500 checked:before:bg-blue-500 hover:before:opacity-10"
+                id="blue"
+              />
+              <span
+                class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"
+              >
+                <i
+                  class="fa-solid fa-check text-[12px] flex justify-center items-center"
+                ></i>
+              </span>
+            </label>
+            <span class="pl-2 text-[13px] leading-tight">Tốt: >7đ</span>
+          </div>
+          <span class="text-[13px]">111</span>
+        </div>
+        <div class="inline-flex items-center justify-between">
+          <div class="flex items-center">
+            <label
+              class="relative flex items-center rounded-full cursor-pointer"
+              for="blue"
+            >
+              <input
+                type="checkbox"
+                class="before:content[''] peer relative h-[20px] w-[20px] cursor-pointer appearance-none border border-[#868686] rounded-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-8 before:w-8 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-blue-500 checked:bg-blue-500 checked:before:bg-blue-500 hover:before:opacity-10"
+                id="blue"
+              />
+              <span
+                class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"
+              >
+                <i
+                  class="fa-solid fa-check text-[12px] flex justify-center items-center"
+                ></i>
+              </span>
+            </label>
+            <span class="pl-2 text-[13px] leading-tight">Dễ chịu: >6đ</span>
+          </div>
+          <span class="text-[13px]">111</span>
+        </div>
+        <!-- Nếu sản phẩm dài quá 5 sản phẩm thì sẽ hiện thị -->
+        <div>
+          <a href="#" class="flex items-center">
+            <span class="text-[#006ce4] pr-1 text-sm"
+              >Hiện thị tất cả 15 loại</span
+            >
+            <i class="text-[#006ce4] fa-solid fa-angle-down"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="py-5 px-3 border-b">
+      <h1 class="text-base text-[#000] font-semibold">Tùy chọn giường</h1>
+      <div class="flex flex-col gap-2 pt-3 pl-2">
+        <div class="inline-flex items-center justify-between">
+          <div class="flex items-center">
+            <label
+              class="relative flex items-center rounded-full cursor-pointer"
+              for="blue"
+            >
+              <input
+                type="checkbox"
+                class="before:content[''] peer relative h-[20px] w-[20px] cursor-pointer appearance-none border border-[#868686] rounded-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-8 before:w-8 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-blue-500 checked:bg-blue-500 checked:before:bg-blue-500 hover:before:opacity-10"
+                id="blue"
+              />
+              <span
+                class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"
+              >
+                <i
+                  class="fa-solid fa-check text-[12px] flex justify-center items-center"
+                ></i>
+              </span>
+            </label>
+            <span class="pl-2 text-[13px] leading-tight">2 Gường đơn</span>
+          </div>
+          <span class="text-[13px]">111</span>
+        </div>
+        <div class="inline-flex items-center justify-between">
+          <div class="flex items-center">
+            <label
+              class="relative flex items-center rounded-full cursor-pointer"
+              for="blue"
+            >
+              <input
+                type="checkbox"
+                class="before:content[''] peer relative h-[20px] w-[20px] cursor-pointer appearance-none border border-[#868686] rounded-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-8 before:w-8 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-blue-500 checked:bg-blue-500 checked:before:bg-blue-500 hover:before:opacity-10"
+                id="blue"
+              />
+              <span
+                class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"
+              >
+                <i
+                  class="fa-solid fa-check text-[12px] flex justify-center items-center"
+                ></i>
+              </span>
+            </label>
+            <span class="pl-2 text-[13px] leading-tight">Giường đôi</span>
+          </div>
+          <span class="text-[13px]">111</span>
+        </div>
+        <!-- khi nhiều quá 5 sản phẩm thì sẽ hiển thị -->
+        <div>
+          <a href="#" class="flex items-center">
+            <span class="text-[#006ce4] pr-1 text-sm"
+              >Hiện thị tất cả 15 loại</span
+            >
+            <i class="text-[#006ce4] fa-solid fa-angle-down"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

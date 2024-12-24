@@ -1,0 +1,988 @@
+<head>
+  <link
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+</head>
+
+<div>
+  <div class="w-[1024px] mx-auto max-w-full bg-[#003b95]">
+    <header>
+      <nav class="bg-blue-800">
+        <div
+          class="max-w-screen-lg flex flex-wrap items-center justify-between container mx-auto p-4"
+        >
+          <a
+            href=""
+            class="flex items-center space-x-3 rtl:space-x-reverse text-white"
+          >
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_uBp1tpVTWG_hB5ri0hLc_ELHuYj1hkl4_m9Pw4vYZfIolw2kqKaP55tSuOwEbCQnOC4&usqp=CAU"
+              class="h-8"
+              alt="TravelLogo"
+            />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap"
+              >Traveling</span
+            >
+          </a>
+          <div class="w-full md:block md:w-auto" id="navbar-default">
+            <ul class="font-medium flex gap-2.5 items-center justify-end">
+              <div class="py-2 px-3 hover:bg-[#1a4f9f] cursor-pointer">
+                <!-- modal ngôn ngữ -->
+              </div>
+              <a
+                href="#"
+                class="fa-regular fa-circle-question text-xl text-white py-2 px-3 hover:bg-[#1a4f9f] cursor-pointer"
+              ></a>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div
+      class="container mx-auto mt-10 shadow-lg bg-white rounded-lg flex flex-col md:flex-row"
+    >
+      <!-- Sidebar -->
+      <div
+        class="w-full md:w-1/4 p-6 rounded-t-lg md:rounded-l-lg border border-gray-300 text-xl"
+      >
+        <ul class="space-y-7">
+          <li class="bg-white p-4 hover:underline border-b border-gray-300">
+            <a href="#" class="text-gray-600 text-lg600 hover:text-blue-600">
+              <i class="fas fa-user mr-2"></i>Thông tin cá nhân
+            </a>
+          </li>
+          <li class="bg-white p-4 hover:underline border-b border-gray-300">
+            <a href="#" class="text-gray-600 text-lg600 hover:text-blue-600">
+              <i class="fas fa-cog mr-2"></i>Cài đặt chung
+            </a>
+          </li>
+          <li class="bg-white p-4 hover:underline border-b border-gray-300">
+            <a href="#" class="text-gray-600 text-lg600 hover:text-blue-600">
+              <i class="fas fa-lock mr-2"></i>Cài đặt bảo mật
+            </a>
+          </li>
+          <li class="bg-white p-4 hover:underline border-b border-gray-300">
+            <a href="#" class="text-gray-600 text-lg600 hover:text-blue-600">
+              <i class="fas fa-credit-card mr-2"></i>Phương thức thanh toán
+            </a>
+          </li>
+          <li class="bg-white p-4 hover:underline border-b border-gray-300">
+            <a href="#" class="text-gray-600 text-lg600 hover:text-blue-600">
+              <i class="fas fa-user-shield mr-2"></i>Cài đặt quyền riêng tư
+            </a>
+          </li>
+          <li class="bg-white p-4 hover:underline border-b border-gray-300">
+            <a href="#" class="text-gray-600 text-lg600 hover:text-blue-600">
+              <i class="fas fa-envelope mr-2"></i>Cài đặt email
+            </a>
+          </li>
+          <li class="bg-white p-4 hover:underline">
+            <a href="#" class="text-gray-600 text-lg600 hover:text-blue-600">
+              <i class="fas fa-user-friends mr-2"></i>Người đi cùng
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Main content -->
+      <div class="w-full md:w-3/4 p-6">
+        <div>
+          <h2 class="font-bold text-5xl">Thông tin cá nhân</h2>
+
+          <div id="circle" class="flex items-center justify-between">
+            <div>
+              <span class="text-gray-500 text-xl"
+                >Cập nhật thông tin của bạn và tìm hiểu các thông tin này được
+                sử dụng ra sao.
+              </span>
+            </div>
+            <!-- Avatar -->
+            <div
+              id="openModal"
+              class="w-20 h-20 rounded-full border border-gray-300 bg-lightblue-500 cursor-pointer flex items-center justify-center"
+              onclick="openModal()"
+            >
+              <!-- You can add an icon or text here if you want -->
+              <span class="text-white text-lg">Open</span>
+            </div>
+          </div>
+
+          <!-- Modal -->
+          <div
+            id="myModal"
+            class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden"
+          >
+            <div class="bg-white rounded-lg shadow-2xl w-full max-w-lg p-6">
+              <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-semibold text-gray-800">
+                  Chọn hình ảnh để tải lên
+                </h2>
+                <span
+                  id="close"
+                  class="cursor-pointer text-gray-500 text-2xl hover:text-gray-800 transition"
+                  >&times;</span
+                >
+              </div>
+
+              <div class="flex justify-between items-center space-x-6">
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-44 h-44 rounded-full border-2 border-gray-200 flex items-center justify-center bg-gray-100"
+                  >
+                    <img
+                      id="preview"
+                      src=""
+                      alt="Image Preview"
+                      class="rounded-full hidden w-full h-full object-cover"
+                    />
+                  </div>
+                  <button
+                    id="delete"
+                    class="mt-4 bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600 transition"
+                  >
+                    Xóa
+                  </button>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <input
+                    type="file"
+                    id="fileInput"
+                    accept="image/*"
+                    onchange="previewImage(event)"
+                    class="cursor-pointer block text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 transition"
+                  />
+                </div>
+              </div>
+
+              <div class="mt-6 text-right">
+                <button
+                  id="save"
+                  class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition"
+                >
+                  Lưu
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="py-8 space-y-10 ml-6">
+          <div class="border-b pb-4"></div>
+          <!-- Tên -->
+          <div class="border-b pb-4 flex justify-between items-center">
+            <div class="w-1/4">
+              <span class="text-xl">Tên</span>
+            </div>
+            <div class="w-1/2">
+              <!-- Phần hiển thị khi chưa chỉnh sửa -->
+              <div
+                id="name-span"
+                class="editable text-gray-600 text-lg cursor-pointer"
+                onclick="editField('name-span', 'name-input', 'edit-actions-name', 'edit-btn-name')"
+              >
+                Nhập tên và họ
+              </div>
+
+              <!-- Phần input khi nhấn chỉnh sửa -->
+              <div
+                class="hidden flex justify-between items-center"
+                id="name-input"
+              >
+                <div class="flex flex-col">
+                  <div><span class="font-semibold">Tên</span></div>
+                  <input
+                    type="text"
+                    id="first-name"
+                    placeholder="Nhập tên"
+                    class="border rounded-md p-2"
+                  />
+                </div>
+                <div class="flex flex-col">
+                  <div><span class="font-semibold">Họ</span></div>
+                  <input
+                    type="text"
+                    id="last-name"
+                    placeholder="Nhập họ"
+                    class="border rounded-md p-2"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div
+              id="edit-btn-name"
+              class="text-blue-600 cursor-pointer text-xl font-semibold"
+              onclick="editField('name-span', 'name-input', 'edit-actions-name', 'edit-btn-name')"
+            >
+              Chỉnh sửa
+            </div>
+
+            <!-- Nút Hủy và Lưu sẽ hiện ra khi nhấn Chỉnh sửa -->
+            <div id="edit-actions-name" class="hidden ml-5 flex gap-2">
+              <button
+                class="text-blue-500 w-12 h-10"
+                onclick="cancelEdit('name-span', 'name-input', 'edit-actions-name', 'edit-btn-name')"
+              >
+                Hủy
+              </button>
+              <button
+                class="text-white bg-blue-700 w-12 h-10"
+                onclick="saveEdit('name-span', 'name-input', 'edit-actions-name', 'edit-btn-name')"
+              >
+                Lưu
+              </button>
+            </div>
+          </div>
+
+          <!-- Tên hiển thị -->
+          <div class="border-b pb-4 flex justify-between items-center">
+            <div class="w-1/4">
+              <span class="text-xl">Tên hiển thị</span>
+            </div>
+            <div class="w-1/2">
+              <!-- Đây là phần hiển thị tên hiển thị và input để chỉnh sửa -->
+              <span
+                id="display-name-span"
+                class="editable text-gray-600 text-lg"
+                onclick="editField('display-name-span', 'display-name-input', 'edit-actions-display-name', 'edit-btn-display-name')"
+                >Chọn tên hiển thị</span
+              >
+              <input
+                id="display-name-input"
+                class="border rounded-md p-2 hidden w-full"
+                type="text"
+                value="Chọn tên hiển thị"
+              />
+            </div>
+            <div
+              id="edit-btn-display-name"
+              class="text-blue-600 cursor-pointer text-xl font-semibold"
+              onclick="editField('display-name-span', 'display-name-input', 'edit-actions-display-name', 'edit-btn-display-name')"
+            >
+              Chỉnh sửa
+            </div>
+
+            <!-- Nút Hủy và Lưu sẽ hiện ra khi nhấn Chỉnh sửa -->
+            <div id="edit-actions-display-name" class="hidden ml-5">
+              <button
+                class="text-blue-500 w-12 h-10"
+                onclick="cancelEdit('display-name-span', 'display-name-input', 'edit-actions-display-name', 'edit-btn-display-name')"
+              >
+                Hủy
+              </button>
+              <button
+                class="text-white bg-blue-700 w-12 h-10"
+                onclick="saveEdit('display-name-span', 'display-name-input', 'edit-actions-display-name', 'edit-btn-display-name')"
+              >
+                Lưu
+              </button>
+            </div>
+          </div>
+
+          <!-- email -->
+          <div class="border-b pb-4 flex justify-between items-center">
+            <div class="w-1/4">
+              <span class="text-xl">Địa chỉ email</span>
+            </div>
+            <div class="w-1/2">
+              <!-- Đây là phần hiển thị địa chỉ email -->
+              <div
+                class="space-y-5"
+                id="email-display"
+                onclick="editField('email-display', 'email-input', 'edit-actions-email', 'edit-btn-email')"
+              >
+                <div class="flex gap-5">
+                  <div>
+                    <span class="editable text-gray-600 text-lg"
+                      >hieumdph36863@fpt.edu.vn</span
+                    >
+                  </div>
+
+                  <div class="bg-green-600 text-white w-20 h-7 text-center">
+                    <span>Xác thực</span>
+                  </div>
+                </div>
+
+                <div>
+                  <span class="text-gray-500"
+                    >Đây là địa chỉ email bạn dùng để đăng nhập. Chúng tôi cũng
+                    sẽ gửi các xác nhận đặt chỗ tới địa chỉ này.</span
+                  >
+                </div>
+              </div>
+
+              <div class="space-y-5 hidden" id="email-input">
+                <div>
+                  <input
+                    class="border rounded-md p-2 w-full"
+                    type="text"
+                    value="hieumdph36863@fpt.edu.vn"
+                  />
+                  <!-- Thay đổi value để hiển thị email -->
+                </div>
+                <div>
+                  <span class="text-gray-500"
+                    >Chúng tôi sẽ gửi đường link xác thực đến địa chỉ email mới.
+                    Vui lòng kiểm tra hộp thư của bạn.</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div
+              id="edit-btn-email"
+              class="text-blue-600 cursor-pointer text-xl font-semibold"
+              onclick="editField('email-display', 'email-input', 'edit-actions-email', 'edit-btn-email')"
+            >
+              Chỉnh sửa
+            </div>
+
+            <!-- Nút Hủy và Lưu sẽ hiện ra khi nhấn Chỉnh sửa -->
+            <div id="edit-actions-email" class="hidden ml-5 flex gap-2">
+              <button
+                class="text-blue-500 w-12 h-10"
+                onclick="cancelEdit('email-display', 'email-input', 'edit-actions-email', 'edit-btn-email')"
+              >
+                Hủy
+              </button>
+              <button
+                class="text-white bg-blue-700 w-12 h-10"
+                onclick="saveEdit('email-display', 'email-input', 'edit-actions-email', 'edit-btn-email')"
+              >
+                Lưu
+              </button>
+            </div>
+          </div>
+
+          <!-- Số điện thoại -->
+          <div class="border-b pb-4 flex justify-between items-center">
+            <div class="w-1/4">
+              <span class="text-xl">Số điện thoại</span>
+            </div>
+            <div class="w-1/2">
+              <!-- Đây là phần hiển thị số điện thoại -->
+              <div
+                class="space-y-5"
+                id="phone-display"
+                onclick="editField('phone-display', 'phone-input', 'edit-actions-phone', 'edit-btn-phone')"
+              >
+                <div>
+                  <span class="editable text-gray-600 text-lg"
+                    >Thêm số điện thoại của bạn</span
+                  >
+                </div>
+                <div>
+                  <span class="text-gray-500"
+                    >Chỗ nghỉ hoặc địa điểm tham quan bạn đặt sẽ liên lạc với
+                    bạn qua số này nếu cần.</span
+                  >
+                </div>
+              </div>
+
+              <div class="space-y-7 hidden" id="phone-input">
+                <div><span class="font-semibold">Số điện thoại</span></div>
+
+                <div class="flex gap-2">
+                  <select class="border rounded-md p-2">
+                    <option>+84</option>
+                    <option>+1</option>
+                    <option>+44</option>
+                  </select>
+                  <input
+                    type="text"
+                    class="border rounded-md p-2 w-full"
+                    placeholder="Số điện thoại"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div
+              id="edit-btn-phone"
+              class="text-blue-600 cursor-pointer text-xl font-semibold"
+              onclick="editField('phone-display', 'phone-input', 'edit-actions-phone', 'edit-btn-phone')"
+            >
+              Chỉnh sửa
+            </div>
+
+            <!-- Nút Hủy và Lưu sẽ hiện ra khi nhấn Chỉnh sửa -->
+            <div id="edit-actions-phone" class="hidden ml-5 flex gap-2">
+              <button
+                class="text-blue-500 w-12 h-10"
+                onclick="cancelEdit('phone-display', 'phone-input', 'edit-actions-phone', 'edit-btn-phone')"
+              >
+                Hủy
+              </button>
+              <button
+                class="text-white bg-blue-700 w-12 h-10"
+                onclick="saveEdit('phone-display', 'phone-input', 'edit-actions-phone', 'edit-btn-phone')"
+              >
+                Lưu
+              </button>
+            </div>
+          </div>
+
+          <!-- Ngày sinh -->
+          <div class="border-b pb-4 flex justify-between items-center">
+            <div class="w-1/4">
+              <span class="text-xl">Ngày sinh</span>
+            </div>
+            <div class="w-1/2">
+              <!-- Đây là phần hiển thị ngày sinh -->
+              <div
+                class="space-y-5"
+                id="birthday-display"
+                onclick="editField('birthday-display', 'birthday-input', 'edit-actions-birthday', 'edit-btn-birthday')"
+              >
+                <div>
+                  <span class="editable text-gray-600 text-lg"
+                    >Nhập ngày sinh của bạn</span
+                  >
+                </div>
+              </div>
+
+              <!-- Đây là phần hiển thị khi nhấn vào nút chỉnh sửa -->
+              <div class="space-y-5 hidden" id="birthday-input">
+                <div><span class="font-semibold">Ngày sinh</span></div>
+                <div class="flex gap-2">
+                  <input
+                    type="text"
+                    class="border rounded-md p-2 w-20"
+                    placeholder="Ngày"
+                    id="day-input"
+                  />
+                  <select class="border rounded-md p-2 w-32">
+                    <option value="">Tháng</option>
+                    <option value="1">Tháng 1</option>
+                    <option value="2">Tháng 2</option>
+                    <option value="3">Tháng 3</option>
+                    <option value="4">Tháng 4</option>
+                    <option value="5">Tháng 5</option>
+                    <option value="6">Tháng 6</option>
+                    <option value="7">Tháng 7</option>
+                    <option value="8">Tháng 8</option>
+                    <option value="9">Tháng 9</option>
+                    <option value="10">Tháng 10</option>
+                    <option value="11">Tháng 11</option>
+                    <option value="12">Tháng 12</option>
+                  </select>
+                  <input
+                    type="text"
+                    class="border rounded-md p-2 w-32"
+                    placeholder="Năm"
+                    id="year-input"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div
+              id="edit-btn-birthday"
+              class="text-blue-600 cursor-pointer text-xl font-semibold"
+              onclick="editField('birthday-display', 'birthday-input', 'edit-actions-birthday', 'edit-btn-birthday')"
+            >
+              Chỉnh sửa
+            </div>
+
+            <!-- Nút Hủy và Lưu sẽ hiện ra khi nhấn Chỉnh sửa -->
+            <div id="edit-actions-birthday" class="hidden ml-5 flex gap-2">
+              <button
+                class="text-blue-500 w-12 h-10"
+                onclick="cancelEdit('birthday-display', 'birthday-input', 'edit-actions-birthday', 'edit-btn-birthday')"
+              >
+                Hủy
+              </button>
+              <button
+                class="text-white bg-blue-700 w-12 h-10"
+                onclick="saveEdit('birthday-display', 'birthday-input', 'edit-actions-birthday', 'edit-btn-birthday')"
+              >
+                Lưu
+              </button>
+            </div>
+          </div>
+
+          <!-- Quốc tịch -->
+          <div class="border-b pb-4 flex justify-between items-center">
+            <div class="w-1/4">
+              <span class="text-xl">Quốc tịch</span>
+            </div>
+            <div class="w-1/2">
+              <!-- Đây là phần hiển thị quốc tịch -->
+              <div
+                class="space-y-5"
+                id="nationality-display"
+                onclick="editField('nationality-display', 'nationality-input', 'edit-actions-nationality', 'edit-btn-nationality')"
+              >
+                <div>
+                  <span class="editable text-gray-600 text-lg"
+                    >Chọn vùng/quốc gia của bạn</span
+                  >
+                </div>
+              </div>
+
+              <!-- Đây là phần hiển thị khi nhấn vào nút chỉnh sửa -->
+              <div class="space-y-5 hidden" id="nationality-input">
+                <div class="flex gap-2">
+                  <select
+                    class="border rounded-md p-2 w-full"
+                    id="nationality-select"
+                  >
+                    <option value="">Chọn quốc tịch</option>
+                    <option value="Vietnam">Việt Nam</option>
+                    <option value="USA">Hoa Kỳ</option>
+                    <option value="Japan">Nhật Bản</option>
+                    <option value="France">Pháp</option>
+                    <option value="Germany">Đức</option>
+                    <!-- Bạn có thể thêm các quốc gia khác tại đây -->
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div
+              id="edit-btn-nationality"
+              class="text-blue-600 cursor-pointer text-xl font-semibold"
+              onclick="editField('nationality-display', 'nationality-input', 'edit-actions-nationality', 'edit-btn-nationality')"
+            >
+              Chỉnh sửa
+            </div>
+
+            <!-- Nút Hủy và Lưu sẽ hiện ra khi nhấn Chỉnh sửa -->
+            <div id="edit-actions-nationality" class="hidden ml-5 flex gap-2">
+              <button
+                class="text-blue-500 w-12 h-10"
+                onclick="cancelEdit('nationality-display', 'nationality-input', 'edit-actions-nationality', 'edit-btn-nationality')"
+              >
+                Hủy
+              </button>
+              <button
+                class="text-white bg-blue-700 w-12 h-10"
+                onclick="saveEdit('nationality-display', 'nationality-input', 'edit-actions-nationality', 'edit-btn-nationality')"
+              >
+                Lưu
+              </button>
+            </div>
+          </div>
+
+          <!-- Giới tính -->
+          <div class="border-b pb-4 flex justify-between items-center">
+            <div class="w-1/4">
+              <span class="text-xl">Giới tính</span>
+            </div>
+            <div class="w-1/2">
+              <!-- Đây là phần hiển thị giới tính -->
+              <div
+                class="space-y-5"
+                id="gender-display"
+                onclick="editField('gender-display', 'gender-input', 'edit-actions-gender', 'edit-btn-gender')"
+              >
+                <div>
+                  <span class="editable text-gray-600 text-lg"
+                    >Chọn giới tính</span
+                  >
+                </div>
+              </div>
+
+              <!-- Đây là phần hiển thị khi nhấn vào nút chỉnh sửa -->
+              <div class="space-y-5 hidden" id="gender-input">
+                <div class="flex gap-2">
+                  <select
+                    class="border rounded-md p-2 w-full"
+                    id="gender-select"
+                  >
+                    <option value="">Chọn giới tính</option>
+                    <option value="Nam">Nam</option>
+                    <option value="Nữ">Nữ</option>
+                    <option value="Khác">Khác</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div
+              id="edit-btn-gender"
+              class="text-blue-600 cursor-pointer text-xl font-semibold"
+              onclick="editField('gender-display', 'gender-input', 'edit-actions-gender', 'edit-btn-gender')"
+            >
+              Chỉnh sửa
+            </div>
+
+            <!-- Nút Hủy và Lưu sẽ hiện ra khi nhấn Chỉnh sửa -->
+            <div id="edit-actions-gender" class="hidden ml-5 flex gap-2">
+              <button
+                class="text-blue-500 w-12 h-10"
+                onclick="cancelEdit('gender-display', 'gender-input', 'edit-actions-gender', 'edit-btn-gender')"
+              >
+                Hủy
+              </button>
+              <button
+                class="text-white bg-blue-700 w-12 h-10"
+                onclick="saveEdit('gender-display', 'gender-input', 'edit-actions-gender', 'edit-btn-gender')"
+              >
+                Lưu
+              </button>
+            </div>
+          </div>
+
+          <!-- Địa chỉ-->
+          <div class="border-b pb-4 flex justify-between items-center">
+            <div class="w-1/4">
+              <span class="text-xl">Địa chỉ</span>
+            </div>
+            <div class="w-1/2">
+              <!-- Phần hiển thị địa chỉ khi chưa chỉnh sửa -->
+              <div
+                class="space-y-5"
+                id="address-display"
+                onclick="editField('address-display', 'address-input', 'edit-actions-address', 'edit-btn-address')"
+              >
+                <div>
+                  <span class="editable text-gray-600 text-lg"
+                    >Nhập địa chỉ</span
+                  >
+                </div>
+              </div>
+
+              <!-- Phần input địa chỉ khi nhấn chỉnh sửa -->
+              <div class="space-y-7 hidden" id="address-input">
+                <div>
+                  <div><span class="font-semibold">Vùng/quốc gia</span></div>
+                  <div>
+                    <select name="country" class="border rounded-md p-2 w-full">
+                      <option value="">Chọn quốc gia</option>
+                      <option value="Viet Nam">Việt Nam</option>
+                      <option value="USA">Hoa Kỳ</option>
+                      <option value="UK">Vương quốc Anh</option>
+                      <!-- Thêm các quốc gia khác -->
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <div><span class="font-semibold">Địa chỉ</span></div>
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="Tên đường và số nhà/căn hộ"
+                      class="border rounded-md p-2 w-full"
+                    />
+                  </div>
+                </div>
+
+                <div class="flex gap-5">
+                  <div class="w-1/2">
+                    <div>
+                      <span class="font-semibold">Thị trấn/thành phố</span>
+                    </div>
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="Thị trấn/thành phố"
+                        class="border rounded-md p-2 w-full"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="w-1/2">
+                    <div><span class="font-semibold">Mã bưu điện</span></div>
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="Mã bưu điện"
+                        class="border rounded-md p-2 w-full"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              id="edit-btn-address"
+              class="text-blue-600 cursor-pointer text-xl font-semibold"
+              onclick="editField('address-display', 'address-input', 'edit-actions-address', 'edit-btn-address')"
+            >
+              Chỉnh sửa
+            </div>
+
+            <!-- Nút Hủy và Lưu sẽ hiện ra khi nhấn Chỉnh sửa -->
+            <div id="edit-actions-address" class="hidden ml-5 flex gap-2">
+              <button
+                class="text-blue-500 w-12 h-10"
+                onclick="cancelEdit('address-display', 'address-input', 'edit-actions-address', 'edit-btn-address')"
+              >
+                Hủy
+              </button>
+              <button
+                class="text-white bg-blue-700 w-12 h-10"
+                onclick="saveEdit('address-display', 'address-input', 'edit-actions-address', 'edit-btn-address')"
+              >
+                Lưu
+              </button>
+            </div>
+          </div>
+
+          <!-- Thông tin hộ chiếu -->
+          <div class="border-b pb-4 flex justify-between items-center">
+            <div class="w-1/4">
+              <span class="text-xl">Thông tin hộ chiếu</span>
+            </div>
+            <div class="w-1/2">
+              <!-- Phần hiển thị khi chưa chỉnh sửa -->
+              <div
+                class="space-y-5"
+                id="passport-display"
+                onclick="editField('passport-display', 'passport-input', 'edit-actions-passport', 'edit-btn-passport')"
+              >
+                <div>
+                  <span class="editable text-gray-600 text-lg"
+                    >Nhập thông tin hộ chiếu</span
+                  >
+                </div>
+              </div>
+
+              <!-- Phần input khi nhấn chỉnh sửa -->
+              <div class="space-y-7 hidden" id="passport-input">
+                <div>
+                  <span
+                    >Lưu thông tin hộ chiếu để sử dụng cho lần tới khi đặt chỗ
+                    nghỉ, chuyến bay hoặc hoạt động tham quan.</span
+                  >
+                </div>
+
+                <!-- Tên và Họ -->
+                <div class="flex gap-4">
+                  <div>
+                    <span class="font-semibold">Tên</span>
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="Nhập tên"
+                        class="border rounded-md p-2"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <span class="font-semibold">Họ</span>
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="Nhập họ"
+                        class="border rounded-md p-2"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <span
+                    >Vui lòng nhập chính xác tên như trên hộ chiếu hoặc giấy tờ
+                    tùy thân chính thức khác.</span
+                  >
+                </div>
+
+                <!-- Quốc gia cấp giấy tờ và số hộ chiếu -->
+                <div class="flex gap-4">
+                  <div>
+                    <div class="font-semibold">
+                      <span>Quốc gia cấp giấy tờ</span>
+                    </div>
+                    <div>
+                      <select class="border rounded-md p-2">
+                        <option value="">Chọn quốc gia</option>
+                        <option value="Viet Nam">Việt Nam</option>
+                        <option value="USA">Hoa Kỳ</option>
+                        <option value="UK">Vương quốc Anh</option>
+                        <!-- Thêm quốc gia khác -->
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="font-semibold"><span>Số hộ chiếu</span></div>
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="Nhập số hộ chiếu"
+                        class="border rounded-md p-2"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Ngày hết hạn -->
+                <div>
+                  <div class="flex gap-4">
+                    <div>
+                      <div class="font-semibold"><span>Ngày hết hạn</span></div>
+                      <div class="flex gap-2">
+                        <input
+                          type="text"
+                          placeholder="DD"
+                          class="border rounded-md p-2 w-12"
+                        />
+                        <select class="border rounded-md p-2 w-24">
+                          <option value="">MM</option>
+                          <option value="01">01</option>
+                          <option value="02">02</option>
+                          <option value="03">03</option>
+                          <!-- Thêm tháng khác -->
+                        </select>
+                        <input
+                          type="text"
+                          placeholder="YYYY"
+                          class="border rounded-md p-2 w-20"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <span
+                      >Chúng tôi sẽ lưu trữ và bảo mật dữ liệu này. Nếu người
+                      dùng không đăng nhập trong vòng 2 năm, chúng tôi sẽ xóa dữ
+                      liệu này.</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Checkbox chấp thuận -->
+                <div class="flex items-center gap-2">
+                  <input type="checkbox" id="agree-checkbox" class="w-5 h-5" />
+                  <span
+                    >Tôi đồng ý cho Booking.com lưu trữ thông tin hộ chiếu của
+                    tôi theo chính sách bảo mật.</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div
+              id="edit-btn-passport"
+              class="text-blue-600 cursor-pointer text-xl font-semibold"
+              onclick="editField('passport-display', 'passport-input', 'edit-actions-passport', 'edit-btn-passport')"
+            >
+              Chỉnh sửa
+            </div>
+
+            <!-- Nút Hủy và Lưu sẽ hiện ra khi nhấn Chỉnh sửa -->
+            <div id="edit-actions-passport" class="hidden ml-5 flex gap-2">
+              <button
+                class="text-blue-500 w-12 h-10"
+                onclick="cancelEdit('passport-display', 'passport-input', 'edit-actions-passport', 'edit-btn-passport')"
+              >
+                Hủy
+              </button>
+              <button
+                class="text-white bg-blue-700 w-12 h-10"
+                onclick="saveEdit('passport-display', 'passport-input', 'edit-actions-passport', 'edit-btn-passport')"
+              >
+                Lưu
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Get modal elements
+  const modal = document.getElementById("myModal");
+  const closeModalButton = document.getElementById("close");
+  const fileInput = document.getElementById("fileInput");
+  const previewImageElement = document.getElementById("preview");
+  const deleteButton = document.getElementById("delete");
+  const saveButton = document.getElementById("save");
+
+  // Open Modal
+  function openModal() {
+    modal.classList.remove("hidden");
+  }
+
+  // Close Modal
+  closeModalButton.addEventListener("click", () => {
+    modal.classList.add("hidden");
+    clearPreview();
+  });
+
+  // Image Preview Function
+  function previewImage(event) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        previewImageElement.src = e.target.result;
+        previewImageElement.classList.remove("hidden");
+      };
+      reader.readAsDataURL(file);
+    }
+  }
+
+  // Delete Preview
+  deleteButton.addEventListener("click", () => {
+    clearPreview();
+    fileInput.value = ""; // Clear the file input
+  });
+
+  // Clear Preview
+  function clearPreview() {
+    previewImageElement.src = "";
+    previewImageElement.classList.add("hidden");
+  }
+
+  // Save Action
+  saveButton.addEventListener("click", () => {
+    if (previewImageElement.src) {
+      alert("Image saved successfully!");
+      modal.classList.add("hidden");
+      clearPreview();
+    } else {
+      alert("Please select an image to save.");
+    }
+  });
+
+  function editField(spanId, inputId, actionsId, editBtnId) {
+    // Lấy giá trị từ span và chia thành tên và họ
+    const fullName = document.getElementById(spanId).textContent;
+    const [firstName, lastName] =
+      fullName.split(" ").length > 1 ? fullName.split(" ") : [fullName, ""];
+
+    // Cập nhật các trường input với giá trị từ span
+    document.getElementById("first-name").value = firstName; // Đặt tên
+    document.getElementById("last-name").value = lastName; // Đặt họ
+
+    // Hiển thị ô input và các nút hành động
+    document.getElementById(spanId).classList.add("hidden"); // Ẩn span
+    document.getElementById(inputId).classList.remove("hidden"); // Hiện input
+    document.getElementById(actionsId).classList.remove("hidden"); // Hiện các nút hành động
+    document.getElementById(editBtnId).classList.add("hidden"); // Ẩn nút chỉnh sửa
+  }
+
+  function cancelEdit(spanId, inputId, actionsId, editBtnId) {
+    // Khôi phục trạng thái ban đầu
+    document.getElementById(spanId).classList.remove("hidden"); // Hiện span
+    document.getElementById(inputId).classList.add("hidden"); // Ẩn input
+    document.getElementById(actionsId).classList.add("hidden"); // Ẩn các nút hành động
+    document.getElementById(editBtnId).classList.remove("hidden"); // Hiện nút chỉnh sửa
+  }
+
+  function saveEdit(spanId, inputId, actionsId, editBtnId) {
+    // Lưu giá trị từ input vào span và khôi phục lại trạng thái
+    const firstName = document.getElementById("first-name").value.trim();
+    const lastName = document.getElementById("last-name").value.trim();
+
+    // Cập nhật giá trị span với tên và họ
+    const displayValue =
+      [firstName, lastName].filter(Boolean).join(" ") || "Nhập tên và họ";
+    document.getElementById(spanId).textContent = displayValue; // Cập nhật giá trị span
+
+    // Khôi phục trạng thái ban đầu
+    cancelEdit(spanId, inputId, actionsId, editBtnId);
+  }
+</script>

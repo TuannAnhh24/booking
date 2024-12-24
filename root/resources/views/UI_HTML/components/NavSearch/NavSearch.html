@@ -1,0 +1,1520 @@
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+<!-- Font Awesome -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
+
+<!-- Ionicons -->
+<script
+  type="module"
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+></script>
+
+<!-- Bootstrap Icons -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+  integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd"
+  crossorigin="anonymous"
+/>
+
+<template>
+  <div>
+    <div
+      class="w-full h-16 bg-[#feb704] absolute top-[calc(100%)] transform -translate-y-1/2 rounded-lg"
+    >
+      <div class="p-1 flex items-center justify-between w-full">
+        <div class="w-[40%]">
+          <form>
+            <label
+              for="search"
+              class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+              >Search</label
+            >
+            <div class="relative focus-parent">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  viewBox="0 0 640 512"
+                >
+                  <path
+                    d="M32 32c17.7 0 32 14.3 32 32V320H288V160c0-17.7 14.3-32 32-32H544c53 0 96 43 96 96V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V416H352 320 64v32c0 17.7-14.3 32-32 32s-32-14.3-32-32V64C0 46.3 14.3 32 32 32zm144 96a80 80 0 1 1 0 160 80 80 0 1 1 0-160z"
+                  />
+                </svg>
+              </div>
+              <input
+                type="search"
+                id="search"
+                class="focus:outline-none block w-full p-4 ps-10 text-sm text-black border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-white dark:placeholder-black dark:text-black"
+                placeholder="Bạn muốn đến đâu?"
+                required
+              />
+              <div
+                class="focus-child w-[calc(100%+2rem)] z-[999] top-[120%] hidden absolute bg-white border shadow-xl rounded-lg"
+                  >
+                <div class="w-full z-[999]">
+                  <div class="p-3">Điểm đến được ưa thích gần đây</div>
+                  <div class="">
+                    <div class="flex items-center p-2 pl-4 hover:bg-[#f2f2f2]">
+                      <i class="fa-solid fa-location-dot text-2xl pr-5"></i>
+                      <div class="flex flex-col">
+                        <div class="text-sm font-medium">Phú Quốc</div>
+                        <span class="text-xs text-[#A1A1A1] font-normal"
+                          >sub</span
+                        >
+                      </div>
+                    </div>
+                    <div class="flex items-center p-2 pl-4 hover:bg-[#f2f2f2]">
+                      <i class="fa-solid fa-location-dot text-2xl pr-5"></i>
+                      <div class="flex flex-col">
+                        <div class="text-sm font-medium">Phú Quốc</div>
+                        <span class="text-xs text-[#A1A1A1] font-normal"
+                          >sub</span
+                        >
+                      </div>
+                    </div>
+                    <div class="flex items-center p-2 pl-4 hover:bg-[#f2f2f2]">
+                      <i class="fa-solid fa-location-dot text-2xl pr-5"></i>
+                      <div class="flex flex-col">
+                        <div class="text-sm font-medium">Phú Quốc</div>
+                        <span class="text-xs text-[#A1A1A1] font-normal"
+                          >sub</span
+                        >
+                      </div>
+                    </div>
+                    <div class="flex items-center p-2 pl-4 hover:bg-[#f2f2f2]">
+                      <i class="fa-solid fa-location-dot text-2xl pr-5"></i>
+                      <div class="flex flex-col">
+                        <div class="text-sm font-medium">Phú Quốc</div>
+                        <span class="text-xs text-[#A1A1A1] font-normal"
+                          >sub</span
+                        >
+                      </div>
+                    </div>
+                    <div class="flex items-center p-2 pl-4 hover:bg-[#f2f2f2]">
+                      <i class="fa-solid fa-location-dot text-2xl pr-5"></i>
+                      <div class="flex flex-col">
+                        <div class="text-sm font-medium">Phú Quốc</div>
+                        <span class="text-xs text-[#A1A1A1] font-normal"
+                          >sub</span
+                        >
+                      </div>
+                    </div>
+                    <div class="flex items-center p-2 pl-4 hover:bg-[#f2f2f2]">
+                      <i class="fa-solid fa-location-dot text-2xl pr-5"></i>
+                      <div class="flex flex-col">
+                        <div class="text-sm font-medium">Phú Quốc</div>
+                        <span class="text-xs text-[#A1A1A1] font-normal"
+                          >sub</span
+                        >
+                      </div>
+                    </div>
+                    <div class="flex items-center p-2 pl-4 hover:bg-[#f2f2f2]">
+                      <i class="fa-solid fa-location-dot text-2xl pr-5"></i>
+                      <div class="flex flex-col">
+                        <div class="text-sm font-medium">Phú Quốc</div>
+                        <span class="text-xs text-[#A1A1A1] font-normal"
+                          >sub</span
+                        >
+                      </div>
+                    </div>
+                    <div class="flex items-center p-2 pl-4 hover:bg-[#f2f2f2]">
+                      <i class="fa-solid fa-location-dot text-2xl pr-5"></i>
+                      <div class="flex flex-col">
+                        <div class="text-sm font-medium">Phú Quốc</div>
+                        <span class="text-xs text-[#A1A1A1] font-normal"
+                          >sub</span
+                        >
+                      </div>
+                    </div>
+                    <div class="flex items-center p-2 pl-4 hover:bg-[#f2f2f2]">
+                      <i class="fa-solid fa-location-dot text-2xl pr-5"></i>
+                      <div class="flex flex-col">
+                        <div class="text-sm font-medium">Phú Quốc</div>
+                        <span class="text-xs text-[#A1A1A1] font-normal"
+                          >sub</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="w-[26%]">
+          <form action="">
+            <div class="focus-parent cursor-pointer">
+              <div
+                class="block w-full p-4 text-sm text-black border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-white dark:placeholder-black dark:text-black"
+              >
+                <div class="flex justify-between">
+                  <div
+                    class="inset-y-0 start-0 flex items-center pointer-events-none"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      viewBox="0 0 448 512"
+                    >
+                      <path
+                        d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v16 48V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192 144 128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192h80v56H48V192zm0 104h80v64H48V296zm128 0h96v64H176V296zm144 0h80v64H320V296zm80-48H320V192h80v56zm0 160v40c0 8.8-7.2 16-16 16H320V408h80zm-128 0v56H176V408h96zm-144 0v56H64c-8.8 0-16-7.2-16-16V408h80zM272 248H176V192h96v56z"
+                      />
+                    </svg>
+                  </div>
+                  <span
+                    class="block overflow-hidden text-ellipsis whitespace-nowrap w-[80px]"
+                    >Ngày nhận phòng</span
+                  >
+                  -
+                  <span
+                    class="block overflow-hidden text-ellipsis whitespace-nowrap w-[80px]"
+                    >ngày trả phòng</span
+                  >
+                </div>
+              </div>
+              <!-- Datepicker -->
+              <div
+                id=" ranges-tab-preview-datepicker"
+                class="focus-child z-[999] top-[104%] hidden absolute w-80 md:w-[40.4rem] flex-col bg-white border shadow-lg rounded-xl overflow-hidden dark:bg-white"
+              >
+                <div class="p-3 z-[999] grid md:flex gap-8">
+                  <!-- Calendar -->
+                  <div class="space-y-0.5">
+                    <!-- Months -->
+                    <div
+                      class="grid grid-cols-5 items-center gap-x-3 mx-1.5 pb-3"
+                    >
+                      <!-- Prev Button -->
+                      <div class="col-span-1">
+                        <button
+                          type="button"
+                          class="size-8 flex justify-center items-center text-gray-800 hover:bg-gray-100 rounded-full disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-800"
+                        >
+                          <svg
+                            class="flex-shrink-0 size-4"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path d="m15 18-6-6 6-6"></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <!-- End Prev Button -->
+
+                      <!-- Month / Year -->
+                      <div
+                        class="col-span-3 flex justify-center items-center gap-x-1"
+                      >
+                        <div class="relative">
+                          <select
+                            data-hs-select='{
+                  "placeholder": "Select month",
+                  "viewport": "#ranges-tab-preview-datepicker",
+                  "toggleTag": "<button type=\"button\"></button>",
+                  "toggleClasses": "hs-select-disabled:pointer-events-none hs-select-disabled:opacity-50 relative flex text-nowrap w-full cursor-pointer text-start font-medium text-gray-800 hover:text-gray-600 focus:outline-none focus:text-gray-600 before:absolute before:inset-0 before:z-[1] dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300",
+                  "dropdownClasses": "mt-2 z-50 w-32 max-h-72 p-1 space-y-0.5 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500 dark:bg-neutral-900 dark:border-neutral-700",
+                  "optionClasses": "p-2 w-full text-sm text-gray-800 cursor-pointer hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:text-neutral-200 dark:focus:bg-neutral-800",
+                  "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"hidden hs-selected:block\"><svg class=\"flex-shrink-0 size-3.5 text-gray-800 dark:text-neutral-200\" xmlns=\"http:.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"/></svg></span></div>"
+                }'
+                            class="hidden"
+                          >
+                            <option value="0">January</option>
+                            <option value="1">February</option>
+                            <option value="2">March</option>
+                            <option value="3">April</option>
+                            <option value="4">May</option>
+                            <option value="5">June</option>
+                            <option value="6" selected="">July</option>
+                            <option value="7">August</option>
+                            <option value="8">September</option>
+                            <option value="9">October</option>
+                            <option value="10">November</option>
+                            <option value="11">December</option>
+                          </select>
+                        </div>
+
+                        <span class="text-gray-800 dark:text-neutral-200"
+                          >/</span
+                        >
+
+                        <div class="relative">
+                          <select
+                            data-hs-select='{
+                  "placeholder": "Select year",
+                  "viewport": "#ranges-tab-preview-datepicker",
+                  "toggleTag": "<button type=\"button\"></button>",
+                  "toggleClasses": "hs-select-disabled:pointer-events-none hs-select-disabled:opacity-50 relative flex text-nowrap w-full cursor-pointer text-start font-medium text-gray-800 hover:text-gray-600 focus:outline-none focus:text-gray-600 before:absolute before:inset-0 before:z-[1] dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300",
+                  "dropdownClasses": "mt-2 z-50 w-20 max-h-72 p-1 space-y-0.5 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500 dark:bg-neutral-900 dark:border-neutral-700",
+                  "optionClasses": "p-2 w-full text-sm text-gray-800 cursor-pointer hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:text-neutral-200 dark:focus:bg-neutral-800",
+                  "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"hidden hs-selected:block\"><svg class=\"flex-shrink-0 size-3.5 text-gray-800 dark:text-neutral-200\" xmlns=\"http:.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"/></svg></span></div>"
+                }'
+                            class="hidden"
+                          >
+                            <option selected="">2023</option>
+                            <option>2024</option>
+                            <option>2025</option>
+                            <option>2026</option>
+                            <option>2027</option>
+                          </select>
+                        </div>
+                      </div>
+                      <!-- End Month / Year -->
+
+                      <!-- Next Button -->
+                      <div class="col-span-1 flex justify-end">
+                        <button
+                          type="button"
+                          class="opacity-0 size-8 flex justify-center items-center text-gray-800 hover:bg-gray-100 rounded-full disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-800"
+                        >
+                          <svg
+                            class="flex-shrink-0 size-4"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path d="m9 18 6-6-6-6"></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <!-- End Next Button -->
+                    </div>
+                    <!-- Months -->
+
+                    <!-- Weeks -->
+                    <div class="flex pb-1.5">
+                      <span
+                        class="m-px w-10 block text-center text-sm text-gray-500 dark:text-neutral-500"
+                      >
+                        Mo
+                      </span>
+                      <span
+                        class="m-px w-10 block text-center text-sm text-gray-500 dark:text-neutral-500"
+                      >
+                        Tu
+                      </span>
+                      <span
+                        class="m-px w-10 block text-center text-sm text-gray-500 dark:text-neutral-500"
+                      >
+                        We
+                      </span>
+                      <span
+                        class="m-px w-10 block text-center text-sm text-gray-500 dark:text-neutral-500"
+                      >
+                        Th
+                      </span>
+                      <span
+                        class="m-px w-10 block text-center text-sm text-gray-500 dark:text-neutral-500"
+                      >
+                        Fr
+                      </span>
+                      <span
+                        class="m-px w-10 block text-center text-sm text-gray-500 dark:text-neutral-500"
+                      >
+                        Sa
+                      </span>
+                      <span
+                        class="m-px w-10 block text-center text-sm text-gray-500 dark:text-neutral-500"
+                      >
+                        Su
+                      </span>
+                    </div>
+                    <!-- Weeks -->
+
+                    <!-- Days -->
+                    <div class="flex">
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                          disabled=""
+                        >
+                          26
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                          disabled=""
+                        >
+                          27
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                          disabled=""
+                        >
+                          28
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                          disabled=""
+                        >
+                          29
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                          disabled=""
+                        >
+                          30
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          1
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          2
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Days -->
+
+                    <!-- Days -->
+                    <div class="flex">
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          3
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          4
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          5
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          6
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          7
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          8
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          9
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Days -->
+
+                    <!-- Days -->
+                    <div class="flex">
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          10
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          11
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          12
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          13
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          14
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          15
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          16
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Days -->
+
+                    <!-- Days -->
+                    <div class="flex">
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          17
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          18
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          19
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center bg-blue-600 border border-transparent text-sm font-medium text-white hover:border-blue-600 rounded-full dark:bg-blue-500 disabled:text-gray-300 disabled:pointer-events-none dark:hover:border-blue-500"
+                        >
+                          20
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          21
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          22
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          23
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Days -->
+
+                    <!-- Days -->
+                    <div class="flex">
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          24
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          25
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          26
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          27
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          28
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          29
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          30
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Days -->
+
+                    <!-- Days -->
+                    <div class="flex">
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          31
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                          disabled=""
+                        >
+                          1
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                          disabled=""
+                        >
+                          2
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                          disabled=""
+                        >
+                          3
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                          disabled=""
+                        >
+                          4
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                          disabled=""
+                        >
+                          5
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                          disabled=""
+                        >
+                          6
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Days -->
+                  </div>
+                  <!-- End Calendar -->
+
+                  <!-- Calendar -->
+                  <div class="space-y-0.5">
+                    <!-- Months -->
+                    <div
+                      class="grid grid-cols-5 items-center gap-x-3 mx-1.5 pb-3"
+                    >
+                      <!-- Prev Button -->
+                      <div class="col-span-1">
+                        <button
+                          type="button"
+                          class="opacity-0 size-8 flex justify-center items-center text-gray-800 hover:bg-gray-100 rounded-full disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-800"
+                        >
+                          <svg
+                            class="flex-shrink-0 size-4"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path d="m15 18-6-6 6-6"></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <!-- End Prev Button -->
+
+                      <!-- Month / Year -->
+                      <div
+                        class="col-span-3 flex justify-center items-center gap-x-1"
+                      >
+                        <div class="relative">
+                          <select
+                            data-hs-select='{
+                  "placeholder": "Select month",
+                  "viewport": "#ranges-tab-preview-datepicker",
+                  "toggleTag": "<button type=\"button\"></button>",
+                  "toggleClasses": "hs-select-disabled:pointer-events-none hs-select-disabled:opacity-50 relative flex text-nowrap w-full cursor-pointer text-start font-medium text-gray-800 hover:text-gray-600 focus:outline-none focus:text-gray-600 before:absolute before:inset-0 before:z-[1] dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300",
+                  "dropdownClasses": "mt-2 z-50 w-32 max-h-72 p-1 space-y-0.5 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500 dark:bg-neutral-900 dark:border-neutral-700",
+                  "optionClasses": "p-2 w-full text-sm text-gray-800 cursor-pointer hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:text-neutral-200 dark:focus:bg-neutral-800",
+                  "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"hidden hs-selected:block\"><svg class=\"flex-shrink-0 size-3.5 text-gray-800 dark:text-neutral-200\" xmlns=\"http:.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"/></svg></span></div>"
+                }'
+                            class="hidden"
+                          >
+                            <option value="0">January</option>
+                            <option value="1">February</option>
+                            <option value="2">March</option>
+                            <option value="3">April</option>
+                            <option value="4">May</option>
+                            <option value="5">June</option>
+                            <option value="6">July</option>
+                            <option value="7" selected="">August</option>
+                            <option value="8">September</option>
+                            <option value="9">October</option>
+                            <option value="10">November</option>
+                            <option value="11">December</option>
+                          </select>
+                        </div>
+
+                        <span class="text-gray-800 dark:text-neutral-200"
+                          >/</span
+                        >
+
+                        <div class="relative">
+                          <select
+                            data-hs-select='{
+                  "placeholder": "Select year",
+                  "viewport": "#ranges-tab-preview-datepicker",
+                  "toggleTag": "<button type=\"button\"></button>",
+                  "toggleClasses": "hs-select-disabled:pointer-events-none hs-select-disabled:opacity-50 relative flex text-nowrap w-full cursor-pointer text-start font-medium text-gray-800 hover:text-gray-600 focus:outline-none focus:text-gray-600 before:absolute before:inset-0 before:z-[1] dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300",
+                  "dropdownClasses": "mt-2 z-50 w-20 max-h-72 p-1 space-y-0.5 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500 dark:bg-neutral-900 dark:border-neutral-700",
+                  "optionClasses": "p-2 w-full text-sm text-gray-800 cursor-pointer hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:text-neutral-200 dark:focus:bg-neutral-800",
+                  "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"hidden hs-selected:block\"><svg class=\"flex-shrink-0 size-3.5 text-gray-800 dark:text-neutral-200\" xmlns=\"http:.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"/></svg></span></div>"
+                }'
+                            class="hidden"
+                          >
+                            <option selected="">2023</option>
+                            <option>2024</option>
+                            <option>2025</option>
+                            <option>2026</option>
+                            <option>2027</option>
+                          </select>
+                        </div>
+                      </div>
+                      <!-- End Month / Year -->
+
+                      <!-- Next Button -->
+                      <div class="col-span-1 flex justify-end">
+                        <button
+                          type="button"
+                          class="size-8 flex justify-center items-center text-gray-800 hover:bg-gray-100 rounded-full disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-800"
+                        >
+                          <svg
+                            class="flex-shrink-0 size-4"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path d="m9 18 6-6-6-6"></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <!-- End Next Button -->
+                    </div>
+                    <!-- Months -->
+
+                    <!-- Weeks -->
+                    <div class="flex pb-1.5">
+                      <span
+                        class="m-px w-10 block text-center text-sm text-gray-500 dark:text-neutral-500"
+                      >
+                        Mo
+                      </span>
+                      <span
+                        class="m-px w-10 block text-center text-sm text-gray-500 dark:text-neutral-500"
+                      >
+                        Tu
+                      </span>
+                      <span
+                        class="m-px w-10 block text-center text-sm text-gray-500 dark:text-neutral-500"
+                      >
+                        We
+                      </span>
+                      <span
+                        class="m-px w-10 block text-center text-sm text-gray-500 dark:text-neutral-500"
+                      >
+                        Th
+                      </span>
+                      <span
+                        class="m-px w-10 block text-center text-sm text-gray-500 dark:text-neutral-500"
+                      >
+                        Fr
+                      </span>
+                      <span
+                        class="m-px w-10 block text-center text-sm text-gray-500 dark:text-neutral-500"
+                      >
+                        Sa
+                      </span>
+                      <span
+                        class="m-px w-10 block text-center text-sm text-gray-500 dark:text-neutral-500"
+                      >
+                        Su
+                      </span>
+                    </div>
+                    <!-- Weeks -->
+
+                    <!-- Days -->
+                    <div class="flex">
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                          disabled=""
+                        >
+                          31
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          1
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          2
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          3
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          4
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          5
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          6
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Days -->
+
+                    <!-- Days -->
+                    <div class="flex">
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          7
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          8
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          9
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          10
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          11
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          12
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          13
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Days -->
+
+                    <!-- Days -->
+                    <div class="flex">
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          14
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          15
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          16
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          17
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          18
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          19
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          20
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Days -->
+
+                    <!-- Days -->
+                    <div class="flex">
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          21
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          22
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          23
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          24
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          25
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          26
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          27
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Days -->
+
+                    <!-- Days -->
+                    <div class="flex">
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          28
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          29
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          30
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                        >
+                          31
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                          disabled=""
+                        >
+                          1
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                          disabled=""
+                        >
+                          2
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                          disabled=""
+                        >
+                          3
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Days -->
+
+                    <!-- Days -->
+                    <div class="flex">
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                          disabled=""
+                        >
+                          4
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                          disabled=""
+                        >
+                          5
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                          disabled=""
+                        >
+                          6
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                          disabled=""
+                        >
+                          7
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                          disabled=""
+                        >
+                          8
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                          disabled=""
+                        >
+                          9
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="m-px size-10 flex justify-center items-center border border-transparent text-sm text-gray-800 hover:border-blue-600 hover:text-blue-600 rounded-full disabled:text-gray-300 disabled:pointer-events-none dark:text-neutral-200 dark:hover:border-neutral-500 dark:disabled:text-neutral-600"
+                          disabled=""
+                        >
+                          10
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Days -->
+                  </div>
+                  <!-- End Calendar -->
+                </div>
+
+                <!-- Footer -->
+                <div
+                  class="flex justify-end items-center gap-x-2 p-3 border-t dark:border-neutral-700"
+                >
+                  <button
+                    type="button"
+                    class="btn-cancel py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="button"
+                    class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                  >
+                    Apply
+                  </button>
+                </div>
+                <!-- End Footer -->
+              </div>
+              <!-- End Datepicker -->
+            </div>
+          </form>
+        </div>
+        <div class="w-[26%]">
+          <form action="">
+            <div class="relative focus-parent cursor-pointer">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+              >
+                <svg
+                  class="h-6 w-6 text-black"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+              </div>
+              <div
+                class="block w-full p-4 pl-10 text-sm text-black border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-white dark:placeholder-black dark:text-black"
+              >
+                2 người lớn · 0 trẻ em · 1 phòng
+              </div>
+              <div
+                id=" ranges-tab-preview-datepicker"
+                class="focus-child z-10 top-[120%] hidden absolute bg-white border shadow-xl rounded-lg"
+              >
+                <div class="p-8 min-w-[350px]">
+                  <div class="pb-2 flex justify-between items-center">
+                    <span class="py-3">Người lớn</span>
+                    <form class="">
+                      <div class="relative flex items-center">
+                        <button
+                          type="button"
+                          id="decrement-button"
+                          data-input-counter-decrement="counter-input"
+                          class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none"
+                        >
+                          <svg
+                            class="w-2.5 h-2.5 text-gray-900 dark:text-white"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 18 2"
+                          >
+                            <path
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M1 1h16"
+                            />
+                          </svg>
+                        </button>
+                        <input
+                          type="text"
+                          id="counter-input"
+                          data-input-counter
+                          class="flex-shrink-0 text-gray-900 dark:text-black border-0 bg-transparent text-sm font-normal focus:outline-none focus:ring-0 max-w-[2.5rem] text-center"
+                          placeholder=""
+                          value="12"
+                          required
+                        />
+                        <button
+                          type="button"
+                          id="increment-button"
+                          data-input-counter-increment="counter-input"
+                          class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none"
+                        >
+                          <svg
+                            class="w-2.5 h-2.5 text-gray-900 dark:text-white"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 18 18"
+                          >
+                            <path
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M9 1v16M1 9h16"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="pb-2 flex justify-between items-center">
+                    <span class="py-3">Trẻ em</span>
+                    <form class="">
+                      <div class="relative flex items-center">
+                        <button
+                          type="button"
+                          id="decrement-button"
+                          data-input-counter-decrement="counter-input"
+                          class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none"
+                        >
+                          <svg
+                            class="w-2.5 h-2.5 text-gray-900 dark:text-white"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 18 2"
+                          >
+                            <path
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M1 1h16"
+                            />
+                          </svg>
+                        </button>
+                        <input
+                          type="text"
+                          id="counter-input"
+                          data-input-counter
+                          class="flex-shrink-0 text-gray-900 dark:text-black border-0 bg-transparent text-sm font-normal focus:outline-none focus:ring-0 max-w-[2.5rem] text-center"
+                          placeholder=""
+                          value="12"
+                          required
+                        />
+                        <button
+                          type="button"
+                          id="increment-button"
+                          data-input-counter-increment="counter-input"
+                          class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none"
+                        >
+                          <svg
+                            class="w-2.5 h-2.5 text-gray-900 dark:text-white"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 18 18"
+                          >
+                            <path
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M9 1v16M1 9h16"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                  <div
+                    class="pb-2 flex justify-between items-center border-b border-black"
+                  >
+                    <span class="py-3">Phòng</span>
+                    <form class="">
+                      <div class="relative flex items-center">
+                        <button
+                          type="button"
+                          id="decrement-button"
+                          data-input-counter-decrement="counter-input"
+                          class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none"
+                        >
+                          <svg
+                            class="w-2.5 h-2.5 text-gray-900 dark:text-white"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 18 2"
+                          >
+                            <path
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M1 1h16"
+                            />
+                          </svg>
+                        </button>
+                        <input
+                          type="text"
+                          id="counter-input"
+                          data-input-counter
+                          class="flex-shrink-0 text-gray-900 dark:text-black border-0 bg-transparent text-sm font-normal focus:outline-none focus:ring-0 max-w-[2.5rem] text-center"
+                          placeholder=""
+                          value="12"
+                          required
+                        />
+                        <button
+                          type="button"
+                          id="increment-button"
+                          data-input-counter-increment="counter-input"
+                          class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none"
+                        >
+                          <svg
+                            class="w-2.5 h-2.5 text-gray-900 dark:text-white"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 18 18"
+                          >
+                            <path
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M9 1v16M1 9h16"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="pb-4 mt-6 flex justify-between items-center">
+                    <span>Bạn đang tìm nhà nghỉ dưỡng hoặc căn hộ?</span>
+                    <label class="inline-flex items-center cursor-pointer">
+                      <input type="checkbox" value="" class="sr-only peer" />
+                      <div
+                        class="relative w-11 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+                      ></div>
+                    </label>
+                  </div>
+                  <div class="pt-4 flex justify-between items-center">
+                    <span>Mang thú cưng đi cùng</span>
+                    <label class="inline-flex items-center cursor-pointer">
+                      <input type="checkbox" value="" class="sr-only peer" />
+                      <div
+                        class="relative w-11 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+                      ></div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="w-[6%]">
+          <button
+            class="bg-[#006ce3] p-[14px] w-full rounded-lg text-xl text-white font-medium"
+          >
+            Tìm
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

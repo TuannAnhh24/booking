@@ -1,0 +1,528 @@
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+<!-- Ionicons -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+   integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous" />
+
+<div>
+   <!-- header checkout -->
+   <HeaderCheckout />
+
+   <!-- main -->
+   <div class="container mx-auto p-4 max-w-screen-lg">
+      <!-- sidebar -->
+      <div class="lg:container mx-auto px-3 pt-6 mb-4 max-w-6xl">
+         <div class="flex justify-between items-center space-x-4">
+            <!-- Step 1 -->
+            <div class="flex items-center">
+               <div class="flex items-center size-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                     stroke="currentColor" class="size-6 rounded-full bg-sky-400 text-white">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                  </svg>
+               </div>
+               <p class="ml-2 font-bold text-sm">Bạn chọn</p>
+            </div>
+            <!-- Line Separator -->
+            <div class="border-t-2 border-black flex-grow"></div>
+            <!-- Step 2 -->
+            <div class="flex items-center">
+               <div class="flex items-center size-6">
+                  <div class="flex items-center justify-center size-6 rounded-full bg-sky-400 text-white">
+                     2
+                  </div>
+               </div>
+               <p class="ml-2 font-bold text-sm">Chi tiết về bạn</p>
+            </div>
+            <!-- Line Separator -->
+            <div class="border-t-2 border-black flex-grow"></div>
+            <!-- Step 3 -->
+            <div class="flex items-center">
+               <div class="flex items-center size-6">
+                  <div class="flex items-center justify-center size-6 rounded-full bg-sky-400 text-white">
+                     3
+                  </div>
+               </div>
+               <p class="ml-2 font-bold text-sm">Bước cuối cùng</p>
+            </div>
+         </div>
+      </div>
+
+      <div class="container mx-auto grid grid-cols-12 min-w-screen-lg">
+         <aside class="col-span-4 p-4 pt-6 px-3">
+            <div>
+               <div class="border rounded-md p-4">
+                  <div class="space-y-3">
+                     <div class="flex items-center">
+                        <div class="flex items-center">
+                           <p class="text-xs mr-2">Căn hộ</p>
+                           <i class="fa-solid fa-star text-yellow-400"></i>
+                           <i class="fa-solid fa-star text-yellow-400"></i>
+                           <i class="fa-solid fa-star text-yellow-400"></i>
+                           <i class="fa-solid fa-star text-yellow-400"></i>
+                           <i class="fa-solid fa-star text-yellow-400"></i>
+                        </div>
+                        <div class="w-7 h-7 bg-yellow-500 rounded-sm flex justify-center items-center">
+                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                              stroke="currentColor" class="size-6 text-white">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                 d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z" />
+                           </svg>
+                        </div>
+                     </div>
+                     <h1 class="text-base font-bold">Mr.Soof - By TLV2GO</h1>
+                  </div>
+                  <div class="mt-1 space-y-3">
+                     <div>
+                        <p class="text-sm">
+                           26 Sderot HaTmarim, Eilat, 8858503, Israel
+                        </p>
+                        <p class="text-xs text-green-400">
+                           Vị trí tuyệt vời — 8.6
+                        </p>
+                     </div>
+                     <div class="flex flex-row items-center my-2">
+                        <div class="mr-2">
+                           <span
+                              class="inline-block rounded-md text-xs w-6 h-6 items-center justify-center border-2 border-blue-700 bg-blue-700 basis-1/4">
+                              <p class="text-center text-sm font-normal text-white">
+                                 9.1
+                              </p>
+                           </span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                           <p class="text-xs">Tuyệt hảo</p>
+                           <span class="text-xs mx-1">.</span>
+                           <!-- Dấu chấm -->
+                           <p class="text-xs">1,471 đánh giá</p>
+                        </div>
+                     </div>
+                     <div class="mt-2 flex flex-wrap">
+                        <div class="flex items-center">
+                           <div class="mr-2 items-center">
+                              <ion-icon name="paw-outline" class="mt-1"></ion-icon>
+                           </div>
+                           <div>
+                              <p class="text-xs">
+                                 Cho phép mang theo vật nuôi
+                              </p>
+                           </div>
+                        </div>
+                        <div class="flex flex-wrap items-center">
+                           <div class="mr-2 flex items-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                 stroke="currentColor" class="size-6">
+                                 <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M8.288 15.038a5.25 5.25 0 0 1 7.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 0 1 1.06 0Z" />
+                              </svg>
+                              <p class="text-xs ml-2">Wifi miễn phí</p>
+                           </div>
+                           <div class="flex items-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                 stroke="currentColor" class="size-6">
+                                 <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                 <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 9.563C9 9.252 9.252 9 9.563 9h4.874c.311 0 .563.252.563.563v4.874c0 .311-.252.563-.563.563H9.564A.562.562 0 0 1 9 14.437V9.564Z" />
+                              </svg>
+                              <p class="text-xs ml-1">Chỗ để xe</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="border rounded-md p-4 mt-4">
+                  <div class="space-y-3">
+                     <h2 class="text-base font-bold">
+                        Chi tiết đặt phòng của bạn
+                     </h2>
+                     <div>
+                        <div>
+                           <div class="flex flex-row mt-4 justify-between">
+                              <div class="flex-1 pr-4 border-r-2">
+                                 <div class="mb-1">
+                                    <p class="text-sm font-medium">
+                                       Nhận phòng
+                                    </p>
+                                 </div>
+                                 <label class="text-base font-bold">T2, 15 tháng 7 2024</label><br />
+                                 <span class="text-sm font-light">Từ 15:00</span>
+                              </div>
+                              <div class="flex-1 pl-4">
+                                 <div class="mb-1">
+                                    <p class="text-sm font-medium">
+                                       Trả phòng
+                                    </p>
+                                 </div>
+                                 <label class="text-base font-bold">T2, 15 tháng 7 2024</label><br />
+                                 <span class="text-sm font-light">Từ 15:00</span>
+                              </div>
+                           </div>
+                           <div class="flex mt-2 items-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                 stroke="currentColor" class="size-6 text-amber-600">
+                                 <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+                              </svg>
+                              <p class="text-sm ml-2 text-amber-600">
+                                 Chỉ còn 6 ngày nữa
+                              </p>
+                           </div>
+                           <div class="mt-2">
+                              <div>
+                                 <p class="text-sm">
+                                    Tổng thời gian lưu trú:
+                                 </p>
+                              </div>
+                              <div>
+                                 <p class="text-sm font-bold mt-1">5 đêm</p>
+                              </div>
+                           </div>
+                           <div class="mt-4">
+                              <div class="mx-1 border-t-2 border-gray-300"></div>
+                           </div>
+                        </div>
+                        <div>
+                           <div>
+                              <button type="button" id="dropdownButton"
+                                 class="flex items-center w-full pt-2 text-base text-gray-900 transition duration-75 rounded-lg group dark:text-white"
+                                 aria-controls="dropdown" data-collapse-toggle="dropdown">
+                                 <span class="flex-1 text-left rtl:text-right whitespace-nowrap font-bold text-black">1
+                                    Phòng cho 2 người lớn</span>
+                              </button>
+                              <!-- drop-down -->
+                              <ul id="dropdown"
+                                 class="hidden py-2 space-y-2 transition-all duration-500 ease-in-out transform origin-top">
+                                 <li>
+                                    <label
+                                       class="w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group dark:text-white">
+                                       <div>
+                                          <span class="block text-black">1 x Căn hộ 1 Phòng Ngủ Có Ban
+                                             Công</span>
+                                          <span class="block text-black text-xs mt-1">2 người lớn</span>
+                                       </div>
+                                    </label>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="mt-2">
+                              <a href="" class="text-sm fornt-semibold text-blue-500">Đổi lựa chọn của bạn</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <section class="mt-4 border rounded-md space-y-2">
+                  <div class="p-4">
+                     <h2 class="text-base font-bold">Tóm tắt giá</h2>
+                     <div class="flex justify-between text-left mt-3">
+                        <p class="text-sm">Giá gốc</p>
+                        <p class="text-sm">VND 35.901.438</p>
+                     </div>
+                     <div class="flex justify-between text-left my-2">
+                        <p class="text-sm">Giảm giá</p>
+                        <p class="text-sm">- VND 3.590.144</p>
+                     </div>
+                  </div>
+                  <div class="w-full border bg-sky-200 p-4">
+                     <div class="flex items-end">
+                        <div class="w-2/5 pr-2">
+                           <h1 class="text-4xl font-bold">Tổng cộng</h1>
+                        </div>
+                        <div class="w-3/5">
+                           <p class="line-through text-red-500 text-base text-right">
+                              VND 35.901.438
+                           </p>
+                           <p class="text-3xl font-bold text-right">
+                              VND 32.311.343
+                           </p>
+                        </div>
+                     </div>
+                     <div class="text-right mt-2">
+                        <p class="text-sm">Đã bao gồm thuế và phí</p>
+                        <p class="text-sm">
+                           Theo loại tiền tệ của chỗ nghỉ:₪ 4.669,18
+                        </p>
+                     </div>
+                  </div>
+                  <div class="p-4">
+                     <h2 class="text-base font-bold">Thông tin giá</h2>
+                     <div class="flex mt-3">
+                        <div class="w-1/5">
+                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                              stroke="currentColor" class="size-6 ml-5">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                 d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                           </svg>
+                        </div>
+                        <div class="w-4/5">
+                           <p class="text-sm">
+                              Giá này được chuyển đổi để hiển thị cho bạn chi
+                              phí ước tính bằng VND. Bạn sẽ trả bằng ₪. Tỷ
+                              giá hối đoái có thể thay đổi trước khi bạn
+                              thanh toán.
+                           </p>
+                        </div>
+                     </div>
+                     <div class="flex mt-3">
+                        <div class="w-1/5">
+                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                              stroke="currentColor" class="size-6 ml-5">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                 d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
+                           </svg>
+                        </div>
+                        <div class="w-4/5">
+                           <p class="text-sm">
+                              Xin lưu ý, đơn vị phát hành thẻ của bạn có thể
+                              tính phí giao dịch bằng ngoại tệ.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <section class="mt-4 border rounded-md space-y-2 p-4">
+                  <h2 class="text-base font-bold">
+                     Chi phí hủy là bao nhiêu
+                  </h2>
+                  <div class="flex justify-between">
+                     <div>
+                        <p class="text-base">
+                           Nếu hủy, bạn sẽ phải thanh toán
+                        </p>
+                     </div>
+                     <span class="text-base"> VND 32.311.343 * </span>
+                  </div>
+               </section>
+               <div class="mt-4 border rounded-md space-y-2 p-4">
+                  <h2 class="text-base font-bold">
+                     Bạn có mã khuyến mãi không?
+                  </h2>
+                  <form action="">
+                     <div class="mt-4 sp">
+                        <label for="first_name"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Nhập mã khuyến
+                           mãi</label>
+                        <input type="text" id="first_name"
+                           class="border border-gray-300 text-gray-900 bg-white text-sm rounded-lg block w-full p-2.5 outline-none"
+                           placeholder="Nhâp mã giảm giá..." />
+                        <button type="button"
+                           class="mt-4 py-2.5 px-5 me-2 mb-2 text-sm font-medium text-blue-500 focus:outline-none bg-white rounded-md border border-blue-700 hover:bg-gray-100 hover:text-blue-500 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-white dark:text-blue-400 dark:hover:text-white dark:hover:bg-gray-700">
+                           Áp dụng
+                        </button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </aside>
+         <main class="col-span-8 p-4 pt-6 px-3 space-y-3">
+            <div class="border rounded-md p-4 mb-4">
+               <h2 class="text-xl font-bold mb-4">
+                  Thanh toán ngay với Booking.com
+               </h2>
+               <div class="pb-2">
+                  <span class="text-base">Bạn sẽ thanh toán khi hoàn tất đặt phòng này</span>
+               </div>
+            </div>
+            <section class="border rounded-md p-4 space-y-3">
+               <h2 class="text-xl font-bold">
+                  Bạn muốn thanh toán bằng cách nào?
+               </h2>
+               <div class="pt-3">
+                  <div class="px-3 py-4 mt-4 border-black rounded-md bg-gray-100 flex items-center">
+                     <div>
+                        <ion-icon name="lock-closed-outline" class="size-5 mt-1"></ion-icon>
+                     </div>
+                     <div class="ml-2">
+                        <p class="text-sm">
+                           Thông tin thanh toán được bảo mật
+                        </p>
+                     </div>
+                  </div>
+
+                  <div class="space-y-6 pt-4">
+                     <div class="flex items-center">
+                        <div class="mr-6 text-center">
+                           <button type="button"
+                              class="payment-button relative border-2 rounded-lg py-4 flex items-center px-10"
+                              onclick="selectPaymentMethod(this)">
+                              <div
+                                 class="checkmark absolute top-2 left-2 w-5 h-5 border-2 border-gray-300 rounded bg-white flex items-center justify-center">
+                                 <svg class="w-4 h-4 text-white bg-blue-500" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                       d="M5 13l4 4L19 7"></path>
+                                 </svg>
+                              </div>
+                              <ion-icon name="card-outline" class="size-20 text-blue-400"></ion-icon>
+                           </button>
+                           <span class="text-base">Thẻ mới</span>
+                        </div>
+                     </div>
+                     <div class="space-y-4">
+                        <span class="font-bold mb-4">Thẻ mới</span>
+                        <div class="flex items-center">
+                           <img
+                              src="https://w7.pngwing.com/pngs/962/794/png-transparent-mastercard-credit-card-mastercard-logo-mastercard-logo-love-text-heart.png"
+                              alt="" class="border h-4 w-7 mr-2" />
+                           <img
+                              src="https://e7.pngegg.com/pngimages/594/666/png-clipart-visa-logo-credit-card-debit-card-payment-card-bank-visa-blue-text.png"
+                              alt="" class="border h-4 w-7 mr-2" />
+                           <img
+                              src="https://banner2.cleanpng.com/20180816/tk/kisspng-computer-icons-jcb-co-ltd-clip-art-credit-card-logo-logotype-icons-8-85-free-vector-icons-pa-5b760deeb7b8b3.1878343715344634707525.jpg"
+                              alt="" class="border h-4 w-7 mr-2" />
+                           <img
+                              src="https://banner2.cleanpng.com/20180713/ezu/kisspng-american-express-credit-card-computer-icons-debit-hotel-menu-card-5b483c35a908d9.9148176215314606616924.jpg"
+                              alt="" class="border h-4 w-7 mr-2" />
+                        </div>
+                     </div>
+                     <form action="" class="mt-3 w-1/2 space-y-6">
+                        <div>
+                           <label for="first_name"
+                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Tên chủ thẻ *</label>
+                           <input type="text" id="first_name"
+                              class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 bg-white outline-none"
+                              placeholder="John" required />
+                        </div>
+                        <div>
+                           <label for="first_name"
+                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Số thẻ</label>
+                           <div class="relative w-full">
+                              <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                 <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                       stroke-width="1.1"
+                                       d="M3 10h18M6 14h2m3 0h5M3 7v10a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1Z" />
+                                 </svg>
+                              </div>
+                              <input type="text" id="simple-search"
+                                 class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full ps-10 p-2.5 bg-white outline-none"
+                                 required />
+                           </div>
+                        </div>
+                        <div class="flex">
+                           <div class="w-full">
+                              <label for="first_name"
+                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Ngày hết
+                                 hạn</label>
+                              <input type="text" id="datepicker" placeholder="Chọn tháng và năm"
+                                 class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 bg-white outline-none" />
+                           </div>
+                           <div class="w-full">
+                              <label for="first_name"
+                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">CVC
+                              </label>
+                              <div class="relative w-full">
+                                 <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                    <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                                       xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                       viewBox="0 0 24 24">
+                                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-width="1.1"
+                                          d="M3 10h18M6 14h2m3 0h5M3 7v10a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1Z" />
+                                    </svg>
+                                 </div>
+                                 <input type="text" id="datepicker"
+                                    class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full ps-10 p-2.5 bg-white outline-none" />
+                              </div>
+                           </div>
+                        </div>
+                        <div>
+                           <label class="inline-flex items-center cursor-pointer">
+                              <input type="checkbox" value="" class="sr-only peer bg-slate-100" />
+                              <div
+                                 class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+                              </div>
+                              <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Lưu thẻ cho các
+                                 giao dịch tương lai</span>
+                           </label>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </section>
+            <div class="mt-4 space-y-4">
+               <div>
+                  <div class="mb-[0.125rem] block min-h-[1.5rem] ps-[1.5rem]">
+                     <input
+                        class="relative float-left -ms-[1.4rem] me-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] cursor-none appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-secondary-500 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ms-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] indeterminate:border-primary indeterminate:bg-primary indeterminate:after:absolute indeterminate:after:ms-[0.2rem] indeterminate:after:mt-[6px] indeterminate:after:w-[0.5rem] indeterminate:after:border-[0.05rem] indeterminate:after:border-solid indeterminate:after:border-white hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ms-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent indeterminate:focus:after:w-[0.5rem] indeterminate:focus:after:rounded-none indeterminate:focus:after:border-[0.125rem] indeterminate:focus:after:border-b-0 indeterminate:focus:after:border-e-0 indeterminate:focus:after:border-s-0 rtl:float-right dark:border-neutral-400 dark:checked:border-primary dark:checked:bg-primary dark:indeterminate:border-primary dark:indeterminate:bg-primary"
+                        type="checkbox" value="" id="flexCheckIndeterminate" />
+                     <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="flexCheckIndeterminate">
+                        Tôi đồng ý nhận email marketing từ Booking.com, bao
+                        gồm khuyến mãi, đề xuất được cá nhân hóa, tặng
+                        thưởng, trải nghiệm du lịch và cập nhật về các sản
+                        phẩm và dịch vụ của Booking.com.
+                     </label>
+                  </div>
+                  <div class="mb-[0.125rem] block min-h-[1.5rem] ps-[1.5rem]">
+                     <input
+                        class="relative float-left -ms-[1.4rem] me-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] cursor-none appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-secondary-500 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ms-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] indeterminate:border-primary indeterminate:bg-primary indeterminate:after:absolute indeterminate:after:ms-[0.2rem] indeterminate:after:mt-[6px] indeterminate:after:w-[0.5rem] indeterminate:after:border-[0.05rem] indeterminate:after:border-solid indeterminate:after:border-white hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ms-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent indeterminate:focus:after:w-[0.5rem] indeterminate:focus:after:rounded-none indeterminate:focus:after:border-[0.125rem] indeterminate:focus:after:border-b-0 indeterminate:focus:after:border-e-0 indeterminate:focus:after:border-s-0 rtl:float-right dark:border-neutral-400 dark:checked:border-primary dark:checked:bg-primary dark:indeterminate:border-primary dark:indeterminate:bg-primary"
+                        type="checkbox" value="" id="flexCheckIndeterminate" />
+                     <label class="inline-block ps-[0.15rem] hover:cursor-pointer" for="flexCheckIndeterminate">
+                        Tôi đồng ý nhận email marketing từ Booking.com, bao
+                        gồm khuyến mãi, đề xuất được cá nhân hóa, tặng
+                        thưởng, trải nghiệm du lịch và cập nhật về các sản
+                        phẩm và dịch vụ của Booking.com Transport Limited.
+                     </label>
+                  </div>
+               </div>
+               <div>
+                  <p class="text-sm">
+                     Với việc đăng kí nhận email marketing, bạn cho phép
+                     chúng tôi đề xuất các sản phẩm, dịch vụ, ưu đãi và nội
+                     dung theo sở thích của mình bằng việc theo dõi cách bạn
+                     sử dụng Booking.com thông qua công nghệ theo dõi. Hủy
+                     đăng kí bất cứ lúc nào. Tham khảo chính sách bảo mật của
+                     chúng tôi.
+                  </p>
+               </div>
+               <div>
+                  <p class="text-base">
+                     Đặt phòng của bạn là đặt phòng trực tiếp với Iconic
+                     Santorini, a Boutique Cave Hotel by Sandglass và bằng
+                     việc hoàn tất đặt phòng này, bạn đồng ý với điều kiện
+                     đặt phòng, điều khoản chung, chính sách bảo mật và điều
+                     khoản Ví.
+                  </p>
+               </div>
+            </div>
+            <div class="mt-6 flex justify-end">
+               <button type="button" data-modal-target="static-modal" data-modal-toggle="static-modal"
+                  class="px-7 py-2.5 me-2 mb-2 text-base font-medium text-blue-500 focus:outline-none bg-white rounded-md border border-blue-700 hover:bg-gray-100 hover:text-blue-500 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-blue-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                  Kiểm tra lại phòng đặt
+               </button>
+               <button type="submit"
+                  class="flex items-center text-white bg-blue-700 hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-md text-base px-7 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                  <svg class="size-10 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                     width="24" height="24" fill="none" viewBox="0 0 24 24">
+                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
+                        d="M12 14v3m-3-6V7a3 3 0 1 1 6 0v4m-8 0h10a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1Z" />
+                  </svg>
+                  Hoàn tất đặt chỗ
+               </button>
+            </div>
+            <div class="mt-4 text-right p-4">
+               <a href="" class="text-blue-400 underline">Các điều kiện đặt phòng là gì?</a>
+            </div>
+         </main>
+      </div>
+   </div>
+
+   <!-- Modal: phần này đang lỗi -->
+   <CheckoutMd />
+
+   <!-- footer checkout -->
+   <FooterCheckout />
+</div>
+
+<link rel="stylesheet" href="Checkout.css">
+<script src="Checkout.js"></script>

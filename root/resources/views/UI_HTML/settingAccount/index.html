@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<body>
+    <header class="w-full bg-blue-500 text-white p-2">
+        <div class="container mx-auto px-4 max-w-screen-lg">
+            <nav class="flex justify-between flex-wrap items-center">
+                <div class="pl-4 py-2">
+                    <h1 class="text-3xl font-bold">Booking.com</h1>
+                </div>
+                <div class="flex pl-4 py-2">
+                    <button class="px-3 py-2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/1024px-Flag_of_Vietnam.svg.png"
+                            alt="" class="rounded-full size-6" />
+                    </button>
+                    <a href=""
+                        class="fa-regular fa-circle-question text-xl text-white py-2 px-3 hover:bg-[#1a4f9f] cursor-pointer">
+                    </a>
+                    <div class="px-3 py-2 flex items-center gap-4" id="profile">
+                        <img src="https://scontent.fhan14-3.fna.fbcdn.net/v/t39.30808-1/425836029_1086790899192216_3582391658824726172_n.jpg?stp=cp6_dst-jpg_p200x200&_nc_cat=103&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=r1OFPNviLvsQ7kNvgGrYMF6&_nc_ht=scontent.fhan14-3.fna&oh=00_AYBv5nxXzfaIxFsOU7eg1bCaaRqZUqcgaV_w9IvGwJdyKQ&oe=6692D13C"
+                            alt="" class="rounded-full size-7" />
+                        <div class="flex flex-col">
+                            <p class="text-white">
+                                nhannvph 3 8 1 4 2 FPL HN
+                            </p>
+                            <span class="text-sm text-[#FEBB02]"> Genius Cấp 1</span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="flex-1 max-w-[1140px] mx-auto mt-[16px] h-full">
+        <div class="flex gap-4 lg:grid-cols-6 lg:gap-4">
+            <div class=" h-full rounded-lg col-span-2 min-w-[306px]">
+                <div class="w-full rounded-t-lg border border-gray-300 text-xl overflow-hidden">
+                    <ul>
+                        <li class="bg-white p-4 hover:underline border-b border-gray-300">
+                            <a href="#" class="text-gray-600 text-sm hover:text-blue-600">
+                                <i class="py-3 px-3 bg-[#f5f5f5] rounded-full fas fa-user mr-2"></i>Thông tin cá
+                                nhân
+                            </a>
+                        </li>
+                        <li class="bg-white p-4 hover:underline border-b border-gray-300">
+                            <a href="#" class="text-gray-600 text-sm hover:text-blue-600">
+                                <i class="py-3 px-3 bg-[#f5f5f5] rounded-full fas fa-cog mr-2"></i>Cài đặt chung
+                            </a>
+                        </li>
+                        <li class="bg-white p-4 hover:underline border-b border-gray-300">
+                            <a href="#" class="text-gray-600 text-sm hover:text-blue-600">
+                                <i class="py-3 px-3 bg-[#f5f5f5] rounded-full fas fa-lock mr-2"></i>Cài đặt bảo mật
+                            </a>
+                        </li>
+                        <li class="bg-white p-4 hover:underline border-b border-gray-300">
+                            <a href="#" class="text-gray-600 text-sm hover:text-blue-600">
+                                <i class="py-3 px-3 bg-[#f5f5f5] rounded-full fas fa-credit-card mr-2"></i>Phương
+                                thức
+                                thanh toán
+                            </a>
+                        </li>
+                        <li class="bg-white p-4 hover:underline border-b border-gray-300">
+                            <a href="#" class="text-gray-600 text-sm hover:text-blue-600">
+                                <i class="py-3 px-3 bg-[#f5f5f5] rounded-full fas fa-user-shield mr-2"></i>Cài đặt
+                                quyền
+                                riêng tư
+                            </a>
+                        </li>
+                        <li class="bg-white p-4 hover:underline border-b border-gray-300">
+                            <a href="#" class="text-gray-600 text-sm hover:text-blue-600">
+                                <i class="py-3 px-3 bg-[#f5f5f5] rounded-full fas fa-envelope mr-2"></i>Cài đặt
+                                email
+                            </a>
+                        </li>
+                        <li class="bg-white p-4 hover:underline">
+                            <a href="#" class="text-gray-600 text-sm hover:text-blue-600">
+                                <i class="py-3 px-3 bg-[#f5f5f5] rounded-full fas fa-user-friends mr-2"></i>Người đi
+                                cùng
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--******************* content profile *******************-->
+            <div class="h-32 rounded-lg w-full">
+                <div class="w-full">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h2 class="font-bold text-[32px]">Cài đặt quyền riêng tư</h2>
+                                <div id="circle" class="flex items-center justify-between">
+                                    <div>
+                                        <span class="text-gray-500 text-base">Thực hiện quyền riêng tư và kiểm soát cách
+                                            dữ liệu của bạn được sử dụng.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pb-8 mt-[16px] ml-6">
+                        <!-- Tên -->
+                        <div class="border-b py-4 flex justify-between items-center">
+                            <div class="w-[30%]">
+                                <span class="text-base">Cài đặt quyền riêng tư</span>
+                            </div>
+                            <div class="w-full flex justify-between gap-4 items-center">
+                                <div>
+                                    <div id="name-span"
+                                        class="editable text-gray-600 cursor-pointer text-sm flex flex-col">
+                                        <span class="mb-2">nhannvph38142@fpt.edu.vn</span>
+                                        Chọn "Quản lý" để thay đổi cài đặt quyền riêng tư và thực hiện các quyền của bạn
+                                        thông qua
+                                        mẫu đơn yêu cầu của chúng tôi.
+                                    </div>
+                                </div>
+
+                                <div id="edit-btn-name"
+                                    class="text-blue-600 min-w-[64px] cursor-pointer font-semibold text-sm">
+                                    Quản lý
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="w-full mt-[96px] bg-[#f5f5f5]  text-center text-white min-h-[100px]">
+        <div class="w-full max-w-screen-lg mx-auto ">
+            <ul class="flex gap-2 text-sm text-[#1A1A1A] py-4 px-[32px]">
+                <li>Về Booking.com</li>
+                <li>Điều khoản và điều kiện</li>
+                <li>Chúng tôi hoạt động như thế nào</li>
+                <li>Chính sách Bảo mật & Cookie</li>
+                <li>Trung tâm Trợ giúp</li>
+            </ul>
+            <div class="flex justify-start w-full text-[12px] text-[#1A1A1A] py-4 px-[32px]">Bản quyền © 1996–2024
+                Booking.com™.
+                Bảo
+                lưu mọi quyền.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
